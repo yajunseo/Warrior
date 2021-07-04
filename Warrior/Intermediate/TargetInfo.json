@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "Warrior",
+			"Path": "C:\\Users\\yajun\\Documents\\Unreal Projects\\Warrior\\Warrior\\Source\\Warrior.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "WarriorEditor",
+			"Path": "C:\\Users\\yajun\\Documents\\Unreal Projects\\Warrior\\Warrior\\Source\\WarriorEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

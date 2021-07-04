@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\Warrior.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{DB3A18FB-39E3-4E9B-ADD4-1206FFA91A20}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Warrior.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\WarriorEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{ED0FCB2C-26CF-438F-B93F-6FCA8D937229}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\Warrior">
+      <UniqueIdentifier>{57BB0166-D0F5-40A0-89E3-0EB44FF8AB0C}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\Warrior\Warrior.Build.cs">
+      <Filter>Source\Warrior</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\Warrior\Warrior.cpp">
+      <Filter>Source\Warrior</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Warrior\Warrior.h">
+      <Filter>Source\Warrior</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Warrior\WarriorCharacter.cpp">
+      <Filter>Source\Warrior</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Warrior\WarriorCharacter.h">
+      <Filter>Source\Warrior</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Warrior\WarriorGameMode.cpp">
+      <Filter>Source\Warrior</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Warrior\WarriorGameMode.h">
+      <Filter>Source\Warrior</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
