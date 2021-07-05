@@ -29,7 +29,23 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
 	float BaseLookUpRate;
 
+	virtual void Tick(float DeltaTime) override;
+
 protected:
+	enum class EViewMode
+	{
+		THIRD_PERSON1,
+		THIRD_PERSON2
+	};
+
+	// ºä ¸ðµå
+	void SetViewMode(EViewMode viewMode);
+	EViewMode CurrentViewMode = EViewMode::THIRD_PERSON1;
+	FVector DirectionToMove = FVector::ZeroVector;
+	float ArmLengthTo = 0.0f;
+	FRotator ArmRotationTo = FRotator::ZeroRotator;
+	float ArmLengthSpeed = 0.0f;
+	float ArmRotationSpeed = 0.0f;
 
 	/** Resets HMD orientation in VR. */
 	void OnResetVR();
@@ -57,6 +73,11 @@ protected:
 
 	/** Handler for when a touch input stops. */
 	void TouchStopped(ETouchIndex::Type FingerIndex, FVector Location);
+
+	void ViewChange();
+
+	void Turn(float Value);
+	void LookUp(float Value);
 
 protected:
 	// APawn interface
