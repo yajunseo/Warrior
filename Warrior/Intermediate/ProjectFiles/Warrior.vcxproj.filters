@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Warrior.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{DB3A18FB-39E3-4E9B-ADD4-1206FFA91A20}</UniqueIdentifier>
+      <UniqueIdentifier>{C0CB4428-1778-45CC-A0B9-A1F55DB9E866}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Warrior.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{ED0FCB2C-26CF-438F-B93F-6FCA8D937229}</UniqueIdentifier>
+      <UniqueIdentifier>{E5DD8CB4-2CC3-4F03-9E1B-B33FCEC06231}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,7 +30,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Warrior">
-      <UniqueIdentifier>{57BB0166-D0F5-40A0-89E3-0EB44FF8AB0C}</UniqueIdentifier>
+      <UniqueIdentifier>{C17824B6-F338-4BC6-B21E-65EE64FBDE11}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Warrior\Warrior.Build.cs">
       <Filter>Source\Warrior</Filter>
@@ -51,6 +51,24 @@
       <Filter>Source\Warrior</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Warrior\WarriorGameMode.h">
+      <Filter>Source\Warrior</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Warrior\W_GameMode.cpp">
+      <Filter>Source\Warrior</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Warrior\W_GameMode.h">
+      <Filter>Source\Warrior</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Warrior\W_Pawn.cpp">
+      <Filter>Source\Warrior</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Warrior\W_Pawn.h">
+      <Filter>Source\Warrior</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Warrior\W_PlayerController.cpp">
+      <Filter>Source\Warrior</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Warrior\W_PlayerController.h">
       <Filter>Source\Warrior</Filter>
     </ClInclude>
   </ItemGroup>
