@@ -26,14 +26,14 @@ AW_Character::AW_Character()
 		GetMesh()->SetSkeletalMesh(SK_KWANG.Object);
 	}
 
-	//GetMesh()->SetAnimationMode(EAnimationMode::AnimationBlueprint);
+	GetMesh()->SetAnimationMode(EAnimationMode::AnimationBlueprint);
 
-	/*static ConstructorHelpers::FClassFinder<UAnimInstance> WARRIOR_ANIM(TEXT("/Game/Book/Animations/WarriorAnimBlueprint.WarriorAnimBlueprint_C"));
+	static ConstructorHelpers::FClassFinder<UAnimInstance> WARRIOR_ANIM(TEXT("/Game/ParagonKwang/Characters/Heroes/Kwang/Animations/WarriorAnimBP.WarriorAnimBP_C"));
 
 	if (WARRIOR_ANIM.Succeeded())
 	{
 		GetMesh()->SetAnimInstanceClass(WARRIOR_ANIM.Class);
-	}*/
+	}
 
 	SetViewMode(EViewMode::THIRD_PERSON_VIEW1);
 
