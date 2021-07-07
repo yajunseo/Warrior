@@ -77,7 +77,6 @@ void AW_Pawn::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 void AW_Pawn::MoveForward(float NewAxisValue)
 {
-	UE_LOG(LogTemp, Warning, TEXT("%f"), NewAxisValue);
 	AddMovementInput(GetActorForwardVector(), NewAxisValue);
 }
 

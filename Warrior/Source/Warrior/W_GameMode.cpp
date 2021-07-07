@@ -2,12 +2,12 @@
 
 
 #include "W_GameMode.h"
-#include "W_Pawn.h"
+#include "W_Character.h"
 #include "W_PlayerController.h"
 
 AW_GameMode::AW_GameMode()
 {
-	DefaultPawnClass = AW_Pawn::StaticClass();
+	DefaultPawnClass = AW_Character::StaticClass();
 	PlayerControllerClass = AW_PlayerController::StaticClass();
 }
 

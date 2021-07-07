@@ -197,9 +197,7 @@ C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Kismet\
 C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStaticsTypes.generated.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStatics.generated.h
 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Inc\Warrior\W_GameMode.generated.h
-C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\W_Pawn.h
-C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/FloatingPawnMovement.h
-C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\FloatingPawnMovement.generated.h
-C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Inc\Warrior\W_Pawn.generated.h
+C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\W_Character.h
+C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Inc\Warrior\W_Character.generated.h
 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\W_PlayerController.h
 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Inc\Warrior\W_PlayerController.generated.h
