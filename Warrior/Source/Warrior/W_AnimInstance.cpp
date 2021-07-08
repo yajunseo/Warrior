@@ -6,6 +6,7 @@
 UW_AnimInstance::UW_AnimInstance()
 {
 	CurrentPawnSpeed = 0.0f;
+	IsInAir = false;
 }
 
 void UW_AnimInstance::NativeUpdateAnimation(float DeltaSeconds)
@@ -15,7 +16,8 @@ void UW_AnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 	auto Pawn = TryGetPawnOwner();
 	if (::IsValid(Pawn))
 	{
-		UE_LOG(LogTemp, Warning, TEXT("1"));
 		CurrentPawnSpeed = Pawn->GetVelocity().Size();
+		auto Character = Cast<ACharacter>(Pawn);
+		IsInAir = Character->GetCharacterMovement()->IsFalling();
 	}
 }
