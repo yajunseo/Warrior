@@ -17,11 +17,16 @@ class WARRIOR_API UW_AnimInstance : public UAnimInstance
 public:
 	UW_AnimInstance();
 	virtual void NativeUpdateAnimation(float DeltaSeconds) override;
+	
+	void PlayAttackMontage();
 
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Pawn, Meta = (AllowPrivateAccess = true))
 		float CurrentPawnSpeed;
 	
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Pawm, Meta = (AllowPrivateAccess = true))
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Pawn, Meta = (AllowPrivateAccess = true))
 		bool IsInAir;
+
+	UPROPERTY(VisibleDefaultsOnly, BlueprintReadOnly, Category = Attack, Meta = (AllowPrivateAccess = true))
+		UAnimMontage* AttackMontage;
 };

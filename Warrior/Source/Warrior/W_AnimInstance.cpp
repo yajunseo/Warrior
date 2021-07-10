@@ -7,6 +7,12 @@ UW_AnimInstance::UW_AnimInstance()
 {
 	CurrentPawnSpeed = 0.0f;
 	IsInAir = false;
+
+	static ConstructorHelpers::FObjectFinder<UAnimMontage> ATTACK_MONTAGE(TEXT("/Game/ParagonKwang/Characters/Heroes/Kwang/Animations/WarriorMontage.WarriorMontage"));
+	if (ATTACK_MONTAGE.Succeeded())
+	{
+		AttackMontage = ATTACK_MONTAGE.Object;
+	}
 }
 
 void UW_AnimInstance::NativeUpdateAnimation(float DeltaSeconds)
@@ -19,5 +25,14 @@ void UW_AnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 		CurrentPawnSpeed = Pawn->GetVelocity().Size();
 		auto Character = Cast<ACharacter>(Pawn);
 		IsInAir = Character->GetCharacterMovement()->IsFalling();
+	}
+}
+
+void UW_AnimInstance::PlayAttackMontage()
+{
+	if (!Montage_IsPlaying(AttackMontage))
+	{
+		UE_LOG(LogTemp, Warning, TEXT("1"));
+		Montage_Play(AttackMontage, 1.0);
 	}
 }

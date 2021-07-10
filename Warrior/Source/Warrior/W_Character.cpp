@@ -2,6 +2,7 @@
 
 
 #include "W_Character.h"
+#include "W_AnimInstance.h"
 
 // Sets default values
 AW_Character::AW_Character()
@@ -127,6 +128,7 @@ void AW_Character::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 
 	PlayerInputComponent->BindAction(TEXT("ViewChange"), EInputEvent::IE_Pressed, this, &AW_Character::ViewChange);
 	PlayerInputComponent->BindAction(TEXT("Jump"), EInputEvent::IE_Pressed, this, &ACharacter::Jump);
+	PlayerInputComponent->BindAction(TEXT("Attack"), EInputEvent::IE_Pressed, this, &AW_Character::Attack);
 }
 
 void AW_Character::MoveForward(float NewAxisValue)
@@ -188,4 +190,13 @@ void AW_Character::ViewChange()
 		SetViewMode(EViewMode::THIRD_PERSON_VIEW1);
 		break;
 	}
+}
+
+void AW_Character::Attack()
+{
+	auto AnimInstance = Cast<UW_AnimInstance>(GetMesh()->GetAnimInstance());
+	if (AnimInstance == nullptr)
+		return;
+
+	AnimInstance->PlayAttackMontage();
 }
