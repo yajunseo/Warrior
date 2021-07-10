@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeWarrior_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0xFBDC3D79,
+				0xE889BB53,
 				0x70213896,
 				METADATA_PARAMS(nullptr, 0)
 			};

@@ -41,6 +41,8 @@ AW_Character::AW_Character()
 	ArmLengthSpeed = 3.0f;
 	ArmRotationSpeed = 10.0f;
 	GetCharacterMovement()->JumpZVelocity = 600.0f;
+
+	IsAttacking = false;
 }
 
 // Called when the game starts or when spawned
@@ -48,6 +50,14 @@ void AW_Character::BeginPlay()
 {
 	Super::BeginPlay();
 
+}
+
+void AW_Character::PostInitializeComponents()
+{
+	Super::PostInitializeComponents();
+	AW_Anim = Cast<UW_AnimInstance>(GetMesh()->GetAnimInstance());
+
+	AW_Anim->OnMontageEnded.AddDynamic(this, &AW_Character::OnAttackMontageEnded);
 }
 
 void AW_Character::SetViewMode(EViewMode NewControlMode)
@@ -194,9 +204,14 @@ void AW_Character::ViewChange()
 
 void AW_Character::Attack()
 {
-	auto AnimInstance = Cast<UW_AnimInstance>(GetMesh()->GetAnimInstance());
-	if (AnimInstance == nullptr)
+	if (IsAttacking)
 		return;
 
-	AnimInstance->PlayAttackMontage();
+	AW_Anim->PlayAttackMontage();
+	IsAttacking = true;
+}
+
+void AW_Character::OnAttackMontageEnded(UAnimMontage* Montage, bool bInterrupted)
+{
+	IsAttacking = false;
 }

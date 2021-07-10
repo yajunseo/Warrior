@@ -8,14 +8,23 @@
 #include "UObject/ScriptMacros.h"
 
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
+class UAnimMontage;
 #ifdef WARRIOR_W_Character_generated_h
 #error "W_Character.generated.h already included, missing '#pragma once' in W_Character.h"
 #endif
 #define WARRIOR_W_Character_generated_h
 
 #define Warrior_Source_Warrior_W_Character_h_12_SPARSE_DATA
-#define Warrior_Source_Warrior_W_Character_h_12_RPC_WRAPPERS
-#define Warrior_Source_Warrior_W_Character_h_12_RPC_WRAPPERS_NO_PURE_DECLS
+#define Warrior_Source_Warrior_W_Character_h_12_RPC_WRAPPERS \
+ \
+	DECLARE_FUNCTION(execOnAttackMontageEnded);
+
+
+#define Warrior_Source_Warrior_W_Character_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
+ \
+	DECLARE_FUNCTION(execOnAttackMontageEnded);
+
+
 #define Warrior_Source_Warrior_W_Character_h_12_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAW_Character(); \
@@ -58,7 +67,11 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AW_Character); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AW_Character)
 
 
-#define Warrior_Source_Warrior_W_Character_h_12_PRIVATE_PROPERTY_OFFSET
+#define Warrior_Source_Warrior_W_Character_h_12_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__IsAttacking() { return STRUCT_OFFSET(AW_Character, IsAttacking); } \
+	FORCEINLINE static uint32 __PPO__AW_Anim() { return STRUCT_OFFSET(AW_Character, AW_Anim); }
+
+
 #define Warrior_Source_Warrior_W_Character_h_9_PROLOG
 #define Warrior_Source_Warrior_W_Character_h_12_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

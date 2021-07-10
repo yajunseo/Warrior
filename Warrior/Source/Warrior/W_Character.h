@@ -18,6 +18,7 @@ public:
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
+	virtual void PostInitializeComponents() override;
 
 	enum class EViewMode
 	{
@@ -55,4 +56,14 @@ private:
 
 	void ViewChange();
 	void Attack();
+
+private:
+	UFUNCTION()
+		void OnAttackMontageEnded(UAnimMontage* Montage, bool bInterrupted);
+
+	UPROPERTY(VisibleInstanceOnly, BlueprintReadOnly, Category = Attack, Meta = (AllowPrivateAccess = true))
+		bool IsAttacking;
+
+	UPROPERTY()
+		class UW_AnimInstance* AW_Anim;
 };

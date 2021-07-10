@@ -30,9 +30,5 @@ void UW_AnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 
 void UW_AnimInstance::PlayAttackMontage()
 {
-	if (!Montage_IsPlaying(AttackMontage))
-	{
-		UE_LOG(LogTemp, Warning, TEXT("1"));
-		Montage_Play(AttackMontage, 1.0);
-	}
+	Montage_Play(AttackMontage, 1.0f);
 }
