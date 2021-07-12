@@ -197,3 +197,5 @@ C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Kismet\
 C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStaticsTypes.generated.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStatics.generated.h
 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Inc\Warrior\W_AnimInstance.generated.h
+C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\W_Character.h
+C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Inc\Warrior\W_Character.generated.h

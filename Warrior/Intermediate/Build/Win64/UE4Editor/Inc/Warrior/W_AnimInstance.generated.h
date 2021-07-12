@@ -71,6 +71,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UW_AnimInstance); \
 #define Warrior_Source_Warrior_W_AnimInstance_h_18_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__CurrentPawnSpeed() { return STRUCT_OFFSET(UW_AnimInstance, CurrentPawnSpeed); } \
 	FORCEINLINE static uint32 __PPO__IsInAir() { return STRUCT_OFFSET(UW_AnimInstance, IsInAir); } \
+	FORCEINLINE static uint32 __PPO__IsAttack() { return STRUCT_OFFSET(UW_AnimInstance, IsAttack); } \
 	FORCEINLINE static uint32 __PPO__AttackMontage() { return STRUCT_OFFSET(UW_AnimInstance, AttackMontage); }
 
 

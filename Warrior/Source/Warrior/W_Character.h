@@ -82,4 +82,7 @@ private:
 
 	UPROPERTY(VisibleInstanceOnly, BlueprintReadOnly, Category = Attack, Meta = (AllowPrivateAccess = true))
 		int32 MaxCombo;
+
+public:
+	bool GetAttackState() { return IsAttacking; };
 };

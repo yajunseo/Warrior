@@ -2,11 +2,13 @@
 
 
 #include "W_AnimInstance.h"
+#include "W_Character.h"
 
 UW_AnimInstance::UW_AnimInstance()
 {
 	CurrentPawnSpeed = 0.0f;
 	IsInAir = false;
+	IsAttack = false;
 
 	static ConstructorHelpers::FObjectFinder<UAnimMontage> ATTACK_MONTAGE(TEXT("/Game/ParagonKwang/Characters/Heroes/Kwang/Animations/WarriorMontage.WarriorMontage"));
 	if (ATTACK_MONTAGE.Succeeded())
@@ -25,6 +27,8 @@ void UW_AnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 		CurrentPawnSpeed = Pawn->GetVelocity().Size();
 		auto Character = Cast<ACharacter>(Pawn);
 		IsInAir = Character->GetCharacterMovement()->IsFalling();
+		auto Character2 = Cast<AW_Character>(Character);
+		IsAttack = Character2->GetAttackState();
 	}
 }
 
