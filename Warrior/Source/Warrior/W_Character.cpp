@@ -43,6 +43,8 @@ AW_Character::AW_Character()
 	GetCharacterMovement()->JumpZVelocity = 600.0f;
 
 	IsAttacking = false;
+	MaxCombo = 4;
+	AttackEndComboState();
 }
 
 // Called when the game starts or when spawned
@@ -58,6 +60,16 @@ void AW_Character::PostInitializeComponents()
 	AW_Anim = Cast<UW_AnimInstance>(GetMesh()->GetAnimInstance());
 
 	AW_Anim->OnMontageEnded.AddDynamic(this, &AW_Character::OnAttackMontageEnded);
+
+	AW_Anim->OnNextAttackCheck.AddLambda([this]() -> void {
+		CanNextCombo = false;
+
+		if (IsComboInputOn)
+		{
+			AttackStartComboState();
+			AW_Anim->JumpToAttackMontageSection(CurrentCombo);
+		}
+	});
 }
 
 void AW_Character::SetViewMode(EViewMode NewControlMode)
@@ -205,13 +217,37 @@ void AW_Character::ViewChange()
 void AW_Character::Attack()
 {
 	if (IsAttacking)
-		return;
+	{
+		if (CanNextCombo)
+			IsComboInputOn = true;
+	}
 
-	AW_Anim->PlayAttackMontage();
-	IsAttacking = true;
+	else
+	{
+		AttackStartComboState();
+		AW_Anim->PlayAttackMontage();
+		AW_Anim->JumpToAttackMontageSection(CurrentCombo);
+		IsAttacking = true;
+	}
 }
 
 void AW_Character::OnAttackMontageEnded(UAnimMontage* Montage, bool bInterrupted)
 {
 	IsAttacking = false;
+	AttackEndComboState();
+}
+
+void AW_Character::AttackStartComboState()
+{
+	CanNextCombo = true;
+	IsComboInputOn = false;
+	CurrentCombo = FMath::Clamp<int32>(CurrentCombo + 1, 1, MaxCombo);
+	UE_LOG(LogTemp, Warning, TEXT("%d"), CurrentCombo);
+}
+
+void AW_Character::AttackEndComboState()
+{
+	CanNextCombo = false;
+	IsComboInputOn = false;
+	CurrentCombo = 0;
 }
