@@ -1,20 +1,12 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (C:\Users\yajun\Documents\Unreal Projects\Warrior).
-  Parsing headers for WarriorEditor
-    Running UnrealHeaderTool "C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Warrior.uproject" "C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\WarriorEditor\Development\WarriorEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\yajun\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
-  Reflection code generated for WarriorEditor in 7.1406646 seconds
   Building WarriorEditor...
   Using Visual Studio 2019 14.28.29910 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 9 actions with 12 processes...
-    [1/9] Warrior.init.gen.cpp
-    [2/9] W_GameMode.cpp
-    [3/9] W_AnimInstance.gen.cpp
-    [4/9] W_AnimInstance.cpp
-    [5/9] W_Character.gen.cpp
-    [6/9] W_Character.cpp
-    [7/9] UE4Editor-Warrior-0051.lib
-       C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\Warrior\UE4Editor-Warrior-0051.lib 라이브러리 및 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\Warrior\UE4Editor-Warrior-0051.exp 개체를 생성하고 있습니다.
-    [8/9] UE4Editor-Warrior-0051.dll
-       C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\Warrior\UE4Editor-Warrior-0051.suppressed.lib 라이브러리 및 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\Warrior\UE4Editor-Warrior-0051.suppressed.exp 개체를 생성하고 있습니다.
-    [9/9] WarriorEditor.target
-  Total time in Parallel executor: 13.38 seconds
-  Total execution time: 21.90 seconds
+  Building 4 actions with 12 processes...
+    [1/4] W_Character.cpp
+    [2/4] UE4Editor-Warrior-0007.lib
+       C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\Warrior\UE4Editor-Warrior-0007.lib 라이브러리 및 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\Warrior\UE4Editor-Warrior-0007.exp 개체를 생성하고 있습니다.
+    [3/4] UE4Editor-Warrior-0007.dll
+       C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\Warrior\UE4Editor-Warrior-0007.suppressed.lib 라이브러리 및 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\Warrior\UE4Editor-Warrior-0007.suppressed.exp 개체를 생성하고 있습니다.
+    [4/4] WarriorEditor.target
+  Total time in Parallel executor: 3.95 seconds
+  Total execution time: 5.04 seconds

@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Warrior.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{6AE768F6-6BA4-488B-94B0-30A6B02AA5BF}</UniqueIdentifier>
+      <UniqueIdentifier>{CEBDADC3-6671-435C-AABB-36511653516C}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Warrior.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{484AF56A-2F70-456B-8885-01503C4061D7}</UniqueIdentifier>
+      <UniqueIdentifier>{308B1511-B9F1-4045-ACBC-04650D8B68F8}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,7 +30,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Warrior">
-      <UniqueIdentifier>{72BE7C5B-6241-4416-9B51-55E12F9D5A28}</UniqueIdentifier>
+      <UniqueIdentifier>{5C1D4E00-8F05-47DB-895C-6D7CAF244631}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Warrior\Warrior.Build.cs">
       <Filter>Source\Warrior</Filter>

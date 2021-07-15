@@ -10,9 +10,10 @@ UW_AnimInstance::UW_AnimInstance()
 	IsInAir = false;
 	IsAttack = false;
 
-	static ConstructorHelpers::FObjectFinder<UAnimMontage> ATTACK_MONTAGE(TEXT("/Game/ParagonKwang/Characters/Heroes/Kwang/Animations/WarriorMontage.WarriorMontage"));
+	static ConstructorHelpers::FObjectFinder<UAnimMontage> ATTACK_MONTAGE(TEXT("/Game/InfinityBladeWarriors/Animation/WeaponAttackMontage.WeaponAttackMontage"));
 	if (ATTACK_MONTAGE.Succeeded())
 	{
+		//UE_LOG(LogTemp, Warning, TEXT("111"));
 		AttackMontage = ATTACK_MONTAGE.Object;
 	}
 }

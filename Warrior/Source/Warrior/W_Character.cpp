@@ -20,7 +20,7 @@ AW_Character::AW_Character()
 	SpringArm->TargetArmLength = 400.0f;
 	SpringArm->SetRelativeRotation(FRotator(-15.0f, 0.0f, 0.0f));
 
-	static ConstructorHelpers::FObjectFinder<USkeletalMesh> SK_KWANG(TEXT("/Game/ParagonKwang/Characters/Heroes/Kwang/Meshes/Kwang_GDC.Kwang_GDC"));
+	static ConstructorHelpers::FObjectFinder<USkeletalMesh> SK_KWANG(TEXT("/Game/InfinityBladeWarriors/Character/CompleteCharacters/sk_CharM_Base.sk_CharM_Base"));
 
 	if (SK_KWANG.Succeeded())
 	{
@@ -29,7 +29,7 @@ AW_Character::AW_Character()
 
 	GetMesh()->SetAnimationMode(EAnimationMode::AnimationBlueprint);
 
-	static ConstructorHelpers::FClassFinder<UAnimInstance> WARRIOR_ANIM(TEXT("/Game/ParagonKwang/Characters/Heroes/Kwang/Animations/WarriorAnimBP.WarriorAnimBP_C"));
+	static ConstructorHelpers::FClassFinder<UAnimInstance> WARRIOR_ANIM(TEXT("/Game/InfinityBladeWarriors/Animation/WarriorAnimBp.WarriorAnimBp_C"));
 
 	if (WARRIOR_ANIM.Succeeded())
 	{
@@ -40,7 +40,7 @@ AW_Character::AW_Character()
 
 	ArmLengthSpeed = 3.0f;
 	ArmRotationSpeed = 10.0f;
-	GetCharacterMovement()->JumpZVelocity = 600.0f;
+	GetCharacterMovement()->JumpZVelocity = 400.0f;
 
 	IsAttacking = false;
 	MaxCombo = 4;
