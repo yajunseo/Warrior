@@ -113,6 +113,11 @@ void EmptyLinkFunctionForGeneratedCodeW_AnimInstance() {}
 		static void NewProp_IsAttack_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_IsAttack;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_IsDead_MetaData[];
+#endif
+		static void NewProp_IsDead_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_IsDead;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AttackMontage_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_AttackMontage;
@@ -169,6 +174,18 @@ void EmptyLinkFunctionForGeneratedCodeW_AnimInstance() {}
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UW_AnimInstance_Statics::NewProp_IsAttack = { "IsAttack", nullptr, (EPropertyFlags)0x0040000000000015, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UW_AnimInstance), &Z_Construct_UClass_UW_AnimInstance_Statics::NewProp_IsAttack_SetBit, METADATA_PARAMS(Z_Construct_UClass_UW_AnimInstance_Statics::NewProp_IsAttack_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UW_AnimInstance_Statics::NewProp_IsAttack_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UW_AnimInstance_Statics::NewProp_IsDead_MetaData[] = {
+		{ "AllowPrivateAccess", "TRUE" },
+		{ "Category", "Pawn" },
+		{ "ModuleRelativePath", "W_AnimInstance.h" },
+	};
+#endif
+	void Z_Construct_UClass_UW_AnimInstance_Statics::NewProp_IsDead_SetBit(void* Obj)
+	{
+		((UW_AnimInstance*)Obj)->IsDead = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UW_AnimInstance_Statics::NewProp_IsDead = { "IsDead", nullptr, (EPropertyFlags)0x0040000000000015, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UW_AnimInstance), &Z_Construct_UClass_UW_AnimInstance_Statics::NewProp_IsDead_SetBit, METADATA_PARAMS(Z_Construct_UClass_UW_AnimInstance_Statics::NewProp_IsDead_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UW_AnimInstance_Statics::NewProp_IsDead_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UW_AnimInstance_Statics::NewProp_AttackMontage_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Attack" },
@@ -180,6 +197,7 @@ void EmptyLinkFunctionForGeneratedCodeW_AnimInstance() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UW_AnimInstance_Statics::NewProp_CurrentPawnSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UW_AnimInstance_Statics::NewProp_IsInAir,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UW_AnimInstance_Statics::NewProp_IsAttack,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UW_AnimInstance_Statics::NewProp_IsDead,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UW_AnimInstance_Statics::NewProp_AttackMontage,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UW_AnimInstance_Statics::StaticCppClassTypeInfo = {
@@ -209,7 +227,7 @@ void EmptyLinkFunctionForGeneratedCodeW_AnimInstance() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UW_AnimInstance, 2579681811);
+	IMPLEMENT_CLASS(UW_AnimInstance, 1530322151);
 	template<> WARRIOR_API UClass* StaticClass<UW_AnimInstance>()
 	{
 		return UW_AnimInstance::StaticClass();

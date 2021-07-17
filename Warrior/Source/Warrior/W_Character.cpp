@@ -45,6 +45,8 @@ AW_Character::AW_Character()
 	IsAttacking = false;
 	MaxCombo = 4;
 	AttackEndComboState();
+
+	GetCapsuleComponent()->SetCollisionProfileName(TEXT("W_Character"));
 }
 
 // Called when the game starts or when spawned
@@ -70,6 +72,8 @@ void AW_Character::PostInitializeComponents()
 			AW_Anim->JumpToAttackMontageSection(CurrentCombo);
 		}
 	});
+
+	AW_Anim->OnAttackHitCheck.AddUObject(this, &AW_Character::AttackCheck);
 }
 
 void AW_Character::SetViewMode(EViewMode NewControlMode)
@@ -151,6 +155,18 @@ void AW_Character::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 	PlayerInputComponent->BindAction(TEXT("ViewChange"), EInputEvent::IE_Pressed, this, &AW_Character::ViewChange);
 	PlayerInputComponent->BindAction(TEXT("Jump"), EInputEvent::IE_Pressed, this, &ACharacter::Jump);
 	PlayerInputComponent->BindAction(TEXT("Attack"), EInputEvent::IE_Pressed, this, &AW_Character::Attack);
+}
+
+float AW_Character::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
+{
+	float FinalDamage = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
+	UE_LOG(LogTemp, Warning, TEXT("Damage"));
+	if (FinalDamage > 0.0f)
+	{
+		AW_Anim->SetDeadAnim();
+		SetActorEnableCollision(false);
+	}
+	return FinalDamage;
 }
 
 void AW_Character::MoveForward(float NewAxisValue)
@@ -242,7 +258,6 @@ void AW_Character::AttackStartComboState()
 	CanNextCombo = true;
 	IsComboInputOn = false;
 	CurrentCombo = FMath::Clamp<int32>(CurrentCombo + 1, 1, MaxCombo);
-	UE_LOG(LogTemp, Warning, TEXT("%d"), CurrentCombo);
 }
 
 void AW_Character::AttackEndComboState()
@@ -250,4 +265,27 @@ void AW_Character::AttackEndComboState()
 	CanNextCombo = false;
 	IsComboInputOn = false;
 	CurrentCombo = 0;
+}
+
+void AW_Character::AttackCheck()
+{
+	FHitResult HitResult;
+	FCollisionQueryParams Params(NAME_None, false, this);
+	bool bResult = GetWorld()->SweepSingleByChannel(
+		HitResult,
+		GetActorLocation(),
+		GetActorLocation() + GetActorForwardVector() * 200.0f,
+		FQuat::Identity,
+		ECollisionChannel::ECC_GameTraceChannel2,
+		FCollisionShape::MakeSphere(50.0f),
+		Params
+	);
+	if (bResult)
+	{
+		if (HitResult.Actor.IsValid())
+		{
+			FDamageEvent DamageEvent;
+			HitResult.Actor->TakeDamage(50.0f, DamageEvent, GetController(), this);
+		}
+	}
 }

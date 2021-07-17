@@ -9,6 +9,7 @@ UW_AnimInstance::UW_AnimInstance()
 	CurrentPawnSpeed = 0.0f;
 	IsInAir = false;
 	IsAttack = false;
+	IsDead = false;
 
 	static ConstructorHelpers::FObjectFinder<UAnimMontage> ATTACK_MONTAGE(TEXT("/Game/InfinityBladeWarriors/Animation/WeaponAttackMontage.WeaponAttackMontage"));
 	if (ATTACK_MONTAGE.Succeeded())
@@ -23,11 +24,15 @@ void UW_AnimInstance::NativeUpdateAnimation(float DeltaSeconds)
 	Super::NativeUpdateAnimation(DeltaSeconds);
 
 	auto Pawn = TryGetPawnOwner();
-	if (::IsValid(Pawn))
+	if (!::IsValid(Pawn))
+		return;
+
+	if (!IsDead)
 	{
 		CurrentPawnSpeed = Pawn->GetVelocity().Size();
 		auto Character = Cast<ACharacter>(Pawn);
 		IsInAir = Character->GetCharacterMovement()->IsFalling();
+
 		auto Character2 = Cast<AW_Character>(Character);
 		IsAttack = Character2->GetAttackState();
 	}
