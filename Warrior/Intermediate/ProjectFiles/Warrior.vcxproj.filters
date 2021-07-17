@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Warrior.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{CEBDADC3-6671-435C-AABB-36511653516C}</UniqueIdentifier>
+      <UniqueIdentifier>{340459C9-AA24-4B8D-B414-BBCD2093C29B}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Warrior.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{308B1511-B9F1-4045-ACBC-04650D8B68F8}</UniqueIdentifier>
+      <UniqueIdentifier>{5924A3F9-C2D5-4D92-9D30-7E455E31FA06}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,7 +30,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Warrior">
-      <UniqueIdentifier>{5C1D4E00-8F05-47DB-895C-6D7CAF244631}</UniqueIdentifier>
+      <UniqueIdentifier>{BC83B151-ADAE-49DD-AEEF-7BD9870271C6}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Warrior\Warrior.Build.cs">
       <Filter>Source\Warrior</Filter>
@@ -71,6 +71,12 @@
     <ClInclude Include="..\..\Source\Warrior\W_GameMode.h">
       <Filter>Source\Warrior</Filter>
     </ClInclude>
+    <ClCompile Include="..\..\Source\Warrior\W_ItemBox.cpp">
+      <Filter>Source\Warrior</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Warrior\W_ItemBox.h">
+      <Filter>Source\Warrior</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Warrior\W_Pawn.cpp">
       <Filter>Source\Warrior</Filter>
     </ClCompile>
@@ -81,6 +87,12 @@
       <Filter>Source\Warrior</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Warrior\W_PlayerController.h">
+      <Filter>Source\Warrior</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Warrior\W_Weapon.cpp">
+      <Filter>Source\Warrior</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Warrior\W_Weapon.h">
       <Filter>Source\Warrior</Filter>
     </ClInclude>
   </ItemGroup>

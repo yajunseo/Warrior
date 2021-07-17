@@ -3,6 +3,7 @@
 
 #include "W_Character.h"
 #include "W_AnimInstance.h"
+#include "W_Weapon.h"
 
 // Sets default values
 AW_Character::AW_Character()
@@ -54,6 +55,13 @@ void AW_Character::BeginPlay()
 {
 	Super::BeginPlay();
 
+	//FName WeaponSocket(TEXT("hand_rSocket"));
+
+	//auto CurWeapon = GetWorld()->SpawnActor<AW_Weapon>(FVector::ZeroVector, FRotator::ZeroRotator);
+	//if (CurWeapon != nullptr)
+	//{
+	//	CurWeapon->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetNotIncludingScale, WeaponSocket);
+	//}
 }
 
 void AW_Character::PostInitializeComponents()
@@ -169,29 +177,51 @@ float AW_Character::TakeDamage(float DamageAmount, FDamageEvent const& DamageEve
 	return FinalDamage;
 }
 
+bool AW_Character::CanSetWeapon()
+{
+	return (CurrentWeapon == nullptr);
+}
+
+void AW_Character::SetWeapon(class AW_Weapon* NewWeapon)
+{
+	FName WeaponSocket(TEXT("hand_rSocket"));
+	if (NewWeapon != nullptr)
+	{
+		NewWeapon->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetNotIncludingScale, WeaponSocket);
+		NewWeapon->SetOwner(this);
+		CurrentWeapon = NewWeapon;
+	}
+}
+
 void AW_Character::MoveForward(float NewAxisValue)
 {
-	switch (CurrentControlMode)
+	if (!IsAttacking)
 	{
-	case EViewMode::THIRD_PERSON_VIEW1:
-		AddMovementInput(FRotationMatrix(FRotator(0.0f, GetControlRotation().Yaw, 0.0f)).GetUnitAxis(EAxis::X), NewAxisValue);
-		break;
-	case EViewMode::THIRD_PERSON_VIEW2:
-		DirectionToMove.X = NewAxisValue;
-		break;
+		switch (CurrentControlMode)
+		{
+		case EViewMode::THIRD_PERSON_VIEW1:
+			AddMovementInput(FRotationMatrix(FRotator(0.0f, GetControlRotation().Yaw, 0.0f)).GetUnitAxis(EAxis::X), NewAxisValue);
+			break;
+		case EViewMode::THIRD_PERSON_VIEW2:
+			DirectionToMove.X = NewAxisValue;
+			break;
+		}
 	}
 }
 
 void AW_Character::MoveRight(float NewAxisValue)
 {
-	switch (CurrentControlMode)
+	if (!IsAttacking)
 	{
-	case EViewMode::THIRD_PERSON_VIEW1:
-		AddMovementInput(FRotationMatrix(FRotator(0.0f, GetControlRotation().Yaw, 0.0f)).GetUnitAxis(EAxis::Y), NewAxisValue);
-		break;
-	case EViewMode::THIRD_PERSON_VIEW2:
-		DirectionToMove.Y = NewAxisValue;
-		break;
+		switch (CurrentControlMode)
+		{
+		case EViewMode::THIRD_PERSON_VIEW1:
+			AddMovementInput(FRotationMatrix(FRotator(0.0f, GetControlRotation().Yaw, 0.0f)).GetUnitAxis(EAxis::Y), NewAxisValue);
+			break;
+		case EViewMode::THIRD_PERSON_VIEW2:
+			DirectionToMove.Y = NewAxisValue;
+			break;
+		}
 	}
 }
 

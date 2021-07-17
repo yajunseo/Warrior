@@ -42,11 +42,20 @@ public:
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 	virtual float TakeDamage(float DamageAmount, struct FDamageEvent const& DamageEvent, class AController* EventInstigator, AActor* DamageCauser) override;
 
+	bool CanSetWeapon();
+	void SetWeapon(class AW_Weapon* NewWeapon);
+
 	UPROPERTY(VisibleAnywhere, Category = Camera)
 		USpringArmComponent* SpringArm;
 
 	UPROPERTY(VisibleAnywhere, Category = Camera)
 		UCameraComponent* Camera;
+
+	UPROPERTY(VisibleAnywhere, Category = Weapon)
+		USkeletalMeshComponent* Weapon;
+
+	UPROPERTY(VisibleAnywhere, Category = Weapon)
+		class AW_Weapon* CurrentWeapon;
 
 private:
 	void MoveForward(float NewAxisValue);
