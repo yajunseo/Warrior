@@ -47,6 +47,8 @@ AW_Character::AW_Character()
 	{
 		HPBarWidget->SetWidgetClass(UI_HUD.Class);
 		HPBarWidget->SetDrawSize(FVector2D(150.0f, 50.0f));
+
+		WarriorWidget = UI_HUD.Class;
 	}
 
 	HPBarWidget->SetRelativeLocation(FVector(0.0f, 0.0f, 180.0f));
@@ -66,12 +68,6 @@ AW_Character::AW_Character()
 	TotalHP = 100;
 	CurrentHP = 100;
 	AttackDamge = 30;
-
-	auto HPWidget = Cast<UW_WarriorWidget>(HPBarWidget);
-	if (HPWidget != nullptr)
-	{
-		HPWidget->UpdateHPWidget(CurrentHP, TotalHP);
-	}
 }
 
 // Called when the game starts or when spawned
@@ -79,8 +75,6 @@ void AW_Character::BeginPlay()
 {
 	Super::BeginPlay();
 
-	/*auto HPWidget = Cast<UW_WarriorWidget>(HPBarWidget);
-	HPWidget->UpdateHPWidget(CurrentHP, TotalHP);*/
 }
 
 void AW_Character::PostInitializeComponents()
@@ -217,6 +211,11 @@ void AW_Character::SetWeapon(class AW_Weapon* NewWeapon)
 		NewWeapon->SetOwner(this);
 		CurrentWeapon = NewWeapon;
 	}
+}
+
+float AW_Character::UpdateHPBarPercent()
+{
+	return CurrentHP / TotalHP;
 }
 
 void AW_Character::MoveForward(float NewAxisValue)

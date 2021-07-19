@@ -71,7 +71,7 @@ void EmptyLinkFunctionForGeneratedCodeW_WarriorWidget() {}
 		{ "ModuleRelativePath", "W_WarriorWidget.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_UW_WarriorWidget_Statics::NewProp_WarriorActor = { "WarriorActor", nullptr, (EPropertyFlags)0x0044000000020815, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UW_WarriorWidget, WarriorActor), Z_Construct_UClass_AW_Character_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_UW_WarriorWidget_Statics::NewProp_WarriorActor_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UW_WarriorWidget_Statics::NewProp_WarriorActor_MetaData)) };
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_UW_WarriorWidget_Statics::NewProp_WarriorActor = { "WarriorActor", nullptr, (EPropertyFlags)0x0044000000000005, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UW_WarriorWidget, WarriorActor), Z_Construct_UClass_AW_Character_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_UW_WarriorWidget_Statics::NewProp_WarriorActor_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UW_WarriorWidget_Statics::NewProp_WarriorActor_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UW_WarriorWidget_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UW_WarriorWidget_Statics::NewProp_HPProgressBar,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UW_WarriorWidget_Statics::NewProp_WarriorActor,
@@ -103,7 +103,7 @@ void EmptyLinkFunctionForGeneratedCodeW_WarriorWidget() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UW_WarriorWidget, 2381958138);
+	IMPLEMENT_CLASS(UW_WarriorWidget, 3782344235);
 	template<> WARRIOR_API UClass* StaticClass<UW_WarriorWidget>()
 	{
 		return UW_WarriorWidget::StaticClass();

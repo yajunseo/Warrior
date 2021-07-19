@@ -60,9 +60,9 @@ public:
 	UPROPERTY(VisibleAnywhere, Category = UI)
 		class UWidgetComponent* HPBarWidget;
 
-	UPROPERTY()
-		class UProgressBar* HPProgressBar;
-
+	UFUNCTION(BlueprintCallable)
+		float UpdateHPBarPercent();
+	
 private:
 	void MoveForward(float NewAxisValue);
 	void MoveRight(float NewAxisValue);
@@ -99,9 +99,17 @@ private:
 	UPROPERTY(VisibleInstanceOnly, BlueprintReadOnly, Category = Attack, Meta = (AllowPrivateAccess = true))
 		int32 MaxCombo;
 
-	float TotalHP;
-	float CurrentHP;
-	float AttackDamge;
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = State, Meta = (AllowPrivateAccess = true))
+		float TotalHP;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = State, Meta = (AllowPrivateAccess = true))
+		float CurrentHP;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = State, Meta = (AllowPrivateAccess = true))
+		float AttackDamge;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI, Meta = (AllowPrivateAccess = true))
+		TSubclassOf<class UUserWidget> WarriorWidget;
 
 public:
 	bool GetAttackState() { return IsAttacking; };

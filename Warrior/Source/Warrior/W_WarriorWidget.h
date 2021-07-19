@@ -26,8 +26,9 @@ private:
 	UPROPERTY()
 		class UProgressBar* HPProgressBar;
 
-	UPROPERTY(VisibleInstanceOnly, BlueprintReadOnly, Category = Actor, Meta = (AllowPrivateAccess = true))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Actor, Meta = (AllowPrivateAccess = true))
 		TSubclassOf<class AW_Character> WarriorActor;
+
 
 private:
 	float CurrentHP;
