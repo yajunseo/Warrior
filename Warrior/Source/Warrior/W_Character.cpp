@@ -4,6 +4,9 @@
 #include "W_Character.h"
 #include "W_AnimInstance.h"
 #include "W_Weapon.h"
+#include "Components/WidgetComponent.h"
+#include "Components/ProgressBar.h"
+#include "W_WarriorWidget.h"
 
 // Sets default values
 AW_Character::AW_Character()
@@ -11,9 +14,11 @@ AW_Character::AW_Character()
  	// Set this character to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SPRINGARM"));
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("CAMERA"));
+	HPBarWidget = CreateDefaultSubobject<UWidgetComponent>(TEXT("HPBARWIDGET"));
 
 	SpringArm->SetupAttachment(GetCapsuleComponent());
 	Camera->SetupAttachment(SpringArm);
+	HPBarWidget->SetupAttachment(GetMesh());
 
 	GetCapsuleComponent()->SetCapsuleHalfHeight(95);
 	GetMesh()->SetRelativeLocationAndRotation(FVector(0.0f, 0.0f, -97.0f), FRotator(0.0f, -90.0f, 0.0f));
@@ -22,7 +27,6 @@ AW_Character::AW_Character()
 	SpringArm->SetRelativeRotation(FRotator(-15.0f, 0.0f, 0.0f));
 
 	static ConstructorHelpers::FObjectFinder<USkeletalMesh> SK_KWANG(TEXT("/Game/InfinityBladeWarriors/Character/CompleteCharacters/sk_CharM_Base.sk_CharM_Base"));
-
 	if (SK_KWANG.Succeeded())
 	{
 		GetMesh()->SetSkeletalMesh(SK_KWANG.Object);
@@ -31,11 +35,21 @@ AW_Character::AW_Character()
 	GetMesh()->SetAnimationMode(EAnimationMode::AnimationBlueprint);
 
 	static ConstructorHelpers::FClassFinder<UAnimInstance> WARRIOR_ANIM(TEXT("/Game/InfinityBladeWarriors/Animation/WarriorAnimBp.WarriorAnimBp_C"));
-
 	if (WARRIOR_ANIM.Succeeded())
 	{
 		GetMesh()->SetAnimInstanceClass(WARRIOR_ANIM.Class);
 	}
+
+	HPBarWidget->SetRelativeLocation(FVector(0.0f, 0.0f, 180.0f));
+	HPBarWidget->SetWidgetSpace(EWidgetSpace::Screen);
+	static ConstructorHelpers::FClassFinder<UUserWidget> UI_HUD(TEXT("/Game/UI/UI_HPBar.UI_HPBar_C"));
+	if (UI_HUD.Succeeded())
+	{
+		HPBarWidget->SetWidgetClass(UI_HUD.Class);
+		HPBarWidget->SetDrawSize(FVector2D(150.0f, 50.0f));
+	}
+
+	HPBarWidget->SetRelativeLocation(FVector(0.0f, 0.0f, 180.0f));
 
 	SetViewMode(EViewMode::THIRD_PERSON_VIEW1);
 
@@ -48,6 +62,16 @@ AW_Character::AW_Character()
 	AttackEndComboState();
 
 	GetCapsuleComponent()->SetCollisionProfileName(TEXT("W_Character"));
+
+	TotalHP = 100;
+	CurrentHP = 100;
+	AttackDamge = 30;
+
+	auto HPWidget = Cast<UW_WarriorWidget>(HPBarWidget);
+	if (HPWidget != nullptr)
+	{
+		HPWidget->UpdateHPWidget(CurrentHP, TotalHP);
+	}
 }
 
 // Called when the game starts or when spawned
@@ -55,13 +79,8 @@ void AW_Character::BeginPlay()
 {
 	Super::BeginPlay();
 
-	//FName WeaponSocket(TEXT("hand_rSocket"));
-
-	//auto CurWeapon = GetWorld()->SpawnActor<AW_Weapon>(FVector::ZeroVector, FRotator::ZeroRotator);
-	//if (CurWeapon != nullptr)
-	//{
-	//	CurWeapon->AttachToComponent(GetMesh(), FAttachmentTransformRules::SnapToTargetNotIncludingScale, WeaponSocket);
-	//}
+	/*auto HPWidget = Cast<UW_WarriorWidget>(HPBarWidget);
+	HPWidget->UpdateHPWidget(CurrentHP, TotalHP);*/
 }
 
 void AW_Character::PostInitializeComponents()
@@ -123,6 +142,7 @@ void AW_Character::SetViewMode(EViewMode NewControlMode)
 	}
 }
 
+
 // Called every frame
 void AW_Character::Tick(float DeltaTime)
 {
@@ -168,8 +188,14 @@ void AW_Character::SetupPlayerInputComponent(UInputComponent* PlayerInputCompone
 float AW_Character::TakeDamage(float DamageAmount, FDamageEvent const& DamageEvent, AController* EventInstigator, AActor* DamageCauser)
 {
 	float FinalDamage = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
-	UE_LOG(LogTemp, Warning, TEXT("Damage"));
-	if (FinalDamage > 0.0f)
+
+	CurrentHP = FMath::Clamp<float>(CurrentHP - FinalDamage, 0, TotalHP);
+
+	/*auto HPWidget = Cast<UW_WarriorWidget>(HPBarWidget);
+	if (HPWidget != nullptr)
+		HPWidget->UpdateHPWidget(CurrentHP, TotalHP);*/
+
+	if (CurrentHP <= 0.0f)
 	{
 		AW_Anim->SetDeadAnim();
 		SetActorEnableCollision(false);
@@ -315,7 +341,7 @@ void AW_Character::AttackCheck()
 		if (HitResult.Actor.IsValid())
 		{
 			FDamageEvent DamageEvent;
-			HitResult.Actor->TakeDamage(50.0f, DamageEvent, GetController(), this);
+			HitResult.Actor->TakeDamage(AttackDamge, DamageEvent, GetController(), this);
 		}
 	}
 }

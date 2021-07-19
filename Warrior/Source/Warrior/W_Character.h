@@ -57,6 +57,12 @@ public:
 	UPROPERTY(VisibleAnywhere, Category = Weapon)
 		class AW_Weapon* CurrentWeapon;
 
+	UPROPERTY(VisibleAnywhere, Category = UI)
+		class UWidgetComponent* HPBarWidget;
+
+	UPROPERTY()
+		class UProgressBar* HPProgressBar;
+
 private:
 	void MoveForward(float NewAxisValue);
 	void MoveRight(float NewAxisValue);
@@ -93,6 +99,14 @@ private:
 	UPROPERTY(VisibleInstanceOnly, BlueprintReadOnly, Category = Attack, Meta = (AllowPrivateAccess = true))
 		int32 MaxCombo;
 
+	float TotalHP;
+	float CurrentHP;
+	float AttackDamge;
+
 public:
 	bool GetAttackState() { return IsAttacking; };
+	void SetTotalHP(float hp) { TotalHP = hp; };
+	float GetTotalHP() { return TotalHP; };
+	void SetCurrentHP(float hp) { CurrentHP = hp; };
+	float GetCurrentHP() { return CurrentHP; };
 };
