@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Warrior.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{3CA2A29A-674A-4D07-8DA6-4611F41F9DCA}</UniqueIdentifier>
+      <UniqueIdentifier>{6FB4EE68-C8B2-49FA-9269-BE0D290242D3}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Warrior.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{A207BE18-2737-4C7F-BE22-E4A1BB1FDF4A}</UniqueIdentifier>
+      <UniqueIdentifier>{622A7240-DE3C-40BB-B1A8-F46BD09A1210}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,7 +30,7 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Warrior">
-      <UniqueIdentifier>{0172189A-121B-4664-811E-835C6309DC4F}</UniqueIdentifier>
+      <UniqueIdentifier>{00F2BB55-FE72-4626-86FA-88F0F9E24C17}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Warrior\Warrior.Build.cs">
       <Filter>Source\Warrior</Filter>
@@ -63,6 +63,18 @@
       <Filter>Source\Warrior</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Warrior\W_Character.h">
+      <Filter>Source\Warrior</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Warrior\W_CharacterStatComponent.cpp">
+      <Filter>Source\Warrior</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Warrior\W_CharacterStatComponent.h">
+      <Filter>Source\Warrior</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Warrior\W_GameInstance.cpp">
+      <Filter>Source\Warrior</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Warrior\W_GameInstance.h">
       <Filter>Source\Warrior</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Warrior\W_GameMode.cpp">

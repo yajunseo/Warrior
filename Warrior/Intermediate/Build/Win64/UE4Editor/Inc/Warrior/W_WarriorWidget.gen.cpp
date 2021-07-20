@@ -18,8 +18,6 @@ void EmptyLinkFunctionForGeneratedCodeW_WarriorWidget() {}
 	UMG_API UClass* Z_Construct_UClass_UUserWidget();
 	UPackage* Z_Construct_UPackage__Script_Warrior();
 	UMG_API UClass* Z_Construct_UClass_UProgressBar_NoRegister();
-	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
-	WARRIOR_API UClass* Z_Construct_UClass_AW_Character_NoRegister();
 // End Cross Module References
 	void UW_WarriorWidget::StaticRegisterNativesUW_WarriorWidget()
 	{
@@ -38,10 +36,6 @@ void EmptyLinkFunctionForGeneratedCodeW_WarriorWidget() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_HPProgressBar_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_HPProgressBar;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_WarriorActor_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FClassPropertyParams NewProp_WarriorActor;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -64,17 +58,8 @@ void EmptyLinkFunctionForGeneratedCodeW_WarriorWidget() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UW_WarriorWidget_Statics::NewProp_HPProgressBar = { "HPProgressBar", nullptr, (EPropertyFlags)0x0040000000080008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UW_WarriorWidget, HPProgressBar), Z_Construct_UClass_UProgressBar_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UW_WarriorWidget_Statics::NewProp_HPProgressBar_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UW_WarriorWidget_Statics::NewProp_HPProgressBar_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UW_WarriorWidget_Statics::NewProp_WarriorActor_MetaData[] = {
-		{ "AllowPrivateAccess", "TRUE" },
-		{ "Category", "Actor" },
-		{ "ModuleRelativePath", "W_WarriorWidget.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_UW_WarriorWidget_Statics::NewProp_WarriorActor = { "WarriorActor", nullptr, (EPropertyFlags)0x0044000000000005, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UW_WarriorWidget, WarriorActor), Z_Construct_UClass_AW_Character_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_UW_WarriorWidget_Statics::NewProp_WarriorActor_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UW_WarriorWidget_Statics::NewProp_WarriorActor_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UW_WarriorWidget_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UW_WarriorWidget_Statics::NewProp_HPProgressBar,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UW_WarriorWidget_Statics::NewProp_WarriorActor,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UW_WarriorWidget_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UW_WarriorWidget>::IsAbstract,
@@ -103,7 +88,7 @@ void EmptyLinkFunctionForGeneratedCodeW_WarriorWidget() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UW_WarriorWidget, 3782344235);
+	IMPLEMENT_CLASS(UW_WarriorWidget, 3320803610);
 	template<> WARRIOR_API UClass* StaticClass<UW_WarriorWidget>()
 	{
 		return UW_WarriorWidget::StaticClass();

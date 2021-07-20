@@ -4,6 +4,7 @@
 #include "W_Character.h"
 #include "W_AnimInstance.h"
 #include "W_Weapon.h"
+#include "W_CharacterStatComponent.h"
 #include "Components/WidgetComponent.h"
 #include "Components/ProgressBar.h"
 #include "W_WarriorWidget.h"
@@ -15,6 +16,7 @@ AW_Character::AW_Character()
 	SpringArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("SPRINGARM"));
 	Camera = CreateDefaultSubobject<UCameraComponent>(TEXT("CAMERA"));
 	HPBarWidget = CreateDefaultSubobject<UWidgetComponent>(TEXT("HPBARWIDGET"));
+	CharacterStat = CreateDefaultSubobject<UW_CharacterStatComponent>(TEXT("CHARACTERSTAT"));
 
 	SpringArm->SetupAttachment(GetCapsuleComponent());
 	Camera->SetupAttachment(SpringArm);
@@ -47,11 +49,8 @@ AW_Character::AW_Character()
 	{
 		HPBarWidget->SetWidgetClass(UI_HUD.Class);
 		HPBarWidget->SetDrawSize(FVector2D(150.0f, 50.0f));
-
-		WarriorWidget = UI_HUD.Class;
+		UE_LOG(LogTemp, Warning, TEXT("55"));
 	}
-
-	HPBarWidget->SetRelativeLocation(FVector(0.0f, 0.0f, 180.0f));
 
 	SetViewMode(EViewMode::THIRD_PERSON_VIEW1);
 
@@ -65,9 +64,6 @@ AW_Character::AW_Character()
 
 	GetCapsuleComponent()->SetCollisionProfileName(TEXT("W_Character"));
 
-	TotalHP = 100;
-	CurrentHP = 100;
-	AttackDamge = 30;
 }
 
 // Called when the game starts or when spawned
@@ -75,6 +71,11 @@ void AW_Character::BeginPlay()
 {
 	Super::BeginPlay();
 
+	UW_WarriorWidget* CharacterWIdget = Cast<UW_WarriorWidget>(HPBarWidget->GetUserWidgetObject());
+	if (CharacterWIdget != nullptr)
+	{
+		CharacterWIdget->BindCharacterStat(CharacterStat);
+	}
 }
 
 void AW_Character::PostInitializeComponents()
@@ -95,6 +96,11 @@ void AW_Character::PostInitializeComponents()
 	});
 
 	AW_Anim->OnAttackHitCheck.AddUObject(this, &AW_Character::AttackCheck);
+
+	CharacterStat->OnHPIsZero.AddLambda([this]() -> void {
+		AW_Anim->SetDeadAnim();
+		SetActorEnableCollision(false);
+	});
 }
 
 void AW_Character::SetViewMode(EViewMode NewControlMode)
@@ -183,17 +189,7 @@ float AW_Character::TakeDamage(float DamageAmount, FDamageEvent const& DamageEve
 {
 	float FinalDamage = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
 
-	CurrentHP = FMath::Clamp<float>(CurrentHP - FinalDamage, 0, TotalHP);
-
-	/*auto HPWidget = Cast<UW_WarriorWidget>(HPBarWidget);
-	if (HPWidget != nullptr)
-		HPWidget->UpdateHPWidget(CurrentHP, TotalHP);*/
-
-	if (CurrentHP <= 0.0f)
-	{
-		AW_Anim->SetDeadAnim();
-		SetActorEnableCollision(false);
-	}
+	CharacterStat->SetDamage(FinalDamage);
 	return FinalDamage;
 }
 
@@ -211,11 +207,6 @@ void AW_Character::SetWeapon(class AW_Weapon* NewWeapon)
 		NewWeapon->SetOwner(this);
 		CurrentWeapon = NewWeapon;
 	}
-}
-
-float AW_Character::UpdateHPBarPercent()
-{
-	return CurrentHP / TotalHP;
 }
 
 void AW_Character::MoveForward(float NewAxisValue)
@@ -340,7 +331,7 @@ void AW_Character::AttackCheck()
 		if (HitResult.Actor.IsValid())
 		{
 			FDamageEvent DamageEvent;
-			HitResult.Actor->TakeDamage(AttackDamge, DamageEvent, GetController(), this);
+			HitResult.Actor->TakeDamage(CharacterStat->GetAttack(), DamageEvent, GetController(), this);
 		}
 	}
 }

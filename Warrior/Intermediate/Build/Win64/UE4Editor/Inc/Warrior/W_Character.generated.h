@@ -17,14 +17,12 @@ class UAnimMontage;
 #define Warrior_Source_Warrior_W_Character_h_12_SPARSE_DATA
 #define Warrior_Source_Warrior_W_Character_h_12_RPC_WRAPPERS \
  \
-	DECLARE_FUNCTION(execOnAttackMontageEnded); \
-	DECLARE_FUNCTION(execUpdateHPBarPercent);
+	DECLARE_FUNCTION(execOnAttackMontageEnded);
 
 
 #define Warrior_Source_Warrior_W_Character_h_12_RPC_WRAPPERS_NO_PURE_DECLS \
  \
-	DECLARE_FUNCTION(execOnAttackMontageEnded); \
-	DECLARE_FUNCTION(execUpdateHPBarPercent);
+	DECLARE_FUNCTION(execOnAttackMontageEnded);
 
 
 #define Warrior_Source_Warrior_W_Character_h_12_INCLASS_NO_PURE_DECLS \
@@ -75,11 +73,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AW_Character); \
 	FORCEINLINE static uint32 __PPO__CanNextCombo() { return STRUCT_OFFSET(AW_Character, CanNextCombo); } \
 	FORCEINLINE static uint32 __PPO__IsComboInputOn() { return STRUCT_OFFSET(AW_Character, IsComboInputOn); } \
 	FORCEINLINE static uint32 __PPO__CurrentCombo() { return STRUCT_OFFSET(AW_Character, CurrentCombo); } \
-	FORCEINLINE static uint32 __PPO__MaxCombo() { return STRUCT_OFFSET(AW_Character, MaxCombo); } \
-	FORCEINLINE static uint32 __PPO__TotalHP() { return STRUCT_OFFSET(AW_Character, TotalHP); } \
-	FORCEINLINE static uint32 __PPO__CurrentHP() { return STRUCT_OFFSET(AW_Character, CurrentHP); } \
-	FORCEINLINE static uint32 __PPO__AttackDamge() { return STRUCT_OFFSET(AW_Character, AttackDamge); } \
-	FORCEINLINE static uint32 __PPO__WarriorWidget() { return STRUCT_OFFSET(AW_Character, WarriorWidget); }
+	FORCEINLINE static uint32 __PPO__MaxCombo() { return STRUCT_OFFSET(AW_Character, MaxCombo); }
 
 
 #define Warrior_Source_Warrior_W_Character_h_9_PROLOG

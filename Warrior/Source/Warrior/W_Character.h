@@ -57,11 +57,11 @@ public:
 	UPROPERTY(VisibleAnywhere, Category = Weapon)
 		class AW_Weapon* CurrentWeapon;
 
+	UPROPERTY(VisibleAnywhere, Category = Stat)
+		class UW_CharacterStatComponent* CharacterStat;
+
 	UPROPERTY(VisibleAnywhere, Category = UI)
 		class UWidgetComponent* HPBarWidget;
-
-	UFUNCTION(BlueprintCallable)
-		float UpdateHPBarPercent();
 	
 private:
 	void MoveForward(float NewAxisValue);
@@ -99,22 +99,7 @@ private:
 	UPROPERTY(VisibleInstanceOnly, BlueprintReadOnly, Category = Attack, Meta = (AllowPrivateAccess = true))
 		int32 MaxCombo;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = State, Meta = (AllowPrivateAccess = true))
-		float TotalHP;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = State, Meta = (AllowPrivateAccess = true))
-		float CurrentHP;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = State, Meta = (AllowPrivateAccess = true))
-		float AttackDamge;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = UI, Meta = (AllowPrivateAccess = true))
-		TSubclassOf<class UUserWidget> WarriorWidget;
 
 public:
 	bool GetAttackState() { return IsAttacking; };
-	void SetTotalHP(float hp) { TotalHP = hp; };
-	float GetTotalHP() { return TotalHP; };
-	void SetCurrentHP(float hp) { CurrentHP = hp; };
-	float GetCurrentHP() { return CurrentHP; };
 };

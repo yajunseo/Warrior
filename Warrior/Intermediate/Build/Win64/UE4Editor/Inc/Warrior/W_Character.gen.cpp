@@ -22,10 +22,9 @@ void EmptyLinkFunctionForGeneratedCodeW_Character() {}
 	ENGINE_API UClass* Z_Construct_UClass_UCameraComponent_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_USkeletalMeshComponent_NoRegister();
 	WARRIOR_API UClass* Z_Construct_UClass_AW_Weapon_NoRegister();
+	WARRIOR_API UClass* Z_Construct_UClass_UW_CharacterStatComponent_NoRegister();
 	UMG_API UClass* Z_Construct_UClass_UWidgetComponent_NoRegister();
 	WARRIOR_API UClass* Z_Construct_UClass_UW_AnimInstance_NoRegister();
-	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
-	UMG_API UClass* Z_Construct_UClass_UUserWidget_NoRegister();
 // End Cross Module References
 	DEFINE_FUNCTION(AW_Character::execOnAttackMontageEnded)
 	{
@@ -36,19 +35,11 @@ void EmptyLinkFunctionForGeneratedCodeW_Character() {}
 		P_THIS->OnAttackMontageEnded(Z_Param_Montage,Z_Param_bInterrupted);
 		P_NATIVE_END;
 	}
-	DEFINE_FUNCTION(AW_Character::execUpdateHPBarPercent)
-	{
-		P_FINISH;
-		P_NATIVE_BEGIN;
-		*(float*)Z_Param__Result=P_THIS->UpdateHPBarPercent();
-		P_NATIVE_END;
-	}
 	void AW_Character::StaticRegisterNativesAW_Character()
 	{
 		UClass* Class = AW_Character::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "OnAttackMontageEnded", &AW_Character::execOnAttackMontageEnded },
-			{ "UpdateHPBarPercent", &AW_Character::execUpdateHPBarPercent },
 		};
 		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
 	}
@@ -93,38 +84,6 @@ void EmptyLinkFunctionForGeneratedCodeW_Character() {}
 		}
 		return ReturnFunction;
 	}
-	struct Z_Construct_UFunction_AW_Character_UpdateHPBarPercent_Statics
-	{
-		struct W_Character_eventUpdateHPBarPercent_Parms
-		{
-			float ReturnValue;
-		};
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ReturnValue;
-		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
-#endif
-		static const UE4CodeGen_Private::FFunctionParams FuncParams;
-	};
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UFunction_AW_Character_UpdateHPBarPercent_Statics::NewProp_ReturnValue = { "ReturnValue", nullptr, (EPropertyFlags)0x0010000000000580, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(W_Character_eventUpdateHPBarPercent_Parms, ReturnValue), METADATA_PARAMS(nullptr, 0) };
-	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_AW_Character_UpdateHPBarPercent_Statics::PropPointers[] = {
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_AW_Character_UpdateHPBarPercent_Statics::NewProp_ReturnValue,
-	};
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AW_Character_UpdateHPBarPercent_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "W_Character.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AW_Character_UpdateHPBarPercent_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AW_Character, nullptr, "UpdateHPBarPercent", nullptr, nullptr, sizeof(W_Character_eventUpdateHPBarPercent_Parms), Z_Construct_UFunction_AW_Character_UpdateHPBarPercent_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AW_Character_UpdateHPBarPercent_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x04020401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AW_Character_UpdateHPBarPercent_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AW_Character_UpdateHPBarPercent_Statics::Function_MetaDataParams)) };
-	UFunction* Z_Construct_UFunction_AW_Character_UpdateHPBarPercent()
-	{
-		static UFunction* ReturnFunction = nullptr;
-		if (!ReturnFunction)
-		{
-			UE4CodeGen_Private::ConstructUFunction(ReturnFunction, Z_Construct_UFunction_AW_Character_UpdateHPBarPercent_Statics::FuncParams);
-		}
-		return ReturnFunction;
-	}
 	UClass* Z_Construct_UClass_AW_Character_NoRegister()
 	{
 		return AW_Character::StaticClass();
@@ -152,6 +111,10 @@ void EmptyLinkFunctionForGeneratedCodeW_Character() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CurrentWeapon_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CurrentWeapon;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CharacterStat_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_CharacterStat;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_HPBarWidget_MetaData[];
 #endif
@@ -183,22 +146,6 @@ void EmptyLinkFunctionForGeneratedCodeW_Character() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxCombo_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FIntPropertyParams NewProp_MaxCombo;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_TotalHP_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_TotalHP;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CurrentHP_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_CurrentHP;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AttackDamge_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_AttackDamge;
-#if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_WarriorWidget_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FClassPropertyParams NewProp_WarriorWidget;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -209,7 +156,6 @@ void EmptyLinkFunctionForGeneratedCodeW_Character() {}
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AW_Character_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_AW_Character_OnAttackMontageEnded, "OnAttackMontageEnded" }, // 321258540
-		{ &Z_Construct_UFunction_AW_Character_UpdateHPBarPercent, "UpdateHPBarPercent" }, // 3989625913
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_Character_Statics::Class_MetaDataParams[] = {
@@ -249,6 +195,14 @@ void EmptyLinkFunctionForGeneratedCodeW_Character() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AW_Character_Statics::NewProp_CurrentWeapon = { "CurrentWeapon", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_Character, CurrentWeapon), Z_Construct_UClass_AW_Weapon_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AW_Character_Statics::NewProp_CurrentWeapon_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_Character_Statics::NewProp_CurrentWeapon_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_Character_Statics::NewProp_CharacterStat_MetaData[] = {
+		{ "Category", "Stat" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "W_Character.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AW_Character_Statics::NewProp_CharacterStat = { "CharacterStat", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_Character, CharacterStat), Z_Construct_UClass_UW_CharacterStatComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AW_Character_Statics::NewProp_CharacterStat_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_Character_Statics::NewProp_CharacterStat_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_Character_Statics::NewProp_HPBarWidget_MetaData[] = {
 		{ "Category", "UI" },
@@ -315,43 +269,12 @@ void EmptyLinkFunctionForGeneratedCodeW_Character() {}
 	};
 #endif
 	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UClass_AW_Character_Statics::NewProp_MaxCombo = { "MaxCombo", nullptr, (EPropertyFlags)0x0040000000020815, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_Character, MaxCombo), METADATA_PARAMS(Z_Construct_UClass_AW_Character_Statics::NewProp_MaxCombo_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_Character_Statics::NewProp_MaxCombo_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_Character_Statics::NewProp_TotalHP_MetaData[] = {
-		{ "AllowPrivateAccess", "TRUE" },
-		{ "Category", "State" },
-		{ "ModuleRelativePath", "W_Character.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AW_Character_Statics::NewProp_TotalHP = { "TotalHP", nullptr, (EPropertyFlags)0x0040000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_Character, TotalHP), METADATA_PARAMS(Z_Construct_UClass_AW_Character_Statics::NewProp_TotalHP_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_Character_Statics::NewProp_TotalHP_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_Character_Statics::NewProp_CurrentHP_MetaData[] = {
-		{ "AllowPrivateAccess", "TRUE" },
-		{ "Category", "State" },
-		{ "ModuleRelativePath", "W_Character.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AW_Character_Statics::NewProp_CurrentHP = { "CurrentHP", nullptr, (EPropertyFlags)0x0040000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_Character, CurrentHP), METADATA_PARAMS(Z_Construct_UClass_AW_Character_Statics::NewProp_CurrentHP_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_Character_Statics::NewProp_CurrentHP_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_Character_Statics::NewProp_AttackDamge_MetaData[] = {
-		{ "AllowPrivateAccess", "TRUE" },
-		{ "Category", "State" },
-		{ "ModuleRelativePath", "W_Character.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AW_Character_Statics::NewProp_AttackDamge = { "AttackDamge", nullptr, (EPropertyFlags)0x0040000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_Character, AttackDamge), METADATA_PARAMS(Z_Construct_UClass_AW_Character_Statics::NewProp_AttackDamge_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_Character_Statics::NewProp_AttackDamge_MetaData)) };
-#if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_Character_Statics::NewProp_WarriorWidget_MetaData[] = {
-		{ "AllowPrivateAccess", "TRUE" },
-		{ "Category", "UI" },
-		{ "ModuleRelativePath", "W_Character.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AW_Character_Statics::NewProp_WarriorWidget = { "WarriorWidget", nullptr, (EPropertyFlags)0x0044000000000005, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_Character, WarriorWidget), Z_Construct_UClass_UUserWidget_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_AW_Character_Statics::NewProp_WarriorWidget_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_Character_Statics::NewProp_WarriorWidget_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AW_Character_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_Character_Statics::NewProp_SpringArm,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_Character_Statics::NewProp_Camera,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_Character_Statics::NewProp_Weapon,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_Character_Statics::NewProp_CurrentWeapon,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_Character_Statics::NewProp_CharacterStat,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_Character_Statics::NewProp_HPBarWidget,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_Character_Statics::NewProp_AW_Anim,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_Character_Statics::NewProp_IsAttacking,
@@ -359,10 +282,6 @@ void EmptyLinkFunctionForGeneratedCodeW_Character() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_Character_Statics::NewProp_IsComboInputOn,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_Character_Statics::NewProp_CurrentCombo,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_Character_Statics::NewProp_MaxCombo,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_Character_Statics::NewProp_TotalHP,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_Character_Statics::NewProp_CurrentHP,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_Character_Statics::NewProp_AttackDamge,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_Character_Statics::NewProp_WarriorWidget,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AW_Character_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AW_Character>::IsAbstract,
@@ -391,7 +310,7 @@ void EmptyLinkFunctionForGeneratedCodeW_Character() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AW_Character, 3414755823);
+	IMPLEMENT_CLASS(AW_Character, 1050350835);
 	template<> WARRIOR_API UClass* StaticClass<AW_Character>()
 	{
 		return AW_Character::StaticClass();

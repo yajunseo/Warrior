@@ -2,31 +2,30 @@
 
 
 #include "W_WarriorWidget.h"
+#include "W_CharacterStatComponent.h"
 #include "Components/ProgressBar.h"
-#include "W_Character.h"
+
+void UW_WarriorWidget::BindCharacterStat(UW_CharacterStatComponent* NewCharacterStat)
+{
+	CurrentCharacterStat = NewCharacterStat;
+	NewCharacterStat->OnHPChanged.AddUObject(this, &UW_WarriorWidget::UpdateHPWidget);
+}
 
 void UW_WarriorWidget::NativeConstruct()
 {
 	Super::NativeConstruct();
 
 	HPProgressBar = Cast<UProgressBar>(GetWidgetFromName(TEXT("PB_HPBAR")));
-
-	TotalHP = 100;
-	CurrentHP = 100;
-	//UpdateHPWidget(CurrentHP, TotalHP);
+	UpdateHPWidget();
 }
 
-void UW_WarriorWidget::NativeTick(const FGeometry& MyGeometry, float InDeltaTime)
+void UW_WarriorWidget::UpdateHPWidget()
 {
-	Super::NativeTick(MyGeometry, InDeltaTime);
-	//UpdateHPWidget(CurrentHP, TotalHP);
-}
-
-void UW_WarriorWidget::UpdateHPWidget(float currentHP, float totalHP)
-{
-	UE_LOG(LogTemp, Warning, TEXT("%f"), currentHP);
-	CurrentHP = currentHP;
-	TotalHP = totalHP;
-	if(HPProgressBar != nullptr)
-		HPProgressBar->SetPercent(CurrentHP / TotalHP);
+	if (CurrentCharacterStat.IsValid())
+	{
+		if (HPProgressBar != nullptr)
+		{
+			HPProgressBar->SetPercent(CurrentCharacterStat->GetHPRatio());
+		}
+	}
 }

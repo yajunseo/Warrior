@@ -61,8 +61,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UW_WarriorWidget); \
 
 
 #define Warrior_Source_Warrior_W_WarriorWidget_h_15_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__HPProgressBar() { return STRUCT_OFFSET(UW_WarriorWidget, HPProgressBar); } \
-	FORCEINLINE static uint32 __PPO__WarriorActor() { return STRUCT_OFFSET(UW_WarriorWidget, WarriorActor); }
+	FORCEINLINE static uint32 __PPO__HPProgressBar() { return STRUCT_OFFSET(UW_WarriorWidget, HPProgressBar); }
 
 
 #define Warrior_Source_Warrior_W_WarriorWidget_h_12_PROLOG

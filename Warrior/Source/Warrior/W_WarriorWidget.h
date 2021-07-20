@@ -15,30 +15,16 @@ class WARRIOR_API UW_WarriorWidget : public UUserWidget
 	GENERATED_BODY()
 	
 public:
+	void BindCharacterStat(class UW_CharacterStatComponent* NewCharacterStat);
 
 protected:
 
 	virtual void NativeConstruct() override;
-	virtual void NativeTick(const FGeometry& MyGeometry, float InDeltaTime) override;
+	void UpdateHPWidget();
 
 private:
+	TWeakObjectPtr<class UW_CharacterStatComponent> CurrentCharacterStat;
 
 	UPROPERTY()
 		class UProgressBar* HPProgressBar;
-
-	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Actor, Meta = (AllowPrivateAccess = true))
-		TSubclassOf<class AW_Character> WarriorActor;
-
-
-private:
-	float CurrentHP;
-	float TotalHP;
-
-public:
-	void SetTotalHP(float hp) { TotalHP = hp; };
-	float GetTotalHP() { return TotalHP; };
-	void SetCurrentHP(float hp) { CurrentHP = hp; };
-	float GetCurrentHP() { return CurrentHP; };
-
-	void UpdateHPWidget(float currentHP, float totalHP);
 };
