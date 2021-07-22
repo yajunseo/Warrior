@@ -36,7 +36,8 @@ void UW_CharacterStatComponent::SetNewLevel(int32 NewLevel)
 {
 	auto WGameInstance = Cast<UW_GameInstance>(UGameplayStatics::GetGameInstance(GetWorld()));
 
-	CurrentStatData = WGameInstance->GetCharacterData(NewLevel);
+	if(WGameInstance != nullptr)
+		CurrentStatData = WGameInstance->GetCharacterData(NewLevel);
 	if (CurrentStatData != nullptr)
 	{
 		Level = NewLevel;
@@ -51,7 +52,8 @@ void UW_CharacterStatComponent::SetNewLevel(int32 NewLevel)
 
 void UW_CharacterStatComponent::SetDamage(float NewDamage)
 {
-	SetHP(FMath::Clamp<float>(CurrentHP - NewDamage, 0.0f, CurrentStatData->MaxHP));
+	if(CurrentStatData != nullptr)
+		SetHP(FMath::Clamp<float>(CurrentHP - NewDamage, 0.0f, CurrentStatData->MaxHP));
 }
 
 void UW_CharacterStatComponent::SetHP(float NewHP)

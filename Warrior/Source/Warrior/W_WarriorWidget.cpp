@@ -15,7 +15,7 @@ void UW_WarriorWidget::NativeConstruct()
 {
 	Super::NativeConstruct();
 
-	HPProgressBar = Cast<UProgressBar>(GetWidgetFromName(TEXT("PB_HPBAR")));
+	HPProgressBar = Cast<UProgressBar>(GetWidgetFromName(TEXT("PB_HPBar")));
 	UpdateHPWidget();
 }
 
