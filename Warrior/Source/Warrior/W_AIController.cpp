@@ -20,7 +20,6 @@ AW_AIController::AW_AIController()
 	static ConstructorHelpers::FObjectFinder<UBehaviorTree> BTObject(TEXT("/Game/AI/BT_Warrior.BT_Warrior"));
 	if (BTObject.Succeeded())
 	{
-		UE_LOG(LogTemp, Warning, TEXT("11"));
 		BTAsset = BTObject.Object;
 	}
 }
@@ -31,11 +30,11 @@ void AW_AIController::OnPossess(APawn* InPawn)
 
 	if (UseBlackboard(BBAsset, Blackboard))
 	{
-		UE_LOG(LogTemp, Warning, TEXT("22"));
 		Blackboard->SetValueAsVector(HomePosKey, InPawn->GetActorLocation());
+		RunBehaviorTree(BTAsset);
 		if (!RunBehaviorTree(BTAsset))
 		{
-			UE_LOG(LogTemp, Warning, TEXT("33"));
+			UE_LOG(LogTemp, Warning, TEXT("AIController couldn't run behavior tree!"));
 		}
 	}
 }

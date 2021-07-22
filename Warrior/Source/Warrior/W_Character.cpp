@@ -50,7 +50,6 @@ AW_Character::AW_Character()
 	{
 		HPBarWidget->SetWidgetClass(UI_HUD.Class);
 		HPBarWidget->SetDrawSize(FVector2D(150.0f, 50.0f));
-		UE_LOG(LogTemp, Warning, TEXT("55"));
 	}
 
 	SetViewMode(EViewMode::THIRD_PERSON_VIEW1);
