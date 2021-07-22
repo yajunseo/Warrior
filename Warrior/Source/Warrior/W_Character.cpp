@@ -8,6 +8,7 @@
 #include "Components/WidgetComponent.h"
 #include "Components/ProgressBar.h"
 #include "W_WarriorWidget.h"
+#include "W_AIController.h"
 
 // Sets default values
 AW_Character::AW_Character()
@@ -64,6 +65,9 @@ AW_Character::AW_Character()
 
 	GetCapsuleComponent()->SetCollisionProfileName(TEXT("W_Character"));
 
+
+	AIControllerClass = AW_AIController::StaticClass();
+	AutoPossessAI = EAutoPossessAI::PlacedInWorldOrSpawned;
 }
 
 // Called when the game starts or when spawned
