@@ -70,21 +70,21 @@ void AW_ItemBox::OnCharacterOverlap(UPrimitiveComponent* OverlappedComp, AActor*
 
 	if (WCharacter != nullptr && WeaponItemClass != nullptr)
 	{
-		if (WCharacter->CanSetWeapon())
-		{
+	/*	if (WCharacter->CanSetWeapon())
+		{*/
 			auto NewWeapon = GetWorld()->SpawnActor<AW_Weapon>(WeaponItemClass, FVector::ZeroVector, FRotator::ZeroRotator);
 			WCharacter->SetWeapon(NewWeapon);
 
 			Effect->Activate(true);
-			Box->SetHiddenInGame(true, true);
-			SetActorEnableCollision(false);
-			Effect->OnSystemFinished.AddDynamic(this, &AW_ItemBox::OnEffectFinished);
-		}
+			//Box->SetHiddenInGame(true, true);
+			//SetActorEnableCollision(false);
+			//Effect->OnSystemFinished.AddDynamic(this, &AW_ItemBox::OnEffectFinished);
+	/*	}*/
 	}
 }
 
 void AW_ItemBox::OnEffectFinished(UParticleSystemComponent* PSystem)
 {
-	Destroy();
+	//Destroy();
 }
 

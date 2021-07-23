@@ -142,6 +142,12 @@ void AW_Character::SetViewMode(EViewMode NewControlMode)
 		GetCharacterMovement()->bUseControllerDesiredRotation = true;
 		GetCharacterMovement()->RotationRate = FRotator(0.0f, 720.0f, 0.0f);
 		break;
+	case EViewMode::NPC:
+		bUseControllerRotationYaw = false;
+		GetCharacterMovement()->bOrientRotationToMovement = false;
+		GetCharacterMovement()->bUseControllerDesiredRotation = true;
+		GetCharacterMovement()->RotationRate = FRotator(0.0f, 480.0f, 0.0f);
+		break;
 	}
 }
 
@@ -196,6 +202,23 @@ float AW_Character::TakeDamage(float DamageAmount, FDamageEvent const& DamageEve
 	return FinalDamage;
 }
 
+void AW_Character::PossessedBy(AController* NewController)
+{
+	Super::PossessedBy(NewController);
+
+	if (IsPlayerControlled())
+	{
+		SetViewMode(EViewMode::THIRD_PERSON_VIEW1);
+		GetCharacterMovement()->MaxWalkSpeed = 600.0f;
+	}
+
+	else
+	{
+		SetViewMode(EViewMode::NPC);
+		GetCharacterMovement()->MaxWalkSpeed = 300.0f;
+	}
+}
+
 bool AW_Character::CanSetWeapon()
 {
 	return (CurrentWeapon == nullptr);
@@ -203,6 +226,12 @@ bool AW_Character::CanSetWeapon()
 
 void AW_Character::SetWeapon(class AW_Weapon* NewWeapon)
 {
+	if (CurrentWeapon != nullptr)
+	{
+		CurrentWeapon->DetachAllSceneComponents(this->GetMesh(), FDetachmentTransformRules::KeepRelativeTransform);
+		CurrentWeapon->Destroy();
+	}
+
 	FName WeaponSocket(TEXT("hand_rSocket"));
 	if (NewWeapon != nullptr)
 	{

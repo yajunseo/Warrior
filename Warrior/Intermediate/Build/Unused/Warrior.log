@@ -2,11 +2,11 @@
   Building WarriorEditor...
   Using Visual Studio 2019 14.28.29910 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
   Building 4 actions with 12 processes...
-    [1/4] BTService_Detect.cpp
-    [2/4] UE4Editor-Warrior-0003.lib
-       C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\Warrior\UE4Editor-Warrior-0003.lib 라이브러리 및 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\Warrior\UE4Editor-Warrior-0003.exp 개체를 생성하고 있습니다.
-    [3/4] UE4Editor-Warrior-0003.dll
-       C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\Warrior\UE4Editor-Warrior-0003.suppressed.lib 라이브러리 및 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\Warrior\UE4Editor-Warrior-0003.suppressed.exp 개체를 생성하고 있습니다.
+    [1/4] W_Character.cpp
+    [2/4] UE4Editor-Warrior-0013.lib
+       C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\Warrior\UE4Editor-Warrior-0013.lib 라이브러리 및 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\Warrior\UE4Editor-Warrior-0013.exp 개체를 생성하고 있습니다.
+    [3/4] UE4Editor-Warrior-0013.dll
+       C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\Warrior\UE4Editor-Warrior-0013.suppressed.lib 라이브러리 및 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\Warrior\UE4Editor-Warrior-0013.suppressed.exp 개체를 생성하고 있습니다.
     [4/4] WarriorEditor.target
-  Total time in Parallel executor: 7.15 seconds
-  Total execution time: 8.28 seconds
+  Total time in Parallel executor: 6.29 seconds
+  Total execution time: 7.49 seconds
