@@ -8,6 +8,7 @@
 
 const FName AW_AIController::HomePosKey(TEXT("HomePos"));
 const FName AW_AIController::PatrolPosKey(TEXT("PatrolPos"));
+const FName AW_AIController::TargetKey(TEXT("Target"));
 
 AW_AIController::AW_AIController()
 {

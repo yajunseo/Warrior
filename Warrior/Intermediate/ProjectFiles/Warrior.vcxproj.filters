@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Warrior.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{210FB25C-4843-4A6D-9334-F8BF150363E4}</UniqueIdentifier>
+      <UniqueIdentifier>{EF72E399-A2EB-4472-AC58-529DE804F394}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Warrior.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{51FC0D27-B8B9-4F7D-B836-3539713BB582}</UniqueIdentifier>
+      <UniqueIdentifier>{F155D572-E86D-4DFF-A4F6-F3642EABA152}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,8 +30,20 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Warrior">
-      <UniqueIdentifier>{C1C5C1C6-50F6-4FBF-A738-CE232D7F0E56}</UniqueIdentifier>
+      <UniqueIdentifier>{6F78A912-754A-4C6F-BCB6-EC6122463CFE}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Warrior\BTService_Detect.cpp">
+      <Filter>Source\Warrior</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Warrior\BTService_Detect.h">
+      <Filter>Source\Warrior</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Warrior\BTTask_FindPatrolPos.cpp">
+      <Filter>Source\Warrior</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Warrior\BTTask_FindPatrolPos.h">
+      <Filter>Source\Warrior</Filter>
+    </ClInclude>
     <None Include="..\..\Source\Warrior\Warrior.Build.cs">
       <Filter>Source\Warrior</Filter>
     </None>
