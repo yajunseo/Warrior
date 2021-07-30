@@ -329,6 +329,7 @@ void AW_Character::OnAttackMontageEnded(UAnimMontage* Montage, bool bInterrupted
 {
 	IsAttacking = false;
 	AttackEndComboState();
+	OnAttackEnd.Broadcast();
 }
 
 void AW_Character::AttackStartComboState()

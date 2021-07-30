@@ -6,6 +6,8 @@
 #include "GameFramework/Character.h"
 #include "W_Character.generated.h"
 
+DECLARE_MULTICAST_DELEGATE(FOnAttackEndDelegate);
+
 UCLASS()
 class WARRIOR_API AW_Character : public ACharacter
 {
@@ -65,6 +67,9 @@ public:
 	UPROPERTY(VisibleAnywhere, Category = UI)
 		class UWidgetComponent* HPBarWidget;
 	
+	void Attack();
+	FOnAttackEndDelegate OnAttackEnd;
+
 private:
 	void MoveForward(float NewAxisValue);
 	void MoveRight(float NewAxisValue);
@@ -72,7 +77,6 @@ private:
 	void Turn(float NewAxisValue);
 
 	void ViewChange();
-	void Attack();
 
 	UFUNCTION()
 		void OnAttackMontageEnded(UAnimMontage* Montage, bool bInterrupted);

@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Warrior.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{EF72E399-A2EB-4472-AC58-529DE804F394}</UniqueIdentifier>
+      <UniqueIdentifier>{EFE343C9-ACF6-41C8-A0C1-8086B2EE83BB}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Warrior.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{F155D572-E86D-4DFF-A4F6-F3642EABA152}</UniqueIdentifier>
+      <UniqueIdentifier>{8EA4A648-BC07-4FF1-B71C-279B5C6E97C4}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,12 +30,24 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\Warrior">
-      <UniqueIdentifier>{6F78A912-754A-4C6F-BCB6-EC6122463CFE}</UniqueIdentifier>
+      <UniqueIdentifier>{78BAA242-DC17-4821-BFE9-2B118C03B667}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\Warrior\BTDecorator_IsInAttackRange.cpp">
+      <Filter>Source\Warrior</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Warrior\BTDecorator_IsInAttackRange.h">
+      <Filter>Source\Warrior</Filter>
+    </ClInclude>
     <ClCompile Include="..\..\Source\Warrior\BTService_Detect.cpp">
       <Filter>Source\Warrior</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Warrior\BTService_Detect.h">
+      <Filter>Source\Warrior</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\Warrior\BTTask_Attack.cpp">
+      <Filter>Source\Warrior</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\Warrior\BTTask_Attack.h">
       <Filter>Source\Warrior</Filter>
     </ClInclude>
     <ClCompile Include="..\..\Source\Warrior\BTTask_FindPatrolPos.cpp">
@@ -129,6 +141,16 @@
       <Filter>Source\Warrior</Filter>
     </ClCompile>
     <ClInclude Include="..\..\Source\Warrior\W_Weapon.h">
+      <Filter>Source\Warrior</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\Warrior\BTTask_TurnToTarget.cpp">
+      <Filter>Source\Warrior</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\Warrior\BTTask_TurnToTarget.h">
       <Filter>Source\Warrior</Filter>
     </ClInclude>
   </ItemGroup>
