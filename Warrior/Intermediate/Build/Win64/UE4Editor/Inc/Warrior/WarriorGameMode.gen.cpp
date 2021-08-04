@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Warrior/WarriorGameMode.h"
+#include "Warrior/Public/WarriorGameMode.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -42,7 +42,7 @@ void EmptyLinkFunctionForGeneratedCodeWarriorGameMode() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AWarriorGameMode_Statics::Class_MetaDataParams[] = {
 		{ "HideCategories", "Info Rendering MovementReplication Replication Actor Input Movement Collision Rendering Utilities|Transformation" },
 		{ "IncludePath", "WarriorGameMode.h" },
-		{ "ModuleRelativePath", "WarriorGameMode.h" },
+		{ "ModuleRelativePath", "Public/WarriorGameMode.h" },
 		{ "ShowCategories", "Input|MouseInput Input|TouchInput" },
 	};
 #endif
@@ -73,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeWarriorGameMode() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AWarriorGameMode, 18304774);
+	IMPLEMENT_CLASS(AWarriorGameMode, 2440260961);
 	template<> WARRIOR_API UClass* StaticClass<AWarriorGameMode>()
 	{
 		return AWarriorGameMode::StaticClass();

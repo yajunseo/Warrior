@@ -1,6 +1,6 @@
 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\Warrior\Definitions.Warrior.h
-C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\BTService_Detect.h
-C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Warrior.h
+C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Public\BTService_Detect.h
+C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Public\Warrior.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Public\EngineMinimal.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Core\Public\Misc/MonolithicHeaderBoilerplate.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\CoreUObject.h
@@ -234,7 +234,7 @@ C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\In
 C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\BTAuxiliaryNode.generated.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\BTService.generated.h
 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Inc\Warrior\BTService_Detect.generated.h
-C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\W_AIController.h
+C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Public\W_AIController.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\AIModule\Classes\AIController.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\AIModule\Classes\Navigation/PathFollowingComponent.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\NavigationSystem\Public\NavigationData.h
@@ -250,7 +250,7 @@ C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Public\VisualLo
 C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\VisualLoggerDebugSnapshotInterface.generated.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\AIModule\AIController.generated.h
 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Inc\Warrior\W_AIController.generated.h
-C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\W_Character.h
+C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Public\W_Character.h
 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Inc\Warrior\W_Character.generated.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\AIModule\Classes\BehaviorTree/BlackboardComponent.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\AIModule\Classes\BehaviorTree/Blackboard/BlackboardKeyType.h

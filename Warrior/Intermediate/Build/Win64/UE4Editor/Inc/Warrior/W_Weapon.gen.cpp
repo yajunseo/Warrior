@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Warrior/W_Weapon.h"
+#include "Warrior/Public/W_Weapon.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -47,14 +47,14 @@ void EmptyLinkFunctionForGeneratedCodeW_Weapon() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_Weapon_Statics::Class_MetaDataParams[] = {
 		{ "IncludePath", "W_Weapon.h" },
-		{ "ModuleRelativePath", "W_Weapon.h" },
+		{ "ModuleRelativePath", "Public/W_Weapon.h" },
 	};
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_Weapon_Statics::NewProp_Weapon_MetaData[] = {
 		{ "Category", "Weapon" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "W_Weapon.h" },
+		{ "ModuleRelativePath", "Public/W_Weapon.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AW_Weapon_Statics::NewProp_Weapon = { "Weapon", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_Weapon, Weapon), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AW_Weapon_Statics::NewProp_Weapon_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_Weapon_Statics::NewProp_Weapon_MetaData)) };
@@ -88,7 +88,7 @@ void EmptyLinkFunctionForGeneratedCodeW_Weapon() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AW_Weapon, 824316462);
+	IMPLEMENT_CLASS(AW_Weapon, 1779714247);
 	template<> WARRIOR_API UClass* StaticClass<AW_Weapon>()
 	{
 		return AW_Weapon::StaticClass();

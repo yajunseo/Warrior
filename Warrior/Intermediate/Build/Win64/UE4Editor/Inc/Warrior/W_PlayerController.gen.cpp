@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Warrior/W_PlayerController.h"
+#include "Warrior/Public/W_PlayerController.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -43,7 +43,7 @@ void EmptyLinkFunctionForGeneratedCodeW_PlayerController() {}
 		{ "Comment", "/**\n * \n */" },
 		{ "HideCategories", "Collision Rendering Utilities|Transformation" },
 		{ "IncludePath", "W_PlayerController.h" },
-		{ "ModuleRelativePath", "W_PlayerController.h" },
+		{ "ModuleRelativePath", "Public/W_PlayerController.h" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AW_PlayerController_Statics::StaticCppClassTypeInfo = {
@@ -73,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeW_PlayerController() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AW_PlayerController, 4202402479);
+	IMPLEMENT_CLASS(AW_PlayerController, 988930229);
 	template<> WARRIOR_API UClass* StaticClass<AW_PlayerController>()
 	{
 		return AW_PlayerController::StaticClass();

@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Warrior/W_AnimInstance.h"
+#include "Warrior/Public/W_AnimInstance.h"
 #include "Engine/Classes/Components/SkeletalMeshComponent.h"
 #ifdef _MSC_VER
 #pragma warning (push)
@@ -52,7 +52,7 @@ void EmptyLinkFunctionForGeneratedCodeW_AnimInstance() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UW_AnimInstance_AnimNotify_AttackHitCheck_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "W_AnimInstance.h" },
+		{ "ModuleRelativePath", "Public/W_AnimInstance.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UW_AnimInstance_AnimNotify_AttackHitCheck_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UW_AnimInstance, nullptr, "AnimNotify_AttackHitCheck", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UW_AnimInstance_AnimNotify_AttackHitCheck_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UW_AnimInstance_AnimNotify_AttackHitCheck_Statics::Function_MetaDataParams)) };
@@ -74,7 +74,7 @@ void EmptyLinkFunctionForGeneratedCodeW_AnimInstance() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_UW_AnimInstance_AnimNotify_NextAttackCheck_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "W_AnimInstance.h" },
+		{ "ModuleRelativePath", "Public/W_AnimInstance.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_UW_AnimInstance_AnimNotify_NextAttackCheck_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_UW_AnimInstance, nullptr, "AnimNotify_NextAttackCheck", nullptr, nullptr, 0, nullptr, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_UW_AnimInstance_AnimNotify_NextAttackCheck_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_UW_AnimInstance_AnimNotify_NextAttackCheck_Statics::Function_MetaDataParams)) };
@@ -130,22 +130,22 @@ void EmptyLinkFunctionForGeneratedCodeW_AnimInstance() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_Warrior,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_UW_AnimInstance_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_UW_AnimInstance_AnimNotify_AttackHitCheck, "AnimNotify_AttackHitCheck" }, // 743176337
-		{ &Z_Construct_UFunction_UW_AnimInstance_AnimNotify_NextAttackCheck, "AnimNotify_NextAttackCheck" }, // 3076497366
+		{ &Z_Construct_UFunction_UW_AnimInstance_AnimNotify_AttackHitCheck, "AnimNotify_AttackHitCheck" }, // 3344099663
+		{ &Z_Construct_UFunction_UW_AnimInstance_AnimNotify_NextAttackCheck, "AnimNotify_NextAttackCheck" }, // 129183524
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UW_AnimInstance_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "/**\n * \n */" },
 		{ "HideCategories", "AnimInstance" },
 		{ "IncludePath", "W_AnimInstance.h" },
-		{ "ModuleRelativePath", "W_AnimInstance.h" },
+		{ "ModuleRelativePath", "Public/W_AnimInstance.h" },
 	};
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UW_AnimInstance_Statics::NewProp_CurrentPawnSpeed_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Pawn" },
-		{ "ModuleRelativePath", "W_AnimInstance.h" },
+		{ "ModuleRelativePath", "Public/W_AnimInstance.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UW_AnimInstance_Statics::NewProp_CurrentPawnSpeed = { "CurrentPawnSpeed", nullptr, (EPropertyFlags)0x0040000000000015, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UW_AnimInstance, CurrentPawnSpeed), METADATA_PARAMS(Z_Construct_UClass_UW_AnimInstance_Statics::NewProp_CurrentPawnSpeed_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UW_AnimInstance_Statics::NewProp_CurrentPawnSpeed_MetaData)) };
@@ -153,7 +153,7 @@ void EmptyLinkFunctionForGeneratedCodeW_AnimInstance() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UW_AnimInstance_Statics::NewProp_IsInAir_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Pawn" },
-		{ "ModuleRelativePath", "W_AnimInstance.h" },
+		{ "ModuleRelativePath", "Public/W_AnimInstance.h" },
 	};
 #endif
 	void Z_Construct_UClass_UW_AnimInstance_Statics::NewProp_IsInAir_SetBit(void* Obj)
@@ -165,7 +165,7 @@ void EmptyLinkFunctionForGeneratedCodeW_AnimInstance() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UW_AnimInstance_Statics::NewProp_IsAttack_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Pawn" },
-		{ "ModuleRelativePath", "W_AnimInstance.h" },
+		{ "ModuleRelativePath", "Public/W_AnimInstance.h" },
 	};
 #endif
 	void Z_Construct_UClass_UW_AnimInstance_Statics::NewProp_IsAttack_SetBit(void* Obj)
@@ -177,7 +177,7 @@ void EmptyLinkFunctionForGeneratedCodeW_AnimInstance() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UW_AnimInstance_Statics::NewProp_IsDead_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Pawn" },
-		{ "ModuleRelativePath", "W_AnimInstance.h" },
+		{ "ModuleRelativePath", "Public/W_AnimInstance.h" },
 	};
 #endif
 	void Z_Construct_UClass_UW_AnimInstance_Statics::NewProp_IsDead_SetBit(void* Obj)
@@ -189,7 +189,7 @@ void EmptyLinkFunctionForGeneratedCodeW_AnimInstance() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UW_AnimInstance_Statics::NewProp_AttackMontage_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Attack" },
-		{ "ModuleRelativePath", "W_AnimInstance.h" },
+		{ "ModuleRelativePath", "Public/W_AnimInstance.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UW_AnimInstance_Statics::NewProp_AttackMontage = { "AttackMontage", nullptr, (EPropertyFlags)0x0040000000030015, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UW_AnimInstance, AttackMontage), Z_Construct_UClass_UAnimMontage_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UW_AnimInstance_Statics::NewProp_AttackMontage_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UW_AnimInstance_Statics::NewProp_AttackMontage_MetaData)) };
@@ -227,7 +227,7 @@ void EmptyLinkFunctionForGeneratedCodeW_AnimInstance() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UW_AnimInstance, 1530322151);
+	IMPLEMENT_CLASS(UW_AnimInstance, 1059655816);
 	template<> WARRIOR_API UClass* StaticClass<UW_AnimInstance>()
 	{
 		return UW_AnimInstance::StaticClass();

@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Warrior/W_GameMode.h"
+#include "Warrior/Public/W_GameMode.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -43,7 +43,7 @@ void EmptyLinkFunctionForGeneratedCodeW_GameMode() {}
 		{ "Comment", "/**\n * \n */" },
 		{ "HideCategories", "Info Rendering MovementReplication Replication Actor Input Movement Collision Rendering Utilities|Transformation" },
 		{ "IncludePath", "W_GameMode.h" },
-		{ "ModuleRelativePath", "W_GameMode.h" },
+		{ "ModuleRelativePath", "Public/W_GameMode.h" },
 		{ "ShowCategories", "Input|MouseInput Input|TouchInput" },
 	};
 #endif
@@ -74,7 +74,7 @@ void EmptyLinkFunctionForGeneratedCodeW_GameMode() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AW_GameMode, 1238041269);
+	IMPLEMENT_CLASS(AW_GameMode, 3810192971);
 	template<> WARRIOR_API UClass* StaticClass<AW_GameMode>()
 	{
 		return AW_GameMode::StaticClass();

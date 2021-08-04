@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Warrior/W_CharacterStatComponent.h"
+#include "Warrior/Public/W_CharacterStatComponent.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -52,14 +52,14 @@ void EmptyLinkFunctionForGeneratedCodeW_CharacterStatComponent() {}
 		{ "BlueprintSpawnableComponent", "" },
 		{ "ClassGroupNames", "Custom" },
 		{ "IncludePath", "W_CharacterStatComponent.h" },
-		{ "ModuleRelativePath", "W_CharacterStatComponent.h" },
+		{ "ModuleRelativePath", "Public/W_CharacterStatComponent.h" },
 	};
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UW_CharacterStatComponent_Statics::NewProp_Level_MetaData[] = {
 		{ "AllowPrivateAcess", "TRUE" },
 		{ "Category", "Stat" },
-		{ "ModuleRelativePath", "W_CharacterStatComponent.h" },
+		{ "ModuleRelativePath", "Public/W_CharacterStatComponent.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UClass_UW_CharacterStatComponent_Statics::NewProp_Level = { "Level", nullptr, (EPropertyFlags)0x0040000000000801, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UW_CharacterStatComponent, Level), METADATA_PARAMS(Z_Construct_UClass_UW_CharacterStatComponent_Statics::NewProp_Level_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UW_CharacterStatComponent_Statics::NewProp_Level_MetaData)) };
@@ -67,7 +67,7 @@ void EmptyLinkFunctionForGeneratedCodeW_CharacterStatComponent() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UW_CharacterStatComponent_Statics::NewProp_CurrentHP_MetaData[] = {
 		{ "AllowPrivateAcess", "TRUE" },
 		{ "Category", "Stat" },
-		{ "ModuleRelativePath", "W_CharacterStatComponent.h" },
+		{ "ModuleRelativePath", "Public/W_CharacterStatComponent.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UW_CharacterStatComponent_Statics::NewProp_CurrentHP = { "CurrentHP", nullptr, (EPropertyFlags)0x0040000000000801, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UW_CharacterStatComponent, CurrentHP), METADATA_PARAMS(Z_Construct_UClass_UW_CharacterStatComponent_Statics::NewProp_CurrentHP_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UW_CharacterStatComponent_Statics::NewProp_CurrentHP_MetaData)) };
@@ -102,7 +102,7 @@ void EmptyLinkFunctionForGeneratedCodeW_CharacterStatComponent() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UW_CharacterStatComponent, 385890170);
+	IMPLEMENT_CLASS(UW_CharacterStatComponent, 321318470);
 	template<> WARRIOR_API UClass* StaticClass<UW_CharacterStatComponent>()
 	{
 		return UW_CharacterStatComponent::StaticClass();

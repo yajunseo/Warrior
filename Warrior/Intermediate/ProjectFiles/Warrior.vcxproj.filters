@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Warrior.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{EFE343C9-ACF6-41C8-A0C1-8086B2EE83BB}</UniqueIdentifier>
+      <UniqueIdentifier>{D66C4839-CB1A-493F-B2B3-CF2BE1830BD7}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Warrior.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{8EA4A648-BC07-4FF1-B71C-279B5C6E97C4}</UniqueIdentifier>
+      <UniqueIdentifier>{61041FF4-5402-41E9-96D6-4FE5A0880A86}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -29,129 +29,155 @@
     <None Include="..\..\Config\DefaultInput.ini">
       <Filter>Config</Filter>
     </None>
-    <Filter Include="Source\Warrior">
-      <UniqueIdentifier>{78BAA242-DC17-4821-BFE9-2B118C03B667}</UniqueIdentifier>
+    <Filter Include="Source\ArenaBattleSetting">
+      <UniqueIdentifier>{5061ACD7-7C17-4DFF-8A11-DD40B0B68616}</UniqueIdentifier>
     </Filter>
-    <ClCompile Include="..\..\Source\Warrior\BTDecorator_IsInAttackRange.cpp">
-      <Filter>Source\Warrior</Filter>
+    <None Include="..\..\Source\ArenaBattleSetting\ArenaBattleSetting.Build.cs">
+      <Filter>Source\ArenaBattleSetting</Filter>
+    </None>
+    <Filter Include="Source\ArenaBattleSetting\Private">
+      <UniqueIdentifier>{960C1817-6AA7-4245-85F3-9FFD0B753879}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\ArenaBattleSetting\Private\ArenaBattleSetting.cpp">
+      <Filter>Source\ArenaBattleSetting\Private</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\Warrior\BTDecorator_IsInAttackRange.h">
-      <Filter>Source\Warrior</Filter>
-    </ClInclude>
-    <ClCompile Include="..\..\Source\Warrior\BTService_Detect.cpp">
-      <Filter>Source\Warrior</Filter>
+    <ClCompile Include="..\..\Source\ArenaBattleSetting\Private\W_CharacterSetting.cpp">
+      <Filter>Source\ArenaBattleSetting\Private</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\Warrior\BTService_Detect.h">
-      <Filter>Source\Warrior</Filter>
+    <Filter Include="Source\ArenaBattleSetting\Public">
+      <UniqueIdentifier>{DC99B401-E8D9-480F-A980-90134988A9D3}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\ArenaBattleSetting\Public\ArenaBattleSetting.h">
+      <Filter>Source\ArenaBattleSetting\Public</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\Warrior\BTTask_Attack.cpp">
-      <Filter>Source\Warrior</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Warrior\BTTask_Attack.h">
-      <Filter>Source\Warrior</Filter>
+    <ClInclude Include="..\..\Source\ArenaBattleSetting\Public\W_CharacterSetting.h">
+      <Filter>Source\ArenaBattleSetting\Public</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\Warrior\BTTask_FindPatrolPos.cpp">
-      <Filter>Source\Warrior</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Warrior\BTTask_FindPatrolPos.h">
-      <Filter>Source\Warrior</Filter>
-    </ClInclude>
+    <Filter Include="Source\Warrior">
+      <UniqueIdentifier>{2CEB1019-7BEB-43F4-B1DB-C14A483599E5}</UniqueIdentifier>
+    </Filter>
     <None Include="..\..\Source\Warrior\Warrior.Build.cs">
       <Filter>Source\Warrior</Filter>
     </None>
-    <ClCompile Include="..\..\Source\Warrior\Warrior.cpp">
-      <Filter>Source\Warrior</Filter>
+    <Filter Include="Source\Warrior\Private">
+      <UniqueIdentifier>{2FFD4E90-A52F-490E-880E-0FE6E281BA09}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\Warrior\Private\BTDecorator_IsInAttackRange.cpp">
+      <Filter>Source\Warrior\Private</Filter>
     </ClCompile>
-    <ClInclude Include="..\..\Source\Warrior\Warrior.h">
-      <Filter>Source\Warrior</Filter>
+    <ClCompile Include="..\..\Source\Warrior\Private\BTService_Detect.cpp">
+      <Filter>Source\Warrior\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Warrior\Private\BTTask_Attack.cpp">
+      <Filter>Source\Warrior\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Warrior\Private\BTTask_FindPatrolPos.cpp">
+      <Filter>Source\Warrior\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Warrior\Private\BTTask_TurnToTarget.cpp">
+      <Filter>Source\Warrior\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Warrior\Private\Warrior.cpp">
+      <Filter>Source\Warrior\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Warrior\Private\WarriorCharacter.cpp">
+      <Filter>Source\Warrior\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Warrior\Private\WarriorGameMode.cpp">
+      <Filter>Source\Warrior\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Warrior\Private\W_AIController.cpp">
+      <Filter>Source\Warrior\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Warrior\Private\W_AnimInstance.cpp">
+      <Filter>Source\Warrior\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Warrior\Private\W_Character.cpp">
+      <Filter>Source\Warrior\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Warrior\Private\W_CharacterStatComponent.cpp">
+      <Filter>Source\Warrior\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Warrior\Private\W_GameInstance.cpp">
+      <Filter>Source\Warrior\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Warrior\Private\W_GameMode.cpp">
+      <Filter>Source\Warrior\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Warrior\Private\W_ItemBox.cpp">
+      <Filter>Source\Warrior\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Warrior\Private\W_Pawn.cpp">
+      <Filter>Source\Warrior\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Warrior\Private\W_PlayerController.cpp">
+      <Filter>Source\Warrior\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Warrior\Private\W_WarriorWidget.cpp">
+      <Filter>Source\Warrior\Private</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Warrior\Private\W_Weapon.cpp">
+      <Filter>Source\Warrior\Private</Filter>
+    </ClCompile>
+    <Filter Include="Source\Warrior\Public">
+      <UniqueIdentifier>{B6BD7311-DA06-4287-8814-8DD8CC7899B4}</UniqueIdentifier>
+    </Filter>
+    <ClInclude Include="..\..\Source\Warrior\Public\BTDecorator_IsInAttackRange.h">
+      <Filter>Source\Warrior\Public</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\Warrior\WarriorCharacter.cpp">
-      <Filter>Source\Warrior</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Warrior\WarriorCharacter.h">
-      <Filter>Source\Warrior</Filter>
+    <ClInclude Include="..\..\Source\Warrior\Public\BTService_Detect.h">
+      <Filter>Source\Warrior\Public</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\Warrior\WarriorGameMode.cpp">
-      <Filter>Source\Warrior</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Warrior\WarriorGameMode.h">
-      <Filter>Source\Warrior</Filter>
+    <ClInclude Include="..\..\Source\Warrior\Public\BTTask_Attack.h">
+      <Filter>Source\Warrior\Public</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\Warrior\W_AIController.cpp">
-      <Filter>Source\Warrior</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Warrior\W_AIController.h">
-      <Filter>Source\Warrior</Filter>
+    <ClInclude Include="..\..\Source\Warrior\Public\BTTask_FindPatrolPos.h">
+      <Filter>Source\Warrior\Public</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\Warrior\W_AnimInstance.cpp">
-      <Filter>Source\Warrior</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Warrior\W_AnimInstance.h">
-      <Filter>Source\Warrior</Filter>
+    <ClInclude Include="..\..\Source\Warrior\Public\BTTask_TurnToTarget.h">
+      <Filter>Source\Warrior\Public</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\Warrior\W_Character.cpp">
-      <Filter>Source\Warrior</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Warrior\W_Character.h">
-      <Filter>Source\Warrior</Filter>
+    <ClInclude Include="..\..\Source\Warrior\Public\Warrior.h">
+      <Filter>Source\Warrior\Public</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\Warrior\W_CharacterStatComponent.cpp">
-      <Filter>Source\Warrior</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Warrior\W_CharacterStatComponent.h">
-      <Filter>Source\Warrior</Filter>
+    <ClInclude Include="..\..\Source\Warrior\Public\WarriorCharacter.h">
+      <Filter>Source\Warrior\Public</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\Warrior\W_GameInstance.cpp">
-      <Filter>Source\Warrior</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Warrior\W_GameInstance.h">
-      <Filter>Source\Warrior</Filter>
+    <ClInclude Include="..\..\Source\Warrior\Public\WarriorGameMode.h">
+      <Filter>Source\Warrior\Public</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\Warrior\W_GameMode.cpp">
-      <Filter>Source\Warrior</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Warrior\W_GameMode.h">
-      <Filter>Source\Warrior</Filter>
+    <ClInclude Include="..\..\Source\Warrior\Public\W_AIController.h">
+      <Filter>Source\Warrior\Public</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\Warrior\W_ItemBox.cpp">
-      <Filter>Source\Warrior</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Warrior\W_ItemBox.h">
-      <Filter>Source\Warrior</Filter>
+    <ClInclude Include="..\..\Source\Warrior\Public\W_AnimInstance.h">
+      <Filter>Source\Warrior\Public</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\Warrior\W_Pawn.cpp">
-      <Filter>Source\Warrior</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Warrior\W_Pawn.h">
-      <Filter>Source\Warrior</Filter>
+    <ClInclude Include="..\..\Source\Warrior\Public\W_Character.h">
+      <Filter>Source\Warrior\Public</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\Warrior\W_PlayerController.cpp">
-      <Filter>Source\Warrior</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Warrior\W_PlayerController.h">
-      <Filter>Source\Warrior</Filter>
+    <ClInclude Include="..\..\Source\Warrior\Public\W_CharacterStatComponent.h">
+      <Filter>Source\Warrior\Public</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\Warrior\W_WarriorWidget.cpp">
-      <Filter>Source\Warrior</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Warrior\W_WarriorWidget.h">
-      <Filter>Source\Warrior</Filter>
+    <ClInclude Include="..\..\Source\Warrior\Public\W_GameInstance.h">
+      <Filter>Source\Warrior\Public</Filter>
     </ClInclude>
-    <ClCompile Include="..\..\Source\Warrior\W_Weapon.cpp">
-      <Filter>Source\Warrior</Filter>
-    </ClCompile>
-    <ClInclude Include="..\..\Source\Warrior\W_Weapon.h">
-      <Filter>Source\Warrior</Filter>
+    <ClInclude Include="..\..\Source\Warrior\Public\W_GameMode.h">
+      <Filter>Source\Warrior\Public</Filter>
     </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\..\Source\Warrior\BTTask_TurnToTarget.cpp">
-      <Filter>Source\Warrior</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="..\..\Source\Warrior\BTTask_TurnToTarget.h">
-      <Filter>Source\Warrior</Filter>
+    <ClInclude Include="..\..\Source\Warrior\Public\W_ItemBox.h">
+      <Filter>Source\Warrior\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Warrior\Public\W_Pawn.h">
+      <Filter>Source\Warrior\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Warrior\Public\W_PlayerController.h">
+      <Filter>Source\Warrior\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Warrior\Public\W_WarriorWidget.h">
+      <Filter>Source\Warrior\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Warrior\Public\W_Weapon.h">
+      <Filter>Source\Warrior\Public</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

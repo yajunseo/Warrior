@@ -1,6 +1,6 @@
 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\Warrior\Definitions.Warrior.h
-C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\W_Character.h
-C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Warrior.h
+C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Public\W_Character.h
+C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Public\Warrior.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Public\EngineMinimal.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Core\Public\Misc/MonolithicHeaderBoilerplate.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\CoreUObject.h
@@ -197,11 +197,11 @@ C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Kismet\
 C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStaticsTypes.generated.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameplayStatics.generated.h
 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Inc\Warrior\W_Character.generated.h
-C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\W_AnimInstance.h
+C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Public\W_AnimInstance.h
 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Inc\Warrior\W_AnimInstance.generated.h
-C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\W_Weapon.h
+C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Public\W_Weapon.h
 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Inc\Warrior\W_Weapon.generated.h
-C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\W_CharacterStatComponent.h
+C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Public\W_CharacterStatComponent.h
 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Inc\Warrior\W_CharacterStatComponent.generated.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\UMG\Public\Components/WidgetComponent.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\UMG\Public\Blueprint/UserWidget.h
@@ -307,9 +307,9 @@ C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\UMG\Public\Components/
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Slate\Public\Widgets/Notifications/SProgressBar.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Slate\SProgressBar.generated.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\ProgressBar.generated.h
-C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\W_WarriorWidget.h
+C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Public\W_WarriorWidget.h
 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Inc\Warrior\W_WarriorWidget.generated.h
-C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\W_AIController.h
+C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Public\W_AIController.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\AIModule\Classes\AIController.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\NavigationSystem\Public\NavFilters/NavigationQueryFilter.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\NavigationSystem\Public\NavAreas/NavArea.h

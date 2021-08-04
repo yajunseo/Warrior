@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Warrior/W_GameInstance.h"
+#include "Warrior/Public/W_GameInstance.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -78,7 +78,7 @@ static struct FScriptStruct_Warrior_StaticRegisterNativesFW_CharacterData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FW_CharacterData_Statics::Struct_MetaDataParams[] = {
 		{ "BlueprintType", "true" },
-		{ "ModuleRelativePath", "W_GameInstance.h" },
+		{ "ModuleRelativePath", "Public/W_GameInstance.h" },
 	};
 #endif
 	void* Z_Construct_UScriptStruct_FW_CharacterData_Statics::NewStructOps()
@@ -88,35 +88,35 @@ static struct FScriptStruct_Warrior_StaticRegisterNativesFW_CharacterData
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FW_CharacterData_Statics::NewProp_Level_MetaData[] = {
 		{ "Category", "Data" },
-		{ "ModuleRelativePath", "W_GameInstance.h" },
+		{ "ModuleRelativePath", "Public/W_GameInstance.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FW_CharacterData_Statics::NewProp_Level = { "Level", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FW_CharacterData, Level), METADATA_PARAMS(Z_Construct_UScriptStruct_FW_CharacterData_Statics::NewProp_Level_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FW_CharacterData_Statics::NewProp_Level_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FW_CharacterData_Statics::NewProp_MaxHP_MetaData[] = {
 		{ "Category", "Data" },
-		{ "ModuleRelativePath", "W_GameInstance.h" },
+		{ "ModuleRelativePath", "Public/W_GameInstance.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FW_CharacterData_Statics::NewProp_MaxHP = { "MaxHP", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FW_CharacterData, MaxHP), METADATA_PARAMS(Z_Construct_UScriptStruct_FW_CharacterData_Statics::NewProp_MaxHP_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FW_CharacterData_Statics::NewProp_MaxHP_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FW_CharacterData_Statics::NewProp_Attack_MetaData[] = {
 		{ "Category", "Data" },
-		{ "ModuleRelativePath", "W_GameInstance.h" },
+		{ "ModuleRelativePath", "Public/W_GameInstance.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UScriptStruct_FW_CharacterData_Statics::NewProp_Attack = { "Attack", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FW_CharacterData, Attack), METADATA_PARAMS(Z_Construct_UScriptStruct_FW_CharacterData_Statics::NewProp_Attack_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FW_CharacterData_Statics::NewProp_Attack_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FW_CharacterData_Statics::NewProp_DropExp_MetaData[] = {
 		{ "Category", "Data" },
-		{ "ModuleRelativePath", "W_GameInstance.h" },
+		{ "ModuleRelativePath", "Public/W_GameInstance.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FW_CharacterData_Statics::NewProp_DropExp = { "DropExp", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FW_CharacterData, DropExp), METADATA_PARAMS(Z_Construct_UScriptStruct_FW_CharacterData_Statics::NewProp_DropExp_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FW_CharacterData_Statics::NewProp_DropExp_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UScriptStruct_FW_CharacterData_Statics::NewProp_NextExp_MetaData[] = {
 		{ "Category", "Data" },
-		{ "ModuleRelativePath", "W_GameInstance.h" },
+		{ "ModuleRelativePath", "Public/W_GameInstance.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UScriptStruct_FW_CharacterData_Statics::NewProp_NextExp = { "NextExp", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(FW_CharacterData, NextExp), METADATA_PARAMS(Z_Construct_UScriptStruct_FW_CharacterData_Statics::NewProp_NextExp_MetaData, UE_ARRAY_COUNT(Z_Construct_UScriptStruct_FW_CharacterData_Statics::NewProp_NextExp_MetaData)) };
@@ -155,7 +155,7 @@ static struct FScriptStruct_Warrior_StaticRegisterNativesFW_CharacterData
 		}
 		return ReturnStruct;
 	}
-	uint32 Get_Z_Construct_UScriptStruct_FW_CharacterData_Hash() { return 3150409454U; }
+	uint32 Get_Z_Construct_UScriptStruct_FW_CharacterData_Hash() { return 1307703665U; }
 	void UW_GameInstance::StaticRegisterNativesUW_GameInstance()
 	{
 	}
@@ -185,12 +185,12 @@ static struct FScriptStruct_Warrior_StaticRegisterNativesFW_CharacterData
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UW_GameInstance_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "/**\n * \n */" },
 		{ "IncludePath", "W_GameInstance.h" },
-		{ "ModuleRelativePath", "W_GameInstance.h" },
+		{ "ModuleRelativePath", "Public/W_GameInstance.h" },
 	};
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UW_GameInstance_Statics::NewProp_W_CharacterTable_MetaData[] = {
-		{ "ModuleRelativePath", "W_GameInstance.h" },
+		{ "ModuleRelativePath", "Public/W_GameInstance.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UW_GameInstance_Statics::NewProp_W_CharacterTable = { "W_CharacterTable", nullptr, (EPropertyFlags)0x0040000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UW_GameInstance, W_CharacterTable), Z_Construct_UClass_UDataTable_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UW_GameInstance_Statics::NewProp_W_CharacterTable_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UW_GameInstance_Statics::NewProp_W_CharacterTable_MetaData)) };
@@ -224,7 +224,7 @@ static struct FScriptStruct_Warrior_StaticRegisterNativesFW_CharacterData
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UW_GameInstance, 2919105358);
+	IMPLEMENT_CLASS(UW_GameInstance, 684277170);
 	template<> WARRIOR_API UClass* StaticClass<UW_GameInstance>()
 	{
 		return UW_GameInstance::StaticClass();

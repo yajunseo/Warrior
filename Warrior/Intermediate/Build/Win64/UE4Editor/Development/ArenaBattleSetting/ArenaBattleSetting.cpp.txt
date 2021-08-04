@@ -1,0 +1,2 @@
+C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\ArenaBattleSetting\Definitions.ArenaBattleSetting.h
+C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\ArenaBattleSetting\Public\ArenaBattleSetting.h

@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Warrior/BTTask_TurnToTarget.h"
+#include "Warrior/Public/BTTask_TurnToTarget.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -42,7 +42,7 @@ void EmptyLinkFunctionForGeneratedCodeBTTask_TurnToTarget() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UBTTask_TurnToTarget_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "/**\n * \n */" },
 		{ "IncludePath", "BTTask_TurnToTarget.h" },
-		{ "ModuleRelativePath", "BTTask_TurnToTarget.h" },
+		{ "ModuleRelativePath", "Public/BTTask_TurnToTarget.h" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UBTTask_TurnToTarget_Statics::StaticCppClassTypeInfo = {
@@ -72,7 +72,7 @@ void EmptyLinkFunctionForGeneratedCodeBTTask_TurnToTarget() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UBTTask_TurnToTarget, 2810855543);
+	IMPLEMENT_CLASS(UBTTask_TurnToTarget, 1339203271);
 	template<> WARRIOR_API UClass* StaticClass<UBTTask_TurnToTarget>()
 	{
 		return UBTTask_TurnToTarget::StaticClass();

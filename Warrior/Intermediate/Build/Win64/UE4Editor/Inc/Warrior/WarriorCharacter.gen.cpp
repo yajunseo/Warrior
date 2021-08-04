@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Warrior/WarriorCharacter.h"
+#include "Warrior/Public/WarriorCharacter.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -61,7 +61,7 @@ void EmptyLinkFunctionForGeneratedCodeWarriorCharacter() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AWarriorCharacter_Statics::Class_MetaDataParams[] = {
 		{ "HideCategories", "Navigation" },
 		{ "IncludePath", "WarriorCharacter.h" },
-		{ "ModuleRelativePath", "WarriorCharacter.h" },
+		{ "ModuleRelativePath", "Public/WarriorCharacter.h" },
 	};
 #endif
 #if WITH_METADATA
@@ -70,7 +70,7 @@ void EmptyLinkFunctionForGeneratedCodeWarriorCharacter() {}
 		{ "Category", "Camera" },
 		{ "Comment", "/** Camera boom positioning the camera behind the character */" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "WarriorCharacter.h" },
+		{ "ModuleRelativePath", "Public/WarriorCharacter.h" },
 		{ "ToolTip", "Camera boom positioning the camera behind the character" },
 	};
 #endif
@@ -81,7 +81,7 @@ void EmptyLinkFunctionForGeneratedCodeWarriorCharacter() {}
 		{ "Category", "Camera" },
 		{ "Comment", "/** Follow camera */" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "WarriorCharacter.h" },
+		{ "ModuleRelativePath", "Public/WarriorCharacter.h" },
 		{ "ToolTip", "Follow camera" },
 	};
 #endif
@@ -90,7 +90,7 @@ void EmptyLinkFunctionForGeneratedCodeWarriorCharacter() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AWarriorCharacter_Statics::NewProp_BaseTurnRate_MetaData[] = {
 		{ "Category", "Camera" },
 		{ "Comment", "/** Base turn rate, in deg/sec. Other scaling may affect final turn rate. */" },
-		{ "ModuleRelativePath", "WarriorCharacter.h" },
+		{ "ModuleRelativePath", "Public/WarriorCharacter.h" },
 		{ "ToolTip", "Base turn rate, in deg/sec. Other scaling may affect final turn rate." },
 	};
 #endif
@@ -99,7 +99,7 @@ void EmptyLinkFunctionForGeneratedCodeWarriorCharacter() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AWarriorCharacter_Statics::NewProp_BaseLookUpRate_MetaData[] = {
 		{ "Category", "Camera" },
 		{ "Comment", "/** Base look up/down rate, in deg/sec. Other scaling may affect final rate. */" },
-		{ "ModuleRelativePath", "WarriorCharacter.h" },
+		{ "ModuleRelativePath", "Public/WarriorCharacter.h" },
 		{ "ToolTip", "Base look up/down rate, in deg/sec. Other scaling may affect final rate." },
 	};
 #endif
@@ -137,7 +137,7 @@ void EmptyLinkFunctionForGeneratedCodeWarriorCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AWarriorCharacter, 601044079);
+	IMPLEMENT_CLASS(AWarriorCharacter, 3796918664);
 	template<> WARRIOR_API UClass* StaticClass<AWarriorCharacter>()
 	{
 		return AWarriorCharacter::StaticClass();

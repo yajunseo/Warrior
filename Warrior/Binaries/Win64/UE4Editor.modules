@@ -2,6 +2,7 @@
 	"BuildId": "14830424",
 	"Modules": 
 	{
-		"Warrior": "UE4Editor-Warrior-0034.dll"
+		"ArenaBattleSetting": "UE4Editor-ArenaBattleSetting-0041.dll",
+		"Warrior": "UE4Editor-Warrior-0639.dll"
 	}
 }

@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Warrior/W_Character.h"
+#include "Warrior/Public/W_Character.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -71,7 +71,7 @@ void EmptyLinkFunctionForGeneratedCodeW_Character() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AW_Character_OnAttackMontageEnded_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "W_Character.h" },
+		{ "ModuleRelativePath", "Public/W_Character.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AW_Character_OnAttackMontageEnded_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AW_Character, nullptr, "OnAttackMontageEnded", nullptr, nullptr, sizeof(W_Character_eventOnAttackMontageEnded_Parms), Z_Construct_UFunction_AW_Character_OnAttackMontageEnded_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AW_Character_OnAttackMontageEnded_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AW_Character_OnAttackMontageEnded_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AW_Character_OnAttackMontageEnded_Statics::Function_MetaDataParams)) };
@@ -155,20 +155,20 @@ void EmptyLinkFunctionForGeneratedCodeW_Character() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_Warrior,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AW_Character_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_AW_Character_OnAttackMontageEnded, "OnAttackMontageEnded" }, // 321258540
+		{ &Z_Construct_UFunction_AW_Character_OnAttackMontageEnded, "OnAttackMontageEnded" }, // 1574618208
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_Character_Statics::Class_MetaDataParams[] = {
 		{ "HideCategories", "Navigation" },
 		{ "IncludePath", "W_Character.h" },
-		{ "ModuleRelativePath", "W_Character.h" },
+		{ "ModuleRelativePath", "Public/W_Character.h" },
 	};
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_Character_Statics::NewProp_SpringArm_MetaData[] = {
 		{ "Category", "Camera" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "W_Character.h" },
+		{ "ModuleRelativePath", "Public/W_Character.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AW_Character_Statics::NewProp_SpringArm = { "SpringArm", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_Character, SpringArm), Z_Construct_UClass_USpringArmComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AW_Character_Statics::NewProp_SpringArm_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_Character_Statics::NewProp_SpringArm_MetaData)) };
@@ -176,7 +176,7 @@ void EmptyLinkFunctionForGeneratedCodeW_Character() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_Character_Statics::NewProp_Camera_MetaData[] = {
 		{ "Category", "Camera" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "W_Character.h" },
+		{ "ModuleRelativePath", "Public/W_Character.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AW_Character_Statics::NewProp_Camera = { "Camera", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_Character, Camera), Z_Construct_UClass_UCameraComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AW_Character_Statics::NewProp_Camera_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_Character_Statics::NewProp_Camera_MetaData)) };
@@ -184,14 +184,14 @@ void EmptyLinkFunctionForGeneratedCodeW_Character() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_Character_Statics::NewProp_Weapon_MetaData[] = {
 		{ "Category", "Weapon" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "W_Character.h" },
+		{ "ModuleRelativePath", "Public/W_Character.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AW_Character_Statics::NewProp_Weapon = { "Weapon", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_Character, Weapon), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AW_Character_Statics::NewProp_Weapon_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_Character_Statics::NewProp_Weapon_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_Character_Statics::NewProp_CurrentWeapon_MetaData[] = {
 		{ "Category", "Weapon" },
-		{ "ModuleRelativePath", "W_Character.h" },
+		{ "ModuleRelativePath", "Public/W_Character.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AW_Character_Statics::NewProp_CurrentWeapon = { "CurrentWeapon", nullptr, (EPropertyFlags)0x0010000000020001, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_Character, CurrentWeapon), Z_Construct_UClass_AW_Weapon_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AW_Character_Statics::NewProp_CurrentWeapon_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_Character_Statics::NewProp_CurrentWeapon_MetaData)) };
@@ -199,7 +199,7 @@ void EmptyLinkFunctionForGeneratedCodeW_Character() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_Character_Statics::NewProp_CharacterStat_MetaData[] = {
 		{ "Category", "Stat" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "W_Character.h" },
+		{ "ModuleRelativePath", "Public/W_Character.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AW_Character_Statics::NewProp_CharacterStat = { "CharacterStat", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_Character, CharacterStat), Z_Construct_UClass_UW_CharacterStatComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AW_Character_Statics::NewProp_CharacterStat_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_Character_Statics::NewProp_CharacterStat_MetaData)) };
@@ -207,13 +207,13 @@ void EmptyLinkFunctionForGeneratedCodeW_Character() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_Character_Statics::NewProp_HPBarWidget_MetaData[] = {
 		{ "Category", "UI" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "W_Character.h" },
+		{ "ModuleRelativePath", "Public/W_Character.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AW_Character_Statics::NewProp_HPBarWidget = { "HPBarWidget", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_Character, HPBarWidget), Z_Construct_UClass_UWidgetComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AW_Character_Statics::NewProp_HPBarWidget_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_Character_Statics::NewProp_HPBarWidget_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_Character_Statics::NewProp_AW_Anim_MetaData[] = {
-		{ "ModuleRelativePath", "W_Character.h" },
+		{ "ModuleRelativePath", "Public/W_Character.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AW_Character_Statics::NewProp_AW_Anim = { "AW_Anim", nullptr, (EPropertyFlags)0x0040000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_Character, AW_Anim), Z_Construct_UClass_UW_AnimInstance_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AW_Character_Statics::NewProp_AW_Anim_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_Character_Statics::NewProp_AW_Anim_MetaData)) };
@@ -221,7 +221,7 @@ void EmptyLinkFunctionForGeneratedCodeW_Character() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_Character_Statics::NewProp_IsAttacking_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Attack" },
-		{ "ModuleRelativePath", "W_Character.h" },
+		{ "ModuleRelativePath", "Public/W_Character.h" },
 	};
 #endif
 	void Z_Construct_UClass_AW_Character_Statics::NewProp_IsAttacking_SetBit(void* Obj)
@@ -233,7 +233,7 @@ void EmptyLinkFunctionForGeneratedCodeW_Character() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_Character_Statics::NewProp_CanNextCombo_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Attack" },
-		{ "ModuleRelativePath", "W_Character.h" },
+		{ "ModuleRelativePath", "Public/W_Character.h" },
 	};
 #endif
 	void Z_Construct_UClass_AW_Character_Statics::NewProp_CanNextCombo_SetBit(void* Obj)
@@ -245,7 +245,7 @@ void EmptyLinkFunctionForGeneratedCodeW_Character() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_Character_Statics::NewProp_IsComboInputOn_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Attack" },
-		{ "ModuleRelativePath", "W_Character.h" },
+		{ "ModuleRelativePath", "Public/W_Character.h" },
 	};
 #endif
 	void Z_Construct_UClass_AW_Character_Statics::NewProp_IsComboInputOn_SetBit(void* Obj)
@@ -257,7 +257,7 @@ void EmptyLinkFunctionForGeneratedCodeW_Character() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_Character_Statics::NewProp_CurrentCombo_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Attack" },
-		{ "ModuleRelativePath", "W_Character.h" },
+		{ "ModuleRelativePath", "Public/W_Character.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UClass_AW_Character_Statics::NewProp_CurrentCombo = { "CurrentCombo", nullptr, (EPropertyFlags)0x0040000000020815, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_Character, CurrentCombo), METADATA_PARAMS(Z_Construct_UClass_AW_Character_Statics::NewProp_CurrentCombo_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_Character_Statics::NewProp_CurrentCombo_MetaData)) };
@@ -265,7 +265,7 @@ void EmptyLinkFunctionForGeneratedCodeW_Character() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_Character_Statics::NewProp_MaxCombo_MetaData[] = {
 		{ "AllowPrivateAccess", "TRUE" },
 		{ "Category", "Attack" },
-		{ "ModuleRelativePath", "W_Character.h" },
+		{ "ModuleRelativePath", "Public/W_Character.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UClass_AW_Character_Statics::NewProp_MaxCombo = { "MaxCombo", nullptr, (EPropertyFlags)0x0040000000020815, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_Character, MaxCombo), METADATA_PARAMS(Z_Construct_UClass_AW_Character_Statics::NewProp_MaxCombo_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_Character_Statics::NewProp_MaxCombo_MetaData)) };
@@ -310,7 +310,7 @@ void EmptyLinkFunctionForGeneratedCodeW_Character() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AW_Character, 1050350835);
+	IMPLEMENT_CLASS(AW_Character, 1475756585);
 	template<> WARRIOR_API UClass* StaticClass<AW_Character>()
 	{
 		return AW_Character::StaticClass();

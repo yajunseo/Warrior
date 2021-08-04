@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Warrior/W_WarriorWidget.h"
+#include "Warrior/Public/W_WarriorWidget.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -48,13 +48,13 @@ void EmptyLinkFunctionForGeneratedCodeW_WarriorWidget() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UW_WarriorWidget_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "/**\n * \n */" },
 		{ "IncludePath", "W_WarriorWidget.h" },
-		{ "ModuleRelativePath", "W_WarriorWidget.h" },
+		{ "ModuleRelativePath", "Public/W_WarriorWidget.h" },
 	};
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UW_WarriorWidget_Statics::NewProp_HPProgressBar_MetaData[] = {
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "W_WarriorWidget.h" },
+		{ "ModuleRelativePath", "Public/W_WarriorWidget.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UW_WarriorWidget_Statics::NewProp_HPProgressBar = { "HPProgressBar", nullptr, (EPropertyFlags)0x0040000000080008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UW_WarriorWidget, HPProgressBar), Z_Construct_UClass_UProgressBar_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UW_WarriorWidget_Statics::NewProp_HPProgressBar_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UW_WarriorWidget_Statics::NewProp_HPProgressBar_MetaData)) };
@@ -88,7 +88,7 @@ void EmptyLinkFunctionForGeneratedCodeW_WarriorWidget() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UW_WarriorWidget, 3320803610);
+	IMPLEMENT_CLASS(UW_WarriorWidget, 3353840365);
 	template<> WARRIOR_API UClass* StaticClass<UW_WarriorWidget>()
 	{
 		return UW_WarriorWidget::StaticClass();

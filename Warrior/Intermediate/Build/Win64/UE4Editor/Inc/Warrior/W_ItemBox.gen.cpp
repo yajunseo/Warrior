@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Warrior/W_ItemBox.h"
+#include "Warrior/Public/W_ItemBox.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -124,7 +124,7 @@ void EmptyLinkFunctionForGeneratedCodeW_ItemBox() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AW_ItemBox_OnCharacterOverlap_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "W_ItemBox.h" },
+		{ "ModuleRelativePath", "Public/W_ItemBox.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AW_ItemBox_OnCharacterOverlap_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AW_ItemBox, nullptr, "OnCharacterOverlap", nullptr, nullptr, sizeof(W_ItemBox_eventOnCharacterOverlap_Parms), Z_Construct_UFunction_AW_ItemBox_OnCharacterOverlap_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AW_ItemBox_OnCharacterOverlap_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00440401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AW_ItemBox_OnCharacterOverlap_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AW_ItemBox_OnCharacterOverlap_Statics::Function_MetaDataParams)) };
@@ -164,7 +164,7 @@ void EmptyLinkFunctionForGeneratedCodeW_ItemBox() {}
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_AW_ItemBox_OnEffectFinished_Statics::Function_MetaDataParams[] = {
-		{ "ModuleRelativePath", "W_ItemBox.h" },
+		{ "ModuleRelativePath", "Public/W_ItemBox.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFunctionParams Z_Construct_UFunction_AW_ItemBox_OnEffectFinished_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_AW_ItemBox, nullptr, "OnEffectFinished", nullptr, nullptr, sizeof(W_ItemBox_eventOnEffectFinished_Parms), Z_Construct_UFunction_AW_ItemBox_OnEffectFinished_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_AW_ItemBox_OnEffectFinished_Statics::PropPointers), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00040401, 0, 0, METADATA_PARAMS(Z_Construct_UFunction_AW_ItemBox_OnEffectFinished_Statics::Function_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UFunction_AW_ItemBox_OnEffectFinished_Statics::Function_MetaDataParams)) };
@@ -213,20 +213,20 @@ void EmptyLinkFunctionForGeneratedCodeW_ItemBox() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_Warrior,
 	};
 	const FClassFunctionLinkInfo Z_Construct_UClass_AW_ItemBox_Statics::FuncInfo[] = {
-		{ &Z_Construct_UFunction_AW_ItemBox_OnCharacterOverlap, "OnCharacterOverlap" }, // 3128292817
-		{ &Z_Construct_UFunction_AW_ItemBox_OnEffectFinished, "OnEffectFinished" }, // 475934765
+		{ &Z_Construct_UFunction_AW_ItemBox_OnCharacterOverlap, "OnCharacterOverlap" }, // 2685246987
+		{ &Z_Construct_UFunction_AW_ItemBox_OnEffectFinished, "OnEffectFinished" }, // 3469233833
 	};
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_ItemBox_Statics::Class_MetaDataParams[] = {
 		{ "IncludePath", "W_ItemBox.h" },
-		{ "ModuleRelativePath", "W_ItemBox.h" },
+		{ "ModuleRelativePath", "Public/W_ItemBox.h" },
 	};
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_ItemBox_Statics::NewProp_Trigger_MetaData[] = {
 		{ "Category", "Box" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "W_ItemBox.h" },
+		{ "ModuleRelativePath", "Public/W_ItemBox.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AW_ItemBox_Statics::NewProp_Trigger = { "Trigger", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_ItemBox, Trigger), Z_Construct_UClass_UBoxComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AW_ItemBox_Statics::NewProp_Trigger_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_ItemBox_Statics::NewProp_Trigger_MetaData)) };
@@ -234,14 +234,14 @@ void EmptyLinkFunctionForGeneratedCodeW_ItemBox() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_ItemBox_Statics::NewProp_Box_MetaData[] = {
 		{ "Category", "Box" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "W_ItemBox.h" },
+		{ "ModuleRelativePath", "Public/W_ItemBox.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AW_ItemBox_Statics::NewProp_Box = { "Box", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_ItemBox, Box), Z_Construct_UClass_UStaticMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AW_ItemBox_Statics::NewProp_Box_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_ItemBox_Statics::NewProp_Box_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_ItemBox_Statics::NewProp_WeaponItemClass_MetaData[] = {
 		{ "Category", "Box" },
-		{ "ModuleRelativePath", "W_ItemBox.h" },
+		{ "ModuleRelativePath", "Public/W_ItemBox.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AW_ItemBox_Statics::NewProp_WeaponItemClass = { "WeaponItemClass", nullptr, (EPropertyFlags)0x0014000000000801, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_ItemBox, WeaponItemClass), Z_Construct_UClass_AW_Weapon_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_AW_ItemBox_Statics::NewProp_WeaponItemClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_ItemBox_Statics::NewProp_WeaponItemClass_MetaData)) };
@@ -249,7 +249,7 @@ void EmptyLinkFunctionForGeneratedCodeW_ItemBox() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_ItemBox_Statics::NewProp_Effect_MetaData[] = {
 		{ "Category", "Effect" },
 		{ "EditInline", "true" },
-		{ "ModuleRelativePath", "W_ItemBox.h" },
+		{ "ModuleRelativePath", "Public/W_ItemBox.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AW_ItemBox_Statics::NewProp_Effect = { "Effect", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_ItemBox, Effect), Z_Construct_UClass_UParticleSystemComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AW_ItemBox_Statics::NewProp_Effect_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_ItemBox_Statics::NewProp_Effect_MetaData)) };
@@ -286,7 +286,7 @@ void EmptyLinkFunctionForGeneratedCodeW_ItemBox() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AW_ItemBox, 2570607596);
+	IMPLEMENT_CLASS(AW_ItemBox, 1545990998);
 	template<> WARRIOR_API UClass* StaticClass<AW_ItemBox>()
 	{
 		return AW_ItemBox::StaticClass();

@@ -1,8 +1,8 @@
 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\Warrior\Definitions.Warrior.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
-C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior/W_PlayerController.h
-C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Warrior.h
+C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior/Public/W_PlayerController.h
+C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Public\Warrior.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Public\EngineMinimal.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Core\Public\Misc/MonolithicHeaderBoilerplate.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\CoreUObject.h

@@ -1,0 +1,13 @@
+/NOLOGO
+/errorReport:prompt
+/MACHINE:x64
+/SUBSYSTEM:WINDOWS
+/DEF
+/NAME:"UE4Editor-ArenaBattleSetting-0038.dll"
+/IGNORE:4221
+/NODEFAULTLIB
+"C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\WarriorEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.obj"
+"C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\ArenaBattleSetting\ArenaBattleSetting.cpp.obj"
+"C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\ArenaBattleSetting\Default.rc2.res"
+/OUT:"C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\ArenaBattleSetting\UE4Editor-ArenaBattleSetting-0038.lib"
+/INCLUDE:IMPLEMENT_MODULE_ArenaBattleSetting

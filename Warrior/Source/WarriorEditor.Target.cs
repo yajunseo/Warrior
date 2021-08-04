@@ -9,6 +9,6 @@ public class WarriorEditorTarget : TargetRules
 	{
 		Type = TargetType.Editor;
 		DefaultBuildSettings = BuildSettingsVersion.V2;
-		ExtraModuleNames.Add("Warrior");
+		ExtraModuleNames.AddRange(new string[] { "Warrior", "ArenaBattleSetting" });
 	}
 }

@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Warrior/W_AIController.h"
+#include "Warrior/Public/W_AIController.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -54,18 +54,18 @@ void EmptyLinkFunctionForGeneratedCodeW_AIController() {}
 		{ "Comment", "/**\n * \n */" },
 		{ "HideCategories", "Collision Rendering Utilities|Transformation" },
 		{ "IncludePath", "W_AIController.h" },
-		{ "ModuleRelativePath", "W_AIController.h" },
+		{ "ModuleRelativePath", "Public/W_AIController.h" },
 	};
 #endif
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_AIController_Statics::NewProp_BTAsset_MetaData[] = {
-		{ "ModuleRelativePath", "W_AIController.h" },
+		{ "ModuleRelativePath", "Public/W_AIController.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AW_AIController_Statics::NewProp_BTAsset = { "BTAsset", nullptr, (EPropertyFlags)0x0040000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_AIController, BTAsset), Z_Construct_UClass_UBehaviorTree_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AW_AIController_Statics::NewProp_BTAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_AIController_Statics::NewProp_BTAsset_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_AIController_Statics::NewProp_BBAsset_MetaData[] = {
-		{ "ModuleRelativePath", "W_AIController.h" },
+		{ "ModuleRelativePath", "Public/W_AIController.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AW_AIController_Statics::NewProp_BBAsset = { "BBAsset", nullptr, (EPropertyFlags)0x0040000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_AIController, BBAsset), Z_Construct_UClass_UBlackboardData_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AW_AIController_Statics::NewProp_BBAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_AIController_Statics::NewProp_BBAsset_MetaData)) };
@@ -100,7 +100,7 @@ void EmptyLinkFunctionForGeneratedCodeW_AIController() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AW_AIController, 1844429116);
+	IMPLEMENT_CLASS(AW_AIController, 401129596);
 	template<> WARRIOR_API UClass* StaticClass<AW_AIController>()
 	{
 		return AW_AIController::StaticClass();

@@ -9,6 +9,6 @@ public class WarriorTarget : TargetRules
 	{
 		Type = TargetType.Game;
 		DefaultBuildSettings = BuildSettingsVersion.V2;
-		ExtraModuleNames.Add("Warrior");
+		ExtraModuleNames.AddRange( new string[]{ "Warrior", "ArenaBattleSetting"});
 	}
 }

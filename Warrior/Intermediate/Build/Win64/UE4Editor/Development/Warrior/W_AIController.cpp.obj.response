@@ -31,6 +31,7 @@
 /wd4244
 /wd4838
 /I .
+/I "C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Private"
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\Engine
 /I Runtime
 /I Runtime\Engine\Classes
@@ -230,8 +231,11 @@
 /I Editor\Kismet\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\ClothingSystemRuntimeInterface
 /I Runtime\ClothingSystemRuntimeInterface\Public
-/I "C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Inc\Warrior"
+/I "C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Inc\ArenaBattleSetting"
 /I "C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source"
+/I "C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\ArenaBattleSetting\Public"
+/I "C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Inc\Warrior"
+/I "C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Public"
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\AugmentedReality
 /I Runtime\AugmentedReality\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\MRMesh
@@ -268,7 +272,7 @@
 /FI"C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\WarriorEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
 /Yu"C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\WarriorEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
 /Fp"C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\WarriorEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
-"C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\W_AIController.cpp"
+"C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Private\W_AIController.cpp"
 /FI"C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\Warrior\Definitions.Warrior.h"
 /Fo"C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\Warrior\W_AIController.cpp.obj"
 /TP

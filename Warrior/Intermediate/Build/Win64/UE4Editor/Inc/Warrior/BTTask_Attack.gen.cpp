@@ -5,7 +5,7 @@
 ===========================================================================*/
 
 #include "UObject/GeneratedCppIncludes.h"
-#include "Warrior/BTTask_Attack.h"
+#include "Warrior/Public/BTTask_Attack.h"
 #ifdef _MSC_VER
 #pragma warning (push)
 #pragma warning (disable : 4883)
@@ -42,7 +42,7 @@ void EmptyLinkFunctionForGeneratedCodeBTTask_Attack() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UBTTask_Attack_Statics::Class_MetaDataParams[] = {
 		{ "Comment", "/**\n * \n */" },
 		{ "IncludePath", "BTTask_Attack.h" },
-		{ "ModuleRelativePath", "BTTask_Attack.h" },
+		{ "ModuleRelativePath", "Public/BTTask_Attack.h" },
 	};
 #endif
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UBTTask_Attack_Statics::StaticCppClassTypeInfo = {
@@ -72,7 +72,7 @@ void EmptyLinkFunctionForGeneratedCodeBTTask_Attack() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UBTTask_Attack, 2573673215);
+	IMPLEMENT_CLASS(UBTTask_Attack, 4249989625);
 	template<> WARRIOR_API UClass* StaticClass<UBTTask_Attack>()
 	{
 		return UBTTask_Attack::StaticClass();
