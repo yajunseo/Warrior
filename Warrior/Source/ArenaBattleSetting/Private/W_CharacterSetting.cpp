@@ -3,3 +3,7 @@
 
 #include "W_CharacterSetting.h"
 
+UW_CharacterSetting::UW_CharacterSetting()
+{
+
+}

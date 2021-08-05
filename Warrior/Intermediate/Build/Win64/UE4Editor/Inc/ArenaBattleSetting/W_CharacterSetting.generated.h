@@ -21,8 +21,10 @@ private: \
 	static void StaticRegisterNativesUW_CharacterSetting(); \
 	friend struct Z_Construct_UClass_UW_CharacterSetting_Statics; \
 public: \
-	DECLARE_CLASS(UW_CharacterSetting, UObject, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/ArenaBattleSetting"), NO_API) \
-	DECLARE_SERIALIZER(UW_CharacterSetting)
+	DECLARE_CLASS(UW_CharacterSetting, UObject, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/ArenaBattleSetting"), NO_API) \
+	DECLARE_SERIALIZER(UW_CharacterSetting) \
+	static const TCHAR* StaticConfigName() {return TEXT("ArenaBattle");} \
+
 
 
 #define Warrior_Source_ArenaBattleSetting_Public_W_CharacterSetting_h_15_INCLASS \
@@ -30,13 +32,15 @@ private: \
 	static void StaticRegisterNativesUW_CharacterSetting(); \
 	friend struct Z_Construct_UClass_UW_CharacterSetting_Statics; \
 public: \
-	DECLARE_CLASS(UW_CharacterSetting, UObject, COMPILED_IN_FLAGS(0), CASTCLASS_None, TEXT("/Script/ArenaBattleSetting"), NO_API) \
-	DECLARE_SERIALIZER(UW_CharacterSetting)
+	DECLARE_CLASS(UW_CharacterSetting, UObject, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/ArenaBattleSetting"), NO_API) \
+	DECLARE_SERIALIZER(UW_CharacterSetting) \
+	static const TCHAR* StaticConfigName() {return TEXT("ArenaBattle");} \
+
 
 
 #define Warrior_Source_ArenaBattleSetting_Public_W_CharacterSetting_h_15_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API UW_CharacterSetting(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	NO_API UW_CharacterSetting(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UW_CharacterSetting) \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UW_CharacterSetting); \
 DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UW_CharacterSetting); \
@@ -48,8 +52,6 @@ public:
 
 
 #define Warrior_Source_ArenaBattleSetting_Public_W_CharacterSetting_h_15_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API UW_CharacterSetting(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API UW_CharacterSetting(UW_CharacterSetting&&); \
@@ -57,7 +59,7 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, UW_CharacterSetting); \
 DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UW_CharacterSetting); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UW_CharacterSetting)
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UW_CharacterSetting)
 
 
 #define Warrior_Source_ArenaBattleSetting_Public_W_CharacterSetting_h_15_PRIVATE_PROPERTY_OFFSET

@@ -16,6 +16,8 @@ class WARRIOR_API AW_Character : public ACharacter
 public:
 	// Sets default values for this character's properties
 	AW_Character();
+	void SetCharacterState(ECharacterState NewState);
+	ECharacterState GetCharacterState() const;
 
 protected:
 	// Called when the game starts or when spawned
@@ -84,6 +86,7 @@ private:
 	void AttackStartComboState();
 	void AttackEndComboState();
 	void AttackCheck();
+	void OnAssetLoadCompleted();
 
 private:
 
@@ -105,6 +108,22 @@ private:
 	UPROPERTY(VisibleInstanceOnly, BlueprintReadOnly, Category = Attack, Meta = (AllowPrivateAccess = true))
 		int32 MaxCombo;
 
+	int32 AssetIndex = 0;
+
+	FSoftObjectPath CharacterAssetToLoad = FSoftObjectPath(nullptr);
+	TSharedPtr<struct FStreamableHandle> AssetStreamingHandle;
+
+	UPROPERTY(Transient, VisibleInstanceOnly, BlueprintReadOnly, Category = State, Meta = (AllowPrivateAccess = true))
+		ECharacterState CurrentState;
+
+	UPROPERTY(Transient, VisibleInstanceOnly, BlueprintReadOnly, Category = State, Meta = (AllowPrivateAccess = true))
+		bool bIsPlayer;
+
+	UPROPERTY()
+		class AW_AIController* W_AIController;
+
+	UPROPERTY()
+		class AW_PlayerController* W_PlayerController;
 
 public:
 	bool GetAttackState() { return IsAttacking; };

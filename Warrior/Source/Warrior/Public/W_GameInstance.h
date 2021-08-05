@@ -5,6 +5,7 @@
 #include "Warrior.h"
 #include "Engine/DataTable.h"
 #include "Engine/GameInstance.h"
+#include "Engine/StreamableManager.h"
 #include "W_GameInstance.generated.h"
 
 USTRUCT(BlueprintType)
@@ -44,6 +45,8 @@ public:
 
 	virtual void Init() override;
 	FW_CharacterData* GetCharacterData(int32 Level);
+
+	FStreamableManager StreamableManager;
 
 private:
 	UPROPERTY()

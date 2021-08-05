@@ -1,9 +1,8 @@
 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Public\BTDecorator_IsInAttackRange.h
-C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Public\BTTask_Attack.h
 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Public\BTTask_FindPatrolPos.h
 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Public\BTTask_TurnToTarget.h
-C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Public\W_AIController.h
-C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Public\WarriorCharacter.h
+C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Public\WarriorGameMode.h
+C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Public\W_AnimInstance.h
 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Public\W_Character.h
 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Public\W_CharacterStatComponent.h
 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Public\W_GameInstance.h
@@ -12,7 +11,9 @@ C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Public\W
 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Public\W_Pawn.h
 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Public\W_PlayerController.h
 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Public\W_WarriorWidget.h
+C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Public\W_AIController.h
 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Public\W_Weapon.h
+C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Public\BTTask_Attack.h
+C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Public\Warrior.h
 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Public\BTService_Detect.h
-C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Public\WarriorGameMode.h
-C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Public\W_AnimInstance.h
+C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Public\WarriorCharacter.h

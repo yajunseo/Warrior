@@ -1,61 +1,28 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (C:\Users\yajun\Documents\Unreal Projects\Warrior).
-  Creating makefile for WarriorEditor (no existing makefile)
   Parsing headers for WarriorEditor
     Running UnrealHeaderTool "C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Warrior.uproject" "C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\WarriorEditor\Development\WarriorEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\yajun\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
-  Reflection code generated for WarriorEditor in 4.8537256 seconds
+  Reflection code generated for WarriorEditor in 4.8071136 seconds
   Building WarriorEditor...
   Using Visual Studio 2019 14.28.29910 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 47 actions with 12 processes...
-    [1/47] WarriorGameMode.cpp
-    [2/47] WarriorCharacter.cpp
-    [3/47] Warrior.cpp
-    [4/47] W_CharacterStatComponent.cpp
-    [5/47] W_AnimInstance.cpp
-    [6/47] W_GameInstance.cpp
-    [7/47] W_GameMode.cpp
-    [8/47] BTTask_Attack.cpp
-    [9/47] BTService_Detect.cpp
-    [10/47] BTDecorator_IsInAttackRange.cpp
-    [11/47] BTTask_TurnToTarget.cpp
-    [12/47] W_AIController.cpp
-    [13/47] BTTask_FindPatrolPos.cpp
-    [14/47] BTTask_FindPatrolPos.gen.cpp
-    [15/47] W_Character.cpp
-    [16/47] Warrior.init.gen.cpp
-    [17/47] W_Pawn.cpp
-    [18/47] W_PlayerController.cpp
-    [19/47] W_ItemBox.cpp
-    [20/47] WarriorCharacter.gen.cpp
-    [21/47] W_Weapon.cpp
-    [22/47] WarriorGameMode.gen.cpp
-    [23/47] BTDecorator_IsInAttackRange.gen.cpp
-    [24/47] BTService_Detect.gen.cpp
-    [25/47] BTTask_TurnToTarget.gen.cpp
-    [26/47] BTTask_Attack.gen.cpp
-    [27/47] W_WarriorWidget.cpp
-    [28/47] ArenaBattleSetting.cpp
-    [29/47] W_AnimInstance.gen.cpp
-    [30/47] W_CharacterStatComponent.gen.cpp
-    [31/47] W_Character.gen.cpp
-    [32/47] W_AIController.gen.cpp
-    [33/47] W_GameInstance.gen.cpp
-    [34/47] W_GameMode.gen.cpp
-    [35/47] W_CharacterSetting.cpp
-    [36/47] ArenaBattleSetting.init.gen.cpp
-    [37/47] W_ItemBox.gen.cpp
-    [38/47] W_CharacterSetting.gen.cpp
-    [39/47] UE4Editor-ArenaBattleSetting-0040.lib
-       C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\ArenaBattleSetting\UE4Editor-ArenaBattleSetting-0040.lib 라이브러리 및 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\ArenaBattleSetting\UE4Editor-ArenaBattleSetting-0040.exp 개체를 생성하고 있습니다.
-    [40/47] W_PlayerController.gen.cpp
-    [41/47] UE4Editor-ArenaBattleSetting-0040.dll
-       C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\ArenaBattleSetting\UE4Editor-ArenaBattleSetting-0040.suppressed.lib 라이브러리 및 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\ArenaBattleSetting\UE4Editor-ArenaBattleSetting-0040.suppressed.exp 개체를 생성하고 있습니다.
-    [42/47] W_Pawn.gen.cpp
-    [43/47] W_Weapon.gen.cpp
-    [44/47] W_WarriorWidget.gen.cpp
-    [45/47] UE4Editor-Warrior-0040.lib
-       C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\Warrior\UE4Editor-Warrior-0040.lib 라이브러리 및 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\Warrior\UE4Editor-Warrior-0040.exp 개체를 생성하고 있습니다.
-    [46/47] UE4Editor-Warrior-0040.dll
-       C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\Warrior\UE4Editor-Warrior-0040.suppressed.lib 라이브러리 및 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\Warrior\UE4Editor-Warrior-0040.suppressed.exp 개체를 생성하고 있습니다.
-    [47/47] WarriorEditor.target
-  Total time in Parallel executor: 27.32 seconds
-  Total execution time: 35.32 seconds
+  Building 15 actions with 12 processes...
+    [1/15] UE4Editor-ArenaBattleSetting-0064.lib
+       C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\ArenaBattleSetting\UE4Editor-ArenaBattleSetting-0064.lib 라이브러리 및 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\ArenaBattleSetting\UE4Editor-ArenaBattleSetting-0064.exp 개체를 생성하고 있습니다.
+    [2/15] UE4Editor-ArenaBattleSetting-0064.dll
+       C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\ArenaBattleSetting\UE4Editor-ArenaBattleSetting-0064.suppressed.lib 라이브러리 및 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\ArenaBattleSetting\UE4Editor-ArenaBattleSetting-0064.suppressed.exp 개체를 생성하고 있습니다.
+    [3/15] Warrior.init.gen.cpp
+    [4/15] W_GameMode.cpp
+    [5/15] W_Character.gen.cpp
+    [6/15] W_AnimInstance.cpp
+    [7/15] W_ItemBox.cpp
+    [8/15] BTTask_Attack.cpp
+    [9/15] BTDecorator_IsInAttackRange.cpp
+    [10/15] BTTask_TurnToTarget.cpp
+    [11/15] BTService_Detect.cpp
+    [12/15] W_Character.cpp
+    [13/15] UE4Editor-Warrior-0064.lib
+       C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\Warrior\UE4Editor-Warrior-0064.lib 라이브러리 및 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\Warrior\UE4Editor-Warrior-0064.exp 개체를 생성하고 있습니다.
+    [14/15] UE4Editor-Warrior-0064.dll
+       C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\Warrior\UE4Editor-Warrior-0064.suppressed.lib 라이브러리 및 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\Warrior\UE4Editor-Warrior-0064.suppressed.exp 개체를 생성하고 있습니다.
+    [15/15] WarriorEditor.target
+  Total time in Parallel executor: 10.20 seconds
+  Total execution time: 16.22 seconds

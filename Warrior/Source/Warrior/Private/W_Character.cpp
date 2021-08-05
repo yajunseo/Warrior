@@ -9,6 +9,8 @@
 #include "Components/ProgressBar.h"
 #include "W_WarriorWidget.h"
 #include "W_AIController.h"
+#include "W_CharacterSetting.h"
+#include "W_GameInstance.h"
 
 // Sets default values
 AW_Character::AW_Character()
@@ -67,12 +69,35 @@ AW_Character::AW_Character()
 
 	AIControllerClass = AW_AIController::StaticClass();
 	AutoPossessAI = EAutoPossessAI::PlacedInWorldOrSpawned;
+
+	auto DefaultSetting = GetDefault<UW_CharacterSetting>();
+	if (DefaultSetting->CharacterAssets.Num() > 0)
+	{
+		for (auto c : DefaultSetting->CharacterAssets)
+		{
+			UE_LOG(LogTemp, Warning, TEXT("%s"), *c.ToString());
+		}
+	}
 }
 
 // Called when the game starts or when spawned
 void AW_Character::BeginPlay()
 {
 	Super::BeginPlay();
+
+	if (!IsPlayerControlled())
+	{
+		auto DefaultSetting = GetDefault<UW_CharacterSetting>();
+		int32 RandIndex = FMath::RandRange(0, DefaultSetting->CharacterAssets.Num() - 1);
+		//CharacterAssetToLoad = DefaultSetting->CharacterAssets[RandIndex];
+
+		//auto ABGameInstance = Cast<UW_GameInstance>(GetGameInstance());
+		//if (nullptr != ABGameInstance)
+		//{
+		//	AssetStreamingHandle = ABGameInstance->StreamableManager.RequestAsyncLoad(CharacterAssetToLoad, FStreamableDelegate::CreateUObject(this, &AW_Character::OnAssetLoadCompleted));
+		//	//AssetStreamingHandle = UAssetManager::GetStreamableManager().RequestAsyncLoad(CharacterAssetToLoad, FStreamableDelegate::CreateUObject(this, &AABCharacter::OnAssetLoadCompleted));
+		//}
+	}
 
 	UW_WarriorWidget* CharacterWIdget = Cast<UW_WarriorWidget>(HPBarWidget->GetUserWidgetObject());
 	if (CharacterWIdget != nullptr)
@@ -366,5 +391,15 @@ void AW_Character::AttackCheck()
 			FDamageEvent DamageEvent;
 			HitResult.Actor->TakeDamage(CharacterStat->GetAttack(), DamageEvent, GetController(), this);
 		}
+	}
+}
+
+void AW_Character::OnAssetLoadCompleted()
+{
+	USkeletalMesh* AssetLoaded = Cast<USkeletalMesh>(AssetStreamingHandle->GetLoadedAsset());
+	AssetStreamingHandle.Reset();
+	if (nullptr != AssetLoaded)
+	{
+		GetMesh()->SetSkeletalMesh(AssetLoaded);
 	}
 }
