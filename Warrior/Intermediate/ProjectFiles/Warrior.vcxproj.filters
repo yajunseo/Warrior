@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Warrior.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{D66C4839-CB1A-493F-B2B3-CF2BE1830BD7}</UniqueIdentifier>
+      <UniqueIdentifier>{E7E98FDD-9E97-4170-BC45-490362CC89C0}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Warrior.Target.cs">
       <Filter>Source</Filter>
@@ -12,8 +12,11 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{61041FF4-5402-41E9-96D6-4FE5A0880A86}</UniqueIdentifier>
+      <UniqueIdentifier>{9733B9B7-CF8B-4554-825D-A5D06DEF19C6}</UniqueIdentifier>
     </Filter>
+    <None Include="..\..\Config\DefaultArenaBattle.ini">
+      <Filter>Config</Filter>
+    </None>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
     </None>
@@ -30,13 +33,13 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\ArenaBattleSetting">
-      <UniqueIdentifier>{5061ACD7-7C17-4DFF-8A11-DD40B0B68616}</UniqueIdentifier>
+      <UniqueIdentifier>{B6CAF685-EDDC-4457-8B4F-5646FD57D830}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\ArenaBattleSetting\ArenaBattleSetting.Build.cs">
       <Filter>Source\ArenaBattleSetting</Filter>
     </None>
     <Filter Include="Source\ArenaBattleSetting\Private">
-      <UniqueIdentifier>{960C1817-6AA7-4245-85F3-9FFD0B753879}</UniqueIdentifier>
+      <UniqueIdentifier>{0C0CF75D-2CBB-48D8-95B9-1249C83B7205}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\ArenaBattleSetting\Private\ArenaBattleSetting.cpp">
       <Filter>Source\ArenaBattleSetting\Private</Filter>
@@ -45,7 +48,7 @@
       <Filter>Source\ArenaBattleSetting\Private</Filter>
     </ClCompile>
     <Filter Include="Source\ArenaBattleSetting\Public">
-      <UniqueIdentifier>{DC99B401-E8D9-480F-A980-90134988A9D3}</UniqueIdentifier>
+      <UniqueIdentifier>{09007603-2BC7-4792-8A14-CF7C2C1BC7BA}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\ArenaBattleSetting\Public\ArenaBattleSetting.h">
       <Filter>Source\ArenaBattleSetting\Public</Filter>
@@ -54,13 +57,13 @@
       <Filter>Source\ArenaBattleSetting\Public</Filter>
     </ClInclude>
     <Filter Include="Source\Warrior">
-      <UniqueIdentifier>{2CEB1019-7BEB-43F4-B1DB-C14A483599E5}</UniqueIdentifier>
+      <UniqueIdentifier>{9A843CE0-64C4-44C5-9AE5-688DF2FA8F2B}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Warrior\Warrior.Build.cs">
       <Filter>Source\Warrior</Filter>
     </None>
     <Filter Include="Source\Warrior\Private">
-      <UniqueIdentifier>{2FFD4E90-A52F-490E-880E-0FE6E281BA09}</UniqueIdentifier>
+      <UniqueIdentifier>{59BEB7BF-D6E4-4EE6-8B49-1745C9911D42}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Warrior\Private\BTDecorator_IsInAttackRange.cpp">
       <Filter>Source\Warrior\Private</Filter>
@@ -120,7 +123,7 @@
       <Filter>Source\Warrior\Private</Filter>
     </ClCompile>
     <Filter Include="Source\Warrior\Public">
-      <UniqueIdentifier>{B6BD7311-DA06-4287-8814-8DD8CC7899B4}</UniqueIdentifier>
+      <UniqueIdentifier>{1F4CFC83-AD28-43E6-8459-955601404795}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\Warrior\Public\BTDecorator_IsInAttackRange.h">
       <Filter>Source\Warrior\Public</Filter>

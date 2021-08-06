@@ -77,7 +77,8 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AW_Character); \
 	FORCEINLINE static uint32 __PPO__CurrentState() { return STRUCT_OFFSET(AW_Character, CurrentState); } \
 	FORCEINLINE static uint32 __PPO__bIsPlayer() { return STRUCT_OFFSET(AW_Character, bIsPlayer); } \
 	FORCEINLINE static uint32 __PPO__W_AIController() { return STRUCT_OFFSET(AW_Character, W_AIController); } \
-	FORCEINLINE static uint32 __PPO__W_PlayerController() { return STRUCT_OFFSET(AW_Character, W_PlayerController); }
+	FORCEINLINE static uint32 __PPO__W_PlayerController() { return STRUCT_OFFSET(AW_Character, W_PlayerController); } \
+	FORCEINLINE static uint32 __PPO__DeadTimer() { return STRUCT_OFFSET(AW_Character, DeadTimer); }
 
 
 #define Warrior_Source_Warrior_Public_W_Character_h_11_PROLOG

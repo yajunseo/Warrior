@@ -20,8 +20,7 @@
 				"Engine",
 				"UMG",
 				"AIModule",
-				"ArenaBattleSetting",
-				"CoreUObject"
+				"ArenaBattleSetting"
 			]
 		}
 	]

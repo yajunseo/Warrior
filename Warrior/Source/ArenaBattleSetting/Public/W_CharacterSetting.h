@@ -9,7 +9,7 @@
 /**
  * 
  */
-UCLASS(config=ArenaBattle)
+UCLASS(config = Warrior)
 class ARENABATTLESETTING_API UW_CharacterSetting : public UObject
 {
 	GENERATED_BODY()

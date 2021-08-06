@@ -23,7 +23,7 @@ private: \
 public: \
 	DECLARE_CLASS(UW_CharacterSetting, UObject, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/ArenaBattleSetting"), NO_API) \
 	DECLARE_SERIALIZER(UW_CharacterSetting) \
-	static const TCHAR* StaticConfigName() {return TEXT("ArenaBattle");} \
+	static const TCHAR* StaticConfigName() {return TEXT("Warrior");} \
 
 
 
@@ -34,7 +34,7 @@ private: \
 public: \
 	DECLARE_CLASS(UW_CharacterSetting, UObject, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/ArenaBattleSetting"), NO_API) \
 	DECLARE_SERIALIZER(UW_CharacterSetting) \
-	static const TCHAR* StaticConfigName() {return TEXT("ArenaBattle");} \
+	static const TCHAR* StaticConfigName() {return TEXT("Warrior");} \
 
 
 

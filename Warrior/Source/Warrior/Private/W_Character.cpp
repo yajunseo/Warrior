@@ -11,6 +11,7 @@
 #include "W_AIController.h"
 #include "W_CharacterSetting.h"
 #include "W_GameInstance.h"
+#include "W_PlayerController.h"
 
 // Sets default values
 AW_Character::AW_Character()
@@ -70,6 +71,7 @@ AW_Character::AW_Character()
 	AIControllerClass = AW_AIController::StaticClass();
 	AutoPossessAI = EAutoPossessAI::PlacedInWorldOrSpawned;
 
+	/*UE_LOG(LogTemp, Warning, TEXT("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"));
 	auto DefaultSetting = GetDefault<UW_CharacterSetting>();
 	if (DefaultSetting->CharacterAssets.Num() > 0)
 	{
@@ -78,12 +80,36 @@ AW_Character::AW_Character()
 			UE_LOG(LogTemp, Warning, TEXT("%s"), *c.ToString());
 		}
 	}
+	else
+	{
+		UE_LOG(LogTemp, Warning, TEXT("bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"));
+	}*/
+
+	SetActorHiddenInGame(true);
+	HPBarWidget->SetHiddenInGame(true);
+	SetCanBeDamaged(false);
+
+	DeadTimer = 5.0f;
 }
 
 // Called when the game starts or when spawned
 void AW_Character::BeginPlay()
 {
 	Super::BeginPlay();
+
+	bIsPlayer = IsPlayerControlled();
+	if (bIsPlayer)
+	{
+		W_PlayerController = Cast<AW_PlayerController>(GetController());
+	}
+	else
+	{
+		W_AIController = Cast<AW_AIController>(GetController());
+	}
+
+	// 모듈 추가 안해서 요기서 ready로 설정함
+	SetCharacterState(ECharacterState::READY);
+
 
 	if (!IsPlayerControlled())
 	{
@@ -104,6 +130,87 @@ void AW_Character::BeginPlay()
 	{
 		CharacterWIdget->BindCharacterStat(CharacterStat);
 	}
+}
+
+void AW_Character::SetCharacterState(ECharacterState NewState)
+{
+	CurrentState = NewState;
+
+	switch (CurrentState)
+	{
+		case ECharacterState::LOADING:
+		{
+			if (bIsPlayer)
+			{
+				DisableInput(W_PlayerController);
+			}
+
+			SetActorHiddenInGame(true);
+			HPBarWidget->SetHiddenInGame(true);
+			SetCanBeDamaged(false);
+			break;
+		}
+		case ECharacterState::READY:
+		{
+			SetActorHiddenInGame(false);
+			HPBarWidget->SetHiddenInGame(false);
+			SetCanBeDamaged(true);
+
+			CharacterStat->OnHPIsZero.AddLambda([this]() -> void {
+				SetCharacterState(ECharacterState::DEAD);
+			});
+			auto CharacterWidget = Cast<UW_WarriorWidget>(HPBarWidget->GetUserWidgetObject());
+			CharacterWidget->BindCharacterStat(CharacterStat);
+
+			if (bIsPlayer)
+			{
+				SetViewMode(EViewMode::THIRD_PERSON_VIEW1);
+				GetCharacterMovement()->MaxWalkSpeed = 600.0f;
+				EnableInput(W_PlayerController);
+			}
+			else
+			{
+				SetViewMode(EViewMode::NPC);
+				GetCharacterMovement()->MaxWalkSpeed = 400.0f;
+				W_AIController->RunAI();
+			}
+			break;
+		}
+		case ECharacterState::DEAD:
+		{
+			SetActorEnableCollision(false);
+			SetActorHiddenInGame(false);
+			HPBarWidget->SetHiddenInGame(true);
+			AW_Anim->SetDeadAnim();
+			SetCanBeDamaged(false);
+
+			if (bIsPlayer)
+			{
+				DisableInput(W_PlayerController);
+			}
+			else
+			{
+				W_AIController->StopAI();
+			}
+
+			GetWorld()->GetTimerManager().SetTimer(DeadTimerHandle, FTimerDelegate::CreateLambda([this]() -> void {
+				if (bIsPlayer)
+				{
+					W_PlayerController->RestartLevel();
+				}
+				else
+				{
+					Destroy();
+				}
+			}), DeadTimer, false);
+			break;
+		}
+	}
+}
+
+ECharacterState AW_Character::GetCharacterState() const
+{
+	return CurrentState;
 }
 
 void AW_Character::PostInitializeComponents()

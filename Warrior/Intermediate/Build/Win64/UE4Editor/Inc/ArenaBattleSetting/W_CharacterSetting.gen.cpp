@@ -68,7 +68,7 @@ void EmptyLinkFunctionForGeneratedCodeW_CharacterSetting() {}
 	};
 	const UE4CodeGen_Private::FClassParams Z_Construct_UClass_UW_CharacterSetting_Statics::ClassParams = {
 		&UW_CharacterSetting::StaticClass,
-		"ArenaBattle",
+		"Warrior",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
@@ -90,7 +90,7 @@ void EmptyLinkFunctionForGeneratedCodeW_CharacterSetting() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UW_CharacterSetting, 494191126);
+	IMPLEMENT_CLASS(UW_CharacterSetting, 3725402411);
 	template<> ARENABATTLESETTING_API UClass* StaticClass<UW_CharacterSetting>()
 	{
 		return UW_CharacterSetting::StaticClass();

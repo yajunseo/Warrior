@@ -51,7 +51,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{76AC347F-34BD-4F54-9165-30938FE4F136}</ProjectGuid>
+    <ProjectGuid>{34717827-F5ED-4786-B995-5EEACF22E8D3}</ProjectGuid>
     <Keyword>MakeFileProj</Keyword>
     <RootNamespace>Warrior</RootNamespace>
     <PlatformToolset>v142</PlatformToolset>
@@ -287,6 +287,7 @@
     <None Include="..\..\Warrior.uproject"/>
     <None Include="..\..\Source\Warrior.Target.cs"/>
     <None Include="..\..\Source\WarriorEditor.Target.cs"/>
+    <None Include="..\..\Config\DefaultArenaBattle.ini"/>
     <None Include="..\..\Config\DefaultEditor.ini"/>
     <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini"/>
     <None Include="..\..\Config\DefaultEngine.ini"/>

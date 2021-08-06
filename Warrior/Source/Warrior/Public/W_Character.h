@@ -125,6 +125,11 @@ private:
 	UPROPERTY()
 		class AW_PlayerController* W_PlayerController;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = State, Meta = (AllowPrivateAccess = true))
+		float DeadTimer;
+
+	FTimerHandle DeadTimerHandle = {};
+
 public:
 	bool GetAttackState() { return IsAttacking; };
 };
