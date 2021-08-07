@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Warrior.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{E7E98FDD-9E97-4170-BC45-490362CC89C0}</UniqueIdentifier>
+      <UniqueIdentifier>{A6352941-CB96-4ACB-A27D-262F24437FF8}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Warrior.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{9733B9B7-CF8B-4554-825D-A5D06DEF19C6}</UniqueIdentifier>
+      <UniqueIdentifier>{A60CA013-C652-4303-9033-9D0D1CDC1244}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultArenaBattle.ini">
       <Filter>Config</Filter>
@@ -33,13 +33,13 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\ArenaBattleSetting">
-      <UniqueIdentifier>{B6CAF685-EDDC-4457-8B4F-5646FD57D830}</UniqueIdentifier>
+      <UniqueIdentifier>{8E7EAE3F-5EB0-4B1E-9706-5D5C6E4094C0}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\ArenaBattleSetting\ArenaBattleSetting.Build.cs">
       <Filter>Source\ArenaBattleSetting</Filter>
     </None>
     <Filter Include="Source\ArenaBattleSetting\Private">
-      <UniqueIdentifier>{0C0CF75D-2CBB-48D8-95B9-1249C83B7205}</UniqueIdentifier>
+      <UniqueIdentifier>{3D09E33A-7E31-445C-B24E-EC2EB5DC1E8A}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\ArenaBattleSetting\Private\ArenaBattleSetting.cpp">
       <Filter>Source\ArenaBattleSetting\Private</Filter>
@@ -48,7 +48,7 @@
       <Filter>Source\ArenaBattleSetting\Private</Filter>
     </ClCompile>
     <Filter Include="Source\ArenaBattleSetting\Public">
-      <UniqueIdentifier>{09007603-2BC7-4792-8A14-CF7C2C1BC7BA}</UniqueIdentifier>
+      <UniqueIdentifier>{E9419B36-EE9F-49F9-AA2F-ACAB65D708DC}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\ArenaBattleSetting\Public\ArenaBattleSetting.h">
       <Filter>Source\ArenaBattleSetting\Public</Filter>
@@ -57,13 +57,13 @@
       <Filter>Source\ArenaBattleSetting\Public</Filter>
     </ClInclude>
     <Filter Include="Source\Warrior">
-      <UniqueIdentifier>{9A843CE0-64C4-44C5-9AE5-688DF2FA8F2B}</UniqueIdentifier>
+      <UniqueIdentifier>{F29A0ECC-7183-46E6-AD62-15FB3E9646CC}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Warrior\Warrior.Build.cs">
       <Filter>Source\Warrior</Filter>
     </None>
     <Filter Include="Source\Warrior\Private">
-      <UniqueIdentifier>{59BEB7BF-D6E4-4EE6-8B49-1745C9911D42}</UniqueIdentifier>
+      <UniqueIdentifier>{D0DF309A-1ED0-4C88-897B-8E47CFB4D71B}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Warrior\Private\BTDecorator_IsInAttackRange.cpp">
       <Filter>Source\Warrior\Private</Filter>
@@ -107,6 +107,9 @@
     <ClCompile Include="..\..\Source\Warrior\Private\W_GameMode.cpp">
       <Filter>Source\Warrior\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Warrior\Private\W_HUDWidget.cpp">
+      <Filter>Source\Warrior\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Warrior\Private\W_ItemBox.cpp">
       <Filter>Source\Warrior\Private</Filter>
     </ClCompile>
@@ -116,6 +119,9 @@
     <ClCompile Include="..\..\Source\Warrior\Private\W_PlayerController.cpp">
       <Filter>Source\Warrior\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Warrior\Private\W_PlayerState.cpp">
+      <Filter>Source\Warrior\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Warrior\Private\W_WarriorWidget.cpp">
       <Filter>Source\Warrior\Private</Filter>
     </ClCompile>
@@ -123,7 +129,7 @@
       <Filter>Source\Warrior\Private</Filter>
     </ClCompile>
     <Filter Include="Source\Warrior\Public">
-      <UniqueIdentifier>{1F4CFC83-AD28-43E6-8459-955601404795}</UniqueIdentifier>
+      <UniqueIdentifier>{D31A30C2-61E4-408F-B730-665BFF77D5A9}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\Warrior\Public\BTDecorator_IsInAttackRange.h">
       <Filter>Source\Warrior\Public</Filter>
@@ -167,6 +173,9 @@
     <ClInclude Include="..\..\Source\Warrior\Public\W_GameMode.h">
       <Filter>Source\Warrior\Public</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\Source\Warrior\Public\W_HUDWidget.h">
+      <Filter>Source\Warrior\Public</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\Warrior\Public\W_ItemBox.h">
       <Filter>Source\Warrior\Public</Filter>
     </ClInclude>
@@ -174,6 +183,9 @@
       <Filter>Source\Warrior\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Warrior\Public\W_PlayerController.h">
+      <Filter>Source\Warrior\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Warrior\Public\W_PlayerState.h">
       <Filter>Source\Warrior\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Warrior\Public\W_WarriorWidget.h">

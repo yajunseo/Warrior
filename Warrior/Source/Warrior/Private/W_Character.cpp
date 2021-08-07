@@ -12,6 +12,7 @@
 #include "W_CharacterSetting.h"
 #include "W_GameInstance.h"
 #include "W_PlayerController.h"
+#include "W_PlayerState.h"
 
 // Sets default values
 AW_Character::AW_Character()
@@ -107,10 +108,6 @@ void AW_Character::BeginPlay()
 		W_AIController = Cast<AW_AIController>(GetController());
 	}
 
-	// 모듈 추가 안해서 요기서 ready로 설정함
-	SetCharacterState(ECharacterState::READY);
-
-
 	if (!IsPlayerControlled())
 	{
 		auto DefaultSetting = GetDefault<UW_CharacterSetting>();
@@ -130,6 +127,9 @@ void AW_Character::BeginPlay()
 	{
 		CharacterWIdget->BindCharacterStat(CharacterStat);
 	}
+
+
+	SetCharacterState(ECharacterState::LOADING);
 }
 
 void AW_Character::SetCharacterState(ECharacterState NewState)
@@ -143,11 +143,17 @@ void AW_Character::SetCharacterState(ECharacterState NewState)
 			if (bIsPlayer)
 			{
 				DisableInput(W_PlayerController);
+
+				auto W_PlayerState = Cast<AW_PlayerState>(GetPlayerState());
+				CharacterStat->SetNewLevel(W_PlayerState->GetCharacterLevel());
 			}
 
 			SetActorHiddenInGame(true);
 			HPBarWidget->SetHiddenInGame(true);
 			SetCanBeDamaged(false);
+
+			// 모듈이 없어서 바로 레디
+			SetCharacterState(ECharacterState::READY);
 			break;
 		}
 		case ECharacterState::READY:
