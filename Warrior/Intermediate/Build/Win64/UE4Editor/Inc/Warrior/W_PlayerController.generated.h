@@ -36,7 +36,7 @@ public: \
 
 #define Warrior_Source_Warrior_Public_W_PlayerController_h_15_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API AW_PlayerController(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
+	NO_API AW_PlayerController(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AW_PlayerController) \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AW_PlayerController); \
 DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AW_PlayerController); \
@@ -48,8 +48,6 @@ public:
 
 
 #define Warrior_Source_Warrior_Public_W_PlayerController_h_15_ENHANCED_CONSTRUCTORS \
-	/** Standard constructor, called after all reflected properties have been initialized */ \
-	NO_API AW_PlayerController(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AW_PlayerController(AW_PlayerController&&); \
@@ -57,10 +55,15 @@ private: \
 public: \
 	DECLARE_VTABLE_PTR_HELPER_CTOR(NO_API, AW_PlayerController); \
 DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AW_PlayerController); \
-	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AW_PlayerController)
+	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AW_PlayerController)
 
 
-#define Warrior_Source_Warrior_Public_W_PlayerController_h_15_PRIVATE_PROPERTY_OFFSET
+#define Warrior_Source_Warrior_Public_W_PlayerController_h_15_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__HUDWidgetClass() { return STRUCT_OFFSET(AW_PlayerController, HUDWidgetClass); } \
+	FORCEINLINE static uint32 __PPO__HUDWidget() { return STRUCT_OFFSET(AW_PlayerController, HUDWidget); } \
+	FORCEINLINE static uint32 __PPO__W_PlayerState() { return STRUCT_OFFSET(AW_PlayerController, W_PlayerState); }
+
+
 #define Warrior_Source_Warrior_Public_W_PlayerController_h_12_PROLOG
 #define Warrior_Source_Warrior_Public_W_PlayerController_h_15_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

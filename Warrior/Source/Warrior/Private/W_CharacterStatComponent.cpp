@@ -28,7 +28,6 @@ void UW_CharacterStatComponent::BeginPlay()
 void UW_CharacterStatComponent::InitializeComponent()
 {
 	Super::InitializeComponent();
-
 	SetNewLevel(Level);
 }
 
@@ -45,7 +44,7 @@ void UW_CharacterStatComponent::SetNewLevel(int32 NewLevel)
 	}
 	else
 	{
-		UE_LOG(LogTemp, Warning, TEXT("1111"));
+		UE_LOG(LogTemp, Warning, TEXT("Level (%d) data doesn't exist"), NewLevel);
 	}
 }
 
@@ -75,4 +74,9 @@ float UW_CharacterStatComponent::GetAttack()
 float UW_CharacterStatComponent::GetHPRatio()
 {
 	return (CurrentStatData->MaxHP < KINDA_SMALL_NUMBER) ? 0.0f : (CurrentHP / CurrentStatData->MaxHP);
+}
+
+int32 UW_CharacterStatComponent::GetDropExp() const
+{
+	return CurrentStatData->DropExp;
 }

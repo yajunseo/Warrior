@@ -13,6 +13,7 @@
 #include "W_GameInstance.h"
 #include "W_PlayerController.h"
 #include "W_PlayerState.h"
+#include "W_HUDWidget.h"
 
 // Sets default values
 AW_Character::AW_Character()
@@ -143,6 +144,8 @@ void AW_Character::SetCharacterState(ECharacterState NewState)
 			if (bIsPlayer)
 			{
 				DisableInput(W_PlayerController);
+
+				W_PlayerController->GetHUDWidget()->BindCharacterStat(CharacterStat);
 
 				auto W_PlayerState = Cast<AW_PlayerState>(GetPlayerState());
 				CharacterStat->SetNewLevel(W_PlayerState->GetCharacterLevel());

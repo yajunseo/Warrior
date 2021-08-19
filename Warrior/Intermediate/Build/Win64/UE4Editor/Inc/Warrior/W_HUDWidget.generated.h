@@ -60,7 +60,15 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UW_HUDWidget); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UW_HUDWidget)
 
 
-#define Warrior_Source_Warrior_Public_W_HUDWidget_h_15_PRIVATE_PROPERTY_OFFSET
+#define Warrior_Source_Warrior_Public_W_HUDWidget_h_15_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__HPBar() { return STRUCT_OFFSET(UW_HUDWidget, HPBar); } \
+	FORCEINLINE static uint32 __PPO__ExpBar() { return STRUCT_OFFSET(UW_HUDWidget, ExpBar); } \
+	FORCEINLINE static uint32 __PPO__PlayerName() { return STRUCT_OFFSET(UW_HUDWidget, PlayerName); } \
+	FORCEINLINE static uint32 __PPO__PlayerLevel() { return STRUCT_OFFSET(UW_HUDWidget, PlayerLevel); } \
+	FORCEINLINE static uint32 __PPO__CurrentScore() { return STRUCT_OFFSET(UW_HUDWidget, CurrentScore); } \
+	FORCEINLINE static uint32 __PPO__HighScore() { return STRUCT_OFFSET(UW_HUDWidget, HighScore); }
+
+
 #define Warrior_Source_Warrior_Public_W_HUDWidget_h_12_PROLOG
 #define Warrior_Source_Warrior_Public_W_HUDWidget_h_15_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
