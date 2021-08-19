@@ -21,6 +21,7 @@ public:
 	virtual void OnPossess(APawn* aPawn) override;
 
 	class UW_HUDWidget* GetHUDWidget() const;
+	void NPCKill(class AW_Character* KilledNPC) const;
 
 protected:
 	virtual void BeginPlay() override;

@@ -4,6 +4,7 @@
 #include "W_PlayerController.h"
 #include "W_HUDWidget.h"
 #include "W_PlayerState.h"
+#include "W_Character.h"
 
 AW_PlayerController::AW_PlayerController()
 {
@@ -34,9 +35,14 @@ void AW_PlayerController::BeginPlay()
 	HUDWidget = CreateWidget<UW_HUDWidget>(this, HUDWidgetClass);	
 	HUDWidget->AddToViewport();
 
-	auto WPlayerState = Cast<AW_PlayerState>(PlayerState);
-	HUDWidget->BindPlayerState(WPlayerState);
-	WPlayerState->OnPlayerStateChanged.Broadcast();
+	W_PlayerState = Cast<AW_PlayerState>(PlayerState);
+	HUDWidget->BindPlayerState(W_PlayerState);
+	W_PlayerState->OnPlayerStateChanged.Broadcast();
+}
+
+void AW_PlayerController::NPCKill(class AW_Character* KilledNPC) const
+{
+	W_PlayerState->AddExp(KilledNPC->GetExp());
 }
 
 UW_HUDWidget* AW_PlayerController::GetHUDWidget() const

@@ -222,6 +222,11 @@ ECharacterState AW_Character::GetCharacterState() const
 	return CurrentState;
 }
 
+int32 AW_Character::GetExp() const
+{
+	return CharacterStat->GetDropExp();
+}
+
 void AW_Character::PostInitializeComponents()
 {
 	Super::PostInitializeComponents();
@@ -340,6 +345,16 @@ float AW_Character::TakeDamage(float DamageAmount, FDamageEvent const& DamageEve
 	float FinalDamage = Super::TakeDamage(DamageAmount, DamageEvent, EventInstigator, DamageCauser);
 
 	CharacterStat->SetDamage(FinalDamage);
+	if (CurrentState == ECharacterState::DEAD)
+	{
+		if (EventInstigator->IsPlayerController())
+		{
+			auto WPlayerController = Cast<AW_PlayerController>(EventInstigator);
+			WPlayerController->NPCKill(this);
+			auto WPlayerState = Cast<AW_PlayerState>(WPlayerController->PlayerState);
+			WPlayerState->AddGameScore();
+		}
+	}
 	return FinalDamage;
 }
 
