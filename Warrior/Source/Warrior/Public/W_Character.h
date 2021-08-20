@@ -19,6 +19,7 @@ public:
 	void SetCharacterState(ECharacterState NewState);
 	ECharacterState GetCharacterState() const;
 	int32 GetExp() const;
+	float GetFinalAttackange() const;
 
 protected:
 	// Called when the game starts or when spawned
@@ -108,6 +109,12 @@ private:
 
 	UPROPERTY(VisibleInstanceOnly, BlueprintReadOnly, Category = Attack, Meta = (AllowPrivateAccess = true))
 		int32 MaxCombo;
+
+	UPROPERTY(VisibleInstanceOnly, BlueprintReadOnly, Category = Attack, Meta = (AllowPrivateAccess = true))
+		float AttackRange;
+
+	UPROPERTY(VisibleInstanceOnly, BlueprintReadOnly, Category = Attack, Meta = (AllowPrivateAccess = true))
+		float AttackRadius;
 
 	int32 AssetIndex = 0;
 

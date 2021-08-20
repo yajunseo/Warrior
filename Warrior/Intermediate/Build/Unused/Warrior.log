@@ -2,15 +2,15 @@
   Building WarriorEditor...
   Using Visual Studio 2019 14.28.29910 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.28.29910) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
   Building 6 actions with 12 processes...
-    [1/6] UE4Editor-ArenaBattleSetting-0015.lib
-       C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\ArenaBattleSetting\UE4Editor-ArenaBattleSetting-0015.lib 라이브러리 및 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\ArenaBattleSetting\UE4Editor-ArenaBattleSetting-0015.exp 개체를 생성하고 있습니다.
-    [2/6] UE4Editor-ArenaBattleSetting-0015.dll
-       C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\ArenaBattleSetting\UE4Editor-ArenaBattleSetting-0015.suppressed.lib 라이브러리 및 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\ArenaBattleSetting\UE4Editor-ArenaBattleSetting-0015.suppressed.exp 개체를 생성하고 있습니다.
-    [3/6] W_Character.cpp
-    [4/6] UE4Editor-Warrior-0015.lib
-       C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\Warrior\UE4Editor-Warrior-0015.lib 라이브러리 및 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\Warrior\UE4Editor-Warrior-0015.exp 개체를 생성하고 있습니다.
-    [5/6] UE4Editor-Warrior-0015.dll
-       C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\Warrior\UE4Editor-Warrior-0015.suppressed.lib 라이브러리 및 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\Warrior\UE4Editor-Warrior-0015.suppressed.exp 개체를 생성하고 있습니다.
+    [1/6] UE4Editor-ArenaBattleSetting-0027.lib
+       C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\ArenaBattleSetting\UE4Editor-ArenaBattleSetting-0027.lib 라이브러리 및 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\ArenaBattleSetting\UE4Editor-ArenaBattleSetting-0027.exp 개체를 생성하고 있습니다.
+    [2/6] UE4Editor-ArenaBattleSetting-0027.dll
+       C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\ArenaBattleSetting\UE4Editor-ArenaBattleSetting-0027.suppressed.lib 라이브러리 및 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\ArenaBattleSetting\UE4Editor-ArenaBattleSetting-0027.suppressed.exp 개체를 생성하고 있습니다.
+    [3/6] BTDecorator_IsInAttackRange.cpp
+    [4/6] UE4Editor-Warrior-0027.lib
+       C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\Warrior\UE4Editor-Warrior-0027.lib 라이브러리 및 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\Warrior\UE4Editor-Warrior-0027.exp 개체를 생성하고 있습니다.
+    [5/6] UE4Editor-Warrior-0027.dll
+       C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\Warrior\UE4Editor-Warrior-0027.suppressed.lib 라이브러리 및 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Development\Warrior\UE4Editor-Warrior-0027.suppressed.exp 개체를 생성하고 있습니다.
     [6/6] WarriorEditor.target
-  Total time in Parallel executor: 8.59 seconds
-  Total execution time: 9.74 seconds
+  Total time in Parallel executor: 5.42 seconds
+  Total execution time: 6.53 seconds

@@ -205,3 +205,7 @@ C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Public\DataTabl
 C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\DataTable.generated.h
 C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\Engine/StreamableManager.h
 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Inc\Warrior\W_GameInstance.generated.h
+C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Public\W_SaveGame.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/SaveGame.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\SaveGame.generated.h
+C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Inc\Warrior\W_SaveGame.generated.h

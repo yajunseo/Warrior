@@ -58,7 +58,10 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AW_Weapon); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AW_Weapon)
 
 
-#define Warrior_Source_Warrior_Public_W_Weapon_h_12_PRIVATE_PROPERTY_OFFSET
+#define Warrior_Source_Warrior_Public_W_Weapon_h_12_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__AttackRange() { return STRUCT_OFFSET(AW_Weapon, AttackRange); }
+
+
 #define Warrior_Source_Warrior_Public_W_Weapon_h_9_PROLOG
 #define Warrior_Source_Warrior_Public_W_Weapon_h_12_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

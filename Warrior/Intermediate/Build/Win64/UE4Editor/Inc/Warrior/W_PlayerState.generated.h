@@ -60,6 +60,7 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AW_PlayerState); \
 
 #define Warrior_Source_Warrior_Public_W_PlayerState_h_17_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__GameScore() { return STRUCT_OFFSET(AW_PlayerState, GameScore); } \
+	FORCEINLINE static uint32 __PPO__GameHighScore() { return STRUCT_OFFSET(AW_PlayerState, GameHighScore); } \
 	FORCEINLINE static uint32 __PPO__CharacterLevel() { return STRUCT_OFFSET(AW_PlayerState, CharacterLevel); } \
 	FORCEINLINE static uint32 __PPO__Exp() { return STRUCT_OFFSET(AW_PlayerState, Exp); }
 

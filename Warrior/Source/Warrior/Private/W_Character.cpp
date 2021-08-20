@@ -65,6 +65,8 @@ AW_Character::AW_Character()
 
 	IsAttacking = false;
 	MaxCombo = 4;
+	AttackRange = 80.0f;
+	AttackRadius = 50.0f;
 	AttackEndComboState();
 
 	GetCapsuleComponent()->SetCollisionProfileName(TEXT("W_Character"));
@@ -375,9 +377,14 @@ void AW_Character::PossessedBy(AController* NewController)
 	}
 }
 
+float AW_Character::GetFinalAttackange() const
+{
+	return (CurrentWeapon != nullptr) ? CurrentWeapon->GetAttackRange() : AttackRange;
+}
+
 bool AW_Character::CanSetWeapon()
 {
-	return (CurrentWeapon == nullptr);
+	return true;
 }
 
 void AW_Character::SetWeapon(class AW_Weapon* NewWeapon)
@@ -386,6 +393,7 @@ void AW_Character::SetWeapon(class AW_Weapon* NewWeapon)
 	{
 		CurrentWeapon->DetachAllSceneComponents(this->GetMesh(), FDetachmentTransformRules::KeepRelativeTransform);
 		CurrentWeapon->Destroy();
+		CurrentWeapon = nullptr;
 	}
 
 	FName WeaponSocket(TEXT("hand_rSocket"));
@@ -504,12 +512,14 @@ void AW_Character::AttackEndComboState()
 
 void AW_Character::AttackCheck()
 {
+	float FinalAttackRange = GetFinalAttackange();
+
 	FHitResult HitResult;
 	FCollisionQueryParams Params(NAME_None, false, this);
 	bool bResult = GetWorld()->SweepSingleByChannel(
 		HitResult,
 		GetActorLocation(),
-		GetActorLocation() + GetActorForwardVector() * 200.0f,
+		GetActorLocation() + GetActorForwardVector() * FinalAttackRange,
 		FQuat::Identity,
 		ECollisionChannel::ECC_GameTraceChannel2,
 		FCollisionShape::MakeSphere(50.0f),

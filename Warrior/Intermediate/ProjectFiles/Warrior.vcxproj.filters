@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\Warrior.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{A6352941-CB96-4ACB-A27D-262F24437FF8}</UniqueIdentifier>
+      <UniqueIdentifier>{F615846C-80EF-41B5-AC0E-BF3BD8573A79}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Warrior.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{A60CA013-C652-4303-9033-9D0D1CDC1244}</UniqueIdentifier>
+      <UniqueIdentifier>{B5E18254-C187-4DCD-8A31-2707111C9C7B}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultArenaBattle.ini">
       <Filter>Config</Filter>
@@ -33,13 +33,13 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\ArenaBattleSetting">
-      <UniqueIdentifier>{8E7EAE3F-5EB0-4B1E-9706-5D5C6E4094C0}</UniqueIdentifier>
+      <UniqueIdentifier>{4CEE37BD-D99E-4E1C-BFB5-7CC1DD9BEEEE}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\ArenaBattleSetting\ArenaBattleSetting.Build.cs">
       <Filter>Source\ArenaBattleSetting</Filter>
     </None>
     <Filter Include="Source\ArenaBattleSetting\Private">
-      <UniqueIdentifier>{3D09E33A-7E31-445C-B24E-EC2EB5DC1E8A}</UniqueIdentifier>
+      <UniqueIdentifier>{D334AF81-8EC2-4AF4-9052-26A10E98E8C9}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\ArenaBattleSetting\Private\ArenaBattleSetting.cpp">
       <Filter>Source\ArenaBattleSetting\Private</Filter>
@@ -48,7 +48,7 @@
       <Filter>Source\ArenaBattleSetting\Private</Filter>
     </ClCompile>
     <Filter Include="Source\ArenaBattleSetting\Public">
-      <UniqueIdentifier>{E9419B36-EE9F-49F9-AA2F-ACAB65D708DC}</UniqueIdentifier>
+      <UniqueIdentifier>{8C4DD9E9-BE1D-4754-8E2F-E0428E2FDBE9}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\ArenaBattleSetting\Public\ArenaBattleSetting.h">
       <Filter>Source\ArenaBattleSetting\Public</Filter>
@@ -57,13 +57,13 @@
       <Filter>Source\ArenaBattleSetting\Public</Filter>
     </ClInclude>
     <Filter Include="Source\Warrior">
-      <UniqueIdentifier>{F29A0ECC-7183-46E6-AD62-15FB3E9646CC}</UniqueIdentifier>
+      <UniqueIdentifier>{E4A501F4-6428-497D-B2E5-85B9D01E3A83}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\Warrior\Warrior.Build.cs">
       <Filter>Source\Warrior</Filter>
     </None>
     <Filter Include="Source\Warrior\Private">
-      <UniqueIdentifier>{D0DF309A-1ED0-4C88-897B-8E47CFB4D71B}</UniqueIdentifier>
+      <UniqueIdentifier>{BC155612-FB3A-4A62-AF3C-D71DE6799150}</UniqueIdentifier>
     </Filter>
     <ClCompile Include="..\..\Source\Warrior\Private\BTDecorator_IsInAttackRange.cpp">
       <Filter>Source\Warrior\Private</Filter>
@@ -122,6 +122,9 @@
     <ClCompile Include="..\..\Source\Warrior\Private\W_PlayerState.cpp">
       <Filter>Source\Warrior\Private</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Warrior\Private\W_SaveGame.cpp">
+      <Filter>Source\Warrior\Private</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Warrior\Private\W_WarriorWidget.cpp">
       <Filter>Source\Warrior\Private</Filter>
     </ClCompile>
@@ -129,7 +132,7 @@
       <Filter>Source\Warrior\Private</Filter>
     </ClCompile>
     <Filter Include="Source\Warrior\Public">
-      <UniqueIdentifier>{D31A30C2-61E4-408F-B730-665BFF77D5A9}</UniqueIdentifier>
+      <UniqueIdentifier>{F8245C63-3049-48D1-AA91-AB2FBB3ABCEE}</UniqueIdentifier>
     </Filter>
     <ClInclude Include="..\..\Source\Warrior\Public\BTDecorator_IsInAttackRange.h">
       <Filter>Source\Warrior\Public</Filter>
@@ -186,6 +189,9 @@
       <Filter>Source\Warrior\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Warrior\Public\W_PlayerState.h">
+      <Filter>Source\Warrior\Public</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Warrior\Public\W_SaveGame.h">
       <Filter>Source\Warrior\Public</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Warrior\Public\W_WarriorWidget.h">

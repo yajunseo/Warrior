@@ -149,6 +149,14 @@ void EmptyLinkFunctionForGeneratedCodeW_Character() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxCombo_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FIntPropertyParams NewProp_MaxCombo;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AttackRange_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_AttackRange;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AttackRadius_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_AttackRadius;
 		static const UE4CodeGen_Private::FBytePropertyParams NewProp_CurrentState_Underlying;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CurrentState_MetaData[];
@@ -294,6 +302,22 @@ void EmptyLinkFunctionForGeneratedCodeW_Character() {}
 	};
 #endif
 	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UClass_AW_Character_Statics::NewProp_MaxCombo = { "MaxCombo", nullptr, (EPropertyFlags)0x0040000000020815, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_Character, MaxCombo), METADATA_PARAMS(Z_Construct_UClass_AW_Character_Statics::NewProp_MaxCombo_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_Character_Statics::NewProp_MaxCombo_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_Character_Statics::NewProp_AttackRange_MetaData[] = {
+		{ "AllowPrivateAccess", "TRUE" },
+		{ "Category", "Attack" },
+		{ "ModuleRelativePath", "Public/W_Character.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AW_Character_Statics::NewProp_AttackRange = { "AttackRange", nullptr, (EPropertyFlags)0x0040000000020815, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_Character, AttackRange), METADATA_PARAMS(Z_Construct_UClass_AW_Character_Statics::NewProp_AttackRange_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_Character_Statics::NewProp_AttackRange_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_Character_Statics::NewProp_AttackRadius_MetaData[] = {
+		{ "AllowPrivateAccess", "TRUE" },
+		{ "Category", "Attack" },
+		{ "ModuleRelativePath", "Public/W_Character.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AW_Character_Statics::NewProp_AttackRadius = { "AttackRadius", nullptr, (EPropertyFlags)0x0040000000020815, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_Character, AttackRadius), METADATA_PARAMS(Z_Construct_UClass_AW_Character_Statics::NewProp_AttackRadius_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_Character_Statics::NewProp_AttackRadius_MetaData)) };
 	const UE4CodeGen_Private::FBytePropertyParams Z_Construct_UClass_AW_Character_Statics::NewProp_CurrentState_Underlying = { "UnderlyingType", nullptr, (EPropertyFlags)0x0000000000000000, UE4CodeGen_Private::EPropertyGenFlags::Byte, RF_Public|RF_Transient|RF_MarkAsNative, 1, 0, nullptr, METADATA_PARAMS(nullptr, 0) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_Character_Statics::NewProp_CurrentState_MetaData[] = {
@@ -348,6 +372,8 @@ void EmptyLinkFunctionForGeneratedCodeW_Character() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_Character_Statics::NewProp_IsComboInputOn,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_Character_Statics::NewProp_CurrentCombo,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_Character_Statics::NewProp_MaxCombo,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_Character_Statics::NewProp_AttackRange,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_Character_Statics::NewProp_AttackRadius,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_Character_Statics::NewProp_CurrentState_Underlying,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_Character_Statics::NewProp_CurrentState,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_Character_Statics::NewProp_bIsPlayer,
@@ -382,7 +408,7 @@ void EmptyLinkFunctionForGeneratedCodeW_Character() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AW_Character, 2193791997);
+	IMPLEMENT_CLASS(AW_Character, 862221673);
 	template<> WARRIOR_API UClass* StaticClass<AW_Character>()
 	{
 		return AW_Character::StaticClass();

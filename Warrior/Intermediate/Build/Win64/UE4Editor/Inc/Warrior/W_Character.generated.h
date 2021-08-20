@@ -74,6 +74,8 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AW_Character); \
 	FORCEINLINE static uint32 __PPO__IsComboInputOn() { return STRUCT_OFFSET(AW_Character, IsComboInputOn); } \
 	FORCEINLINE static uint32 __PPO__CurrentCombo() { return STRUCT_OFFSET(AW_Character, CurrentCombo); } \
 	FORCEINLINE static uint32 __PPO__MaxCombo() { return STRUCT_OFFSET(AW_Character, MaxCombo); } \
+	FORCEINLINE static uint32 __PPO__AttackRange() { return STRUCT_OFFSET(AW_Character, AttackRange); } \
+	FORCEINLINE static uint32 __PPO__AttackRadius() { return STRUCT_OFFSET(AW_Character, AttackRadius); } \
 	FORCEINLINE static uint32 __PPO__CurrentState() { return STRUCT_OFFSET(AW_Character, CurrentState); } \
 	FORCEINLINE static uint32 __PPO__bIsPlayer() { return STRUCT_OFFSET(AW_Character, bIsPlayer); } \
 	FORCEINLINE static uint32 __PPO__W_AIController() { return STRUCT_OFFSET(AW_Character, W_AIController); } \

@@ -36,6 +36,10 @@ void EmptyLinkFunctionForGeneratedCodeW_PlayerState() {}
 #endif
 		static const UE4CodeGen_Private::FIntPropertyParams NewProp_GameScore;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_GameHighScore_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FIntPropertyParams NewProp_GameHighScore;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CharacterLevel_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FIntPropertyParams NewProp_CharacterLevel;
@@ -67,6 +71,12 @@ void EmptyLinkFunctionForGeneratedCodeW_PlayerState() {}
 #endif
 	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UClass_AW_PlayerState_Statics::NewProp_GameScore = { "GameScore", nullptr, (EPropertyFlags)0x0020080000002000, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_PlayerState, GameScore), METADATA_PARAMS(Z_Construct_UClass_AW_PlayerState_Statics::NewProp_GameScore_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_PlayerState_Statics::NewProp_GameScore_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_PlayerState_Statics::NewProp_GameHighScore_MetaData[] = {
+		{ "ModuleRelativePath", "Public/W_PlayerState.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UClass_AW_PlayerState_Statics::NewProp_GameHighScore = { "GameHighScore", nullptr, (EPropertyFlags)0x0020080000002000, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_PlayerState, GameHighScore), METADATA_PARAMS(Z_Construct_UClass_AW_PlayerState_Statics::NewProp_GameHighScore_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_PlayerState_Statics::NewProp_GameHighScore_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_PlayerState_Statics::NewProp_CharacterLevel_MetaData[] = {
 		{ "ModuleRelativePath", "Public/W_PlayerState.h" },
 	};
@@ -80,6 +90,7 @@ void EmptyLinkFunctionForGeneratedCodeW_PlayerState() {}
 	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UClass_AW_PlayerState_Statics::NewProp_Exp = { "Exp", nullptr, (EPropertyFlags)0x0020080000002000, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_PlayerState, Exp), METADATA_PARAMS(Z_Construct_UClass_AW_PlayerState_Statics::NewProp_Exp_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_PlayerState_Statics::NewProp_Exp_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AW_PlayerState_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_PlayerState_Statics::NewProp_GameScore,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_PlayerState_Statics::NewProp_GameHighScore,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_PlayerState_Statics::NewProp_CharacterLevel,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_PlayerState_Statics::NewProp_Exp,
 	};
@@ -110,7 +121,7 @@ void EmptyLinkFunctionForGeneratedCodeW_PlayerState() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AW_PlayerState, 1031583441);
+	IMPLEMENT_CLASS(AW_PlayerState, 1833973412);
 	template<> WARRIOR_API UClass* StaticClass<AW_PlayerState>()
 	{
 		return AW_PlayerState::StaticClass();

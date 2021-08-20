@@ -18,6 +18,13 @@ AW_Weapon::AW_Weapon()
 		Weapon->SetSkeletalMesh(SK_WEAPON.Object);
 	}
 	Weapon->SetCollisionProfileName("NoCollision");
+
+	AttackRange = 150.0f;
+}
+
+float AW_Weapon::GetAttackRange() const
+{
+	return AttackRange;
 }
 
 // Called when the game starts or when spawned

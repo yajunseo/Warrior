@@ -36,6 +36,10 @@ void EmptyLinkFunctionForGeneratedCodeW_Weapon() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Weapon_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_Weapon;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AttackRange_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_AttackRange;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -58,8 +62,16 @@ void EmptyLinkFunctionForGeneratedCodeW_Weapon() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AW_Weapon_Statics::NewProp_Weapon = { "Weapon", nullptr, (EPropertyFlags)0x00100000000a0009, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_Weapon, Weapon), Z_Construct_UClass_USkeletalMeshComponent_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AW_Weapon_Statics::NewProp_Weapon_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_Weapon_Statics::NewProp_Weapon_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_Weapon_Statics::NewProp_AttackRange_MetaData[] = {
+		{ "Category", "Attack" },
+		{ "ModuleRelativePath", "Public/W_Weapon.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AW_Weapon_Statics::NewProp_AttackRange = { "AttackRange", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_Weapon, AttackRange), METADATA_PARAMS(Z_Construct_UClass_AW_Weapon_Statics::NewProp_AttackRange_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_Weapon_Statics::NewProp_AttackRange_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AW_Weapon_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_Weapon_Statics::NewProp_Weapon,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_Weapon_Statics::NewProp_AttackRange,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AW_Weapon_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AW_Weapon>::IsAbstract,
@@ -88,7 +100,7 @@ void EmptyLinkFunctionForGeneratedCodeW_Weapon() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AW_Weapon, 1779714247);
+	IMPLEMENT_CLASS(AW_Weapon, 1093334962);
 	template<> WARRIOR_API UClass* StaticClass<AW_Weapon>()
 	{
 		return AW_Weapon::StaticClass();
