@@ -17,5 +17,15 @@ class WARRIOR_API AW_GameMode : public AGameModeBase
 public:
 	AW_GameMode();
 
+	virtual void PostInitializeComponents() override;
 	virtual void PostLogin(APlayerController* NewPlayer) override;
+	void AddScore(class AABPlayerController* ScoredPlayer);
+	int32 GetScore() const;
+
+private:
+	UPROPERTY()
+		class AW_GameState* W_GameState;
+
+	UPROPERTY()
+		int32 ScoreToClear;
 };

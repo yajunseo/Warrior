@@ -303,3 +303,7 @@ C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\In
 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Inc\Warrior\W_PlayerState.generated.h
 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Public\W_Character.h
 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Inc\Warrior\W_Character.generated.h
+C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Public\W_GameState.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/GameStateBase.h
+C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\GameStateBase.generated.h
+C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Inc\Warrior\W_GameState.generated.h

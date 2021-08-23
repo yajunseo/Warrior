@@ -40,6 +40,30 @@ void EmptyLinkFunctionForGeneratedCodeW_Weapon() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AttackRange_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_AttackRange;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AttackDamageMin_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_AttackDamageMin;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AttackDamageMax_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_AttackDamageMax;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AttackModifierMin_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_AttackModifierMin;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AttackModifierMax_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_AttackModifierMax;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AttackDamage_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_AttackDamage;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_AttackModifier_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_AttackModifier;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -69,9 +93,57 @@ void EmptyLinkFunctionForGeneratedCodeW_Weapon() {}
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AW_Weapon_Statics::NewProp_AttackRange = { "AttackRange", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_Weapon, AttackRange), METADATA_PARAMS(Z_Construct_UClass_AW_Weapon_Statics::NewProp_AttackRange_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_Weapon_Statics::NewProp_AttackRange_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_Weapon_Statics::NewProp_AttackDamageMin_MetaData[] = {
+		{ "Category", "Attack" },
+		{ "ModuleRelativePath", "Public/W_Weapon.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AW_Weapon_Statics::NewProp_AttackDamageMin = { "AttackDamageMin", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_Weapon, AttackDamageMin), METADATA_PARAMS(Z_Construct_UClass_AW_Weapon_Statics::NewProp_AttackDamageMin_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_Weapon_Statics::NewProp_AttackDamageMin_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_Weapon_Statics::NewProp_AttackDamageMax_MetaData[] = {
+		{ "Category", "Attack" },
+		{ "ModuleRelativePath", "Public/W_Weapon.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AW_Weapon_Statics::NewProp_AttackDamageMax = { "AttackDamageMax", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_Weapon, AttackDamageMax), METADATA_PARAMS(Z_Construct_UClass_AW_Weapon_Statics::NewProp_AttackDamageMax_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_Weapon_Statics::NewProp_AttackDamageMax_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_Weapon_Statics::NewProp_AttackModifierMin_MetaData[] = {
+		{ "Category", "Attack" },
+		{ "ModuleRelativePath", "Public/W_Weapon.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AW_Weapon_Statics::NewProp_AttackModifierMin = { "AttackModifierMin", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_Weapon, AttackModifierMin), METADATA_PARAMS(Z_Construct_UClass_AW_Weapon_Statics::NewProp_AttackModifierMin_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_Weapon_Statics::NewProp_AttackModifierMin_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_Weapon_Statics::NewProp_AttackModifierMax_MetaData[] = {
+		{ "Category", "Attack" },
+		{ "ModuleRelativePath", "Public/W_Weapon.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AW_Weapon_Statics::NewProp_AttackModifierMax = { "AttackModifierMax", nullptr, (EPropertyFlags)0x0020080000000005, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_Weapon, AttackModifierMax), METADATA_PARAMS(Z_Construct_UClass_AW_Weapon_Statics::NewProp_AttackModifierMax_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_Weapon_Statics::NewProp_AttackModifierMax_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_Weapon_Statics::NewProp_AttackDamage_MetaData[] = {
+		{ "Category", "Attack" },
+		{ "ModuleRelativePath", "Public/W_Weapon.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AW_Weapon_Statics::NewProp_AttackDamage = { "AttackDamage", nullptr, (EPropertyFlags)0x0020080000022815, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_Weapon, AttackDamage), METADATA_PARAMS(Z_Construct_UClass_AW_Weapon_Statics::NewProp_AttackDamage_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_Weapon_Statics::NewProp_AttackDamage_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_Weapon_Statics::NewProp_AttackModifier_MetaData[] = {
+		{ "Category", "Attack" },
+		{ "ModuleRelativePath", "Public/W_Weapon.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AW_Weapon_Statics::NewProp_AttackModifier = { "AttackModifier", nullptr, (EPropertyFlags)0x0020080000022815, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_Weapon, AttackModifier), METADATA_PARAMS(Z_Construct_UClass_AW_Weapon_Statics::NewProp_AttackModifier_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_Weapon_Statics::NewProp_AttackModifier_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AW_Weapon_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_Weapon_Statics::NewProp_Weapon,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_Weapon_Statics::NewProp_AttackRange,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_Weapon_Statics::NewProp_AttackDamageMin,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_Weapon_Statics::NewProp_AttackDamageMax,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_Weapon_Statics::NewProp_AttackModifierMin,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_Weapon_Statics::NewProp_AttackModifierMax,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_Weapon_Statics::NewProp_AttackDamage,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_Weapon_Statics::NewProp_AttackModifier,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AW_Weapon_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AW_Weapon>::IsAbstract,
@@ -100,7 +172,7 @@ void EmptyLinkFunctionForGeneratedCodeW_Weapon() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AW_Weapon, 1093334962);
+	IMPLEMENT_CLASS(AW_Weapon, 1632951950);
 	template<> WARRIOR_API UClass* StaticClass<AW_Weapon>()
 	{
 		return AW_Weapon::StaticClass();

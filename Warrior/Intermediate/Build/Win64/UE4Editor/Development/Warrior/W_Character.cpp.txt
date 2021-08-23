@@ -365,3 +365,5 @@ C:\Program Files\Epic Games\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\In
 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Inc\Warrior\W_PlayerState.generated.h
 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Public\W_HUDWidget.h
 C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Inc\Warrior\W_HUDWidget.generated.h
+C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Source\Warrior\Public\W_GameMode.h
+C:\Users\yajun\Documents\Unreal Projects\Warrior\Warrior\Intermediate\Build\Win64\UE4Editor\Inc\Warrior\W_GameMode.generated.h

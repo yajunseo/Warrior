@@ -58,7 +58,11 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AW_GameMode); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AW_GameMode)
 
 
-#define Warrior_Source_Warrior_Public_W_GameMode_h_15_PRIVATE_PROPERTY_OFFSET
+#define Warrior_Source_Warrior_Public_W_GameMode_h_15_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__W_GameState() { return STRUCT_OFFSET(AW_GameMode, W_GameState); } \
+	FORCEINLINE static uint32 __PPO__ScoreToClear() { return STRUCT_OFFSET(AW_GameMode, ScoreToClear); }
+
+
 #define Warrior_Source_Warrior_Public_W_GameMode_h_12_PROLOG
 #define Warrior_Source_Warrior_Public_W_GameMode_h_15_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

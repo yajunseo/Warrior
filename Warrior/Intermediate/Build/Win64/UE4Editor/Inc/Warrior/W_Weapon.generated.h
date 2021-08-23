@@ -59,7 +59,13 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AW_Weapon); \
 
 
 #define Warrior_Source_Warrior_Public_W_Weapon_h_12_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__AttackRange() { return STRUCT_OFFSET(AW_Weapon, AttackRange); }
+	FORCEINLINE static uint32 __PPO__AttackRange() { return STRUCT_OFFSET(AW_Weapon, AttackRange); } \
+	FORCEINLINE static uint32 __PPO__AttackDamageMin() { return STRUCT_OFFSET(AW_Weapon, AttackDamageMin); } \
+	FORCEINLINE static uint32 __PPO__AttackDamageMax() { return STRUCT_OFFSET(AW_Weapon, AttackDamageMax); } \
+	FORCEINLINE static uint32 __PPO__AttackModifierMin() { return STRUCT_OFFSET(AW_Weapon, AttackModifierMin); } \
+	FORCEINLINE static uint32 __PPO__AttackModifierMax() { return STRUCT_OFFSET(AW_Weapon, AttackModifierMax); } \
+	FORCEINLINE static uint32 __PPO__AttackDamage() { return STRUCT_OFFSET(AW_Weapon, AttackDamage); } \
+	FORCEINLINE static uint32 __PPO__AttackModifier() { return STRUCT_OFFSET(AW_Weapon, AttackModifier); }
 
 
 #define Warrior_Source_Warrior_Public_W_Weapon_h_9_PROLOG

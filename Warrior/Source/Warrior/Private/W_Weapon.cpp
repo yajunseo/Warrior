@@ -20,6 +20,10 @@ AW_Weapon::AW_Weapon()
 	Weapon->SetCollisionProfileName("NoCollision");
 
 	AttackRange = 150.0f;
+	AttackDamageMin = -2.5f;
+	AttackDamageMax = 10.0f;
+	AttackModifierMin = 0.85f;
+	AttackModifierMax = 1.25f;
 }
 
 float AW_Weapon::GetAttackRange() const
@@ -27,11 +31,23 @@ float AW_Weapon::GetAttackRange() const
 	return AttackRange;
 }
 
+float AW_Weapon::GetAttackDamage() const
+{
+	return AttackDamage;
+}
+
+float AW_Weapon::GetAttackModifier() const
+{
+	return AttackModifier;
+}
+
 // Called when the game starts or when spawned
 void AW_Weapon::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	AttackDamage = FMath::RandRange(AttackDamageMin, AttackDamageMax);
+	AttackModifier = FMath::RandRange(AttackModifierMin, AttackModifierMax);
 }
 
 // Called every frame

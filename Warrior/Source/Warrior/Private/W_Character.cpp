@@ -14,6 +14,7 @@
 #include "W_PlayerController.h"
 #include "W_PlayerState.h"
 #include "W_HUDWidget.h"
+#include "W_GameMode.h"
 
 // Sets default values
 AW_Character::AW_Character()
@@ -40,6 +41,7 @@ AW_Character::AW_Character()
 		GetMesh()->SetSkeletalMesh(SK_KWANG.Object);
 	}
 
+	GetMesh()->SetAnimationMode(EAnimationMode::AnimationBlueprint);
 	GetMesh()->SetAnimationMode(EAnimationMode::AnimationBlueprint);
 
 	static ConstructorHelpers::FClassFinder<UAnimInstance> WARRIOR_ANIM(TEXT("/Game/InfinityBladeWarriors/Animation/WarriorAnimBp.WarriorAnimBp_C"));
@@ -151,6 +153,14 @@ void AW_Character::SetCharacterState(ECharacterState NewState)
 
 				auto W_PlayerState = Cast<AW_PlayerState>(GetPlayerState());
 				CharacterStat->SetNewLevel(W_PlayerState->GetCharacterLevel());
+			}
+			
+			else
+			{
+				auto ABGameMode = Cast<AW_GameMode>(GetWorld()->GetAuthGameMode());
+				int32 TargetLevel = FMath::CeilToInt(((float)ABGameMode->GetScore() * 0.8f));
+				int32 FinalLevel = FMath::Clamp<int32>(TargetLevel, 1, 20);
+				CharacterStat->SetNewLevel(FinalLevel);
 			}
 
 			SetActorHiddenInGame(true);
@@ -382,6 +392,15 @@ float AW_Character::GetFinalAttackange() const
 	return (CurrentWeapon != nullptr) ? CurrentWeapon->GetAttackRange() : AttackRange;
 }
 
+float AW_Character::GetFinalAttackDamage() const
+{
+	float AttackDamage = (nullptr != CurrentWeapon) ? (CharacterStat->GetAttack() + CurrentWeapon->GetAttackDamage()) : CharacterStat->GetAttack();
+	float AttackModifier = (nullptr != CurrentWeapon) ? CurrentWeapon->GetAttackModifier() : 1.0f;
+	UE_LOG(LogTemp, Warning, TEXT("%f"), AttackDamage * AttackModifier)
+	return AttackDamage * AttackModifier;
+}
+
+
 bool AW_Character::CanSetWeapon()
 {
 	return true;
@@ -530,7 +549,7 @@ void AW_Character::AttackCheck()
 		if (HitResult.Actor.IsValid())
 		{
 			FDamageEvent DamageEvent;
-			HitResult.Actor->TakeDamage(CharacterStat->GetAttack(), DamageEvent, GetController(), this);
+			HitResult.Actor->TakeDamage(GetFinalAttackDamage(), DamageEvent, GetController(), this);
 		}
 	}
 }
