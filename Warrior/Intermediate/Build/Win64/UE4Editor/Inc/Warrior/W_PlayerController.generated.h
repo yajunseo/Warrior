@@ -60,8 +60,12 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(AW_PlayerController); \
 
 #define Warrior_Source_Warrior_Public_W_PlayerController_h_15_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__HUDWidgetClass() { return STRUCT_OFFSET(AW_PlayerController, HUDWidgetClass); } \
+	FORCEINLINE static uint32 __PPO__MenuWidgetClass() { return STRUCT_OFFSET(AW_PlayerController, MenuWidgetClass); } \
+	FORCEINLINE static uint32 __PPO__ResultWidgetClass() { return STRUCT_OFFSET(AW_PlayerController, ResultWidgetClass); } \
 	FORCEINLINE static uint32 __PPO__HUDWidget() { return STRUCT_OFFSET(AW_PlayerController, HUDWidget); } \
-	FORCEINLINE static uint32 __PPO__W_PlayerState() { return STRUCT_OFFSET(AW_PlayerController, W_PlayerState); }
+	FORCEINLINE static uint32 __PPO__W_PlayerState() { return STRUCT_OFFSET(AW_PlayerController, W_PlayerState); } \
+	FORCEINLINE static uint32 __PPO__MenuWidget() { return STRUCT_OFFSET(AW_PlayerController, MenuWidget); } \
+	FORCEINLINE static uint32 __PPO__ResultWidget() { return STRUCT_OFFSET(AW_PlayerController, ResultWidget); }
 
 
 #define Warrior_Source_Warrior_Public_W_PlayerController_h_12_PROLOG

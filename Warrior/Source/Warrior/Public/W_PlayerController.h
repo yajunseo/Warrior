@@ -27,15 +27,16 @@ public:
 
 protected:
 	virtual void BeginPlay() override;
-	
+	virtual void SetupInputComponent() override;
+
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = UI)
 		TSubclassOf<class UW_HUDWidget> HUDWidgetClass;
 
-	/*UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = UI)
-		TSubclassOf<class UABGameplayWidget> MenuWidgetClass;
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = UI)
+		TSubclassOf<class UW_GameplayWidget> MenuWidgetClass;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = UI)
-		TSubclassOf<class UABGameplayResultWidget> ResultWidgetClass;*/
+		TSubclassOf<class UW_GameplayResultWidget> ResultWidgetClass;
 
 private:
 	void OnGamePause();
@@ -46,11 +47,11 @@ private:
 	UPROPERTY()
 		class AW_PlayerState* W_PlayerState;
 
-	/*UPROPERTY()
-		class UABGameplayWidget* MenuWidget;
+	UPROPERTY()
+		class UW_GameplayWidget* MenuWidget;
 
 	UPROPERTY()
-		class UABGameplayResultWidget* ResultWidget;*/
+		class UW_GameplayResultWidget* ResultWidget;
 
 	FInputModeGameOnly GameInputMode;
 	FInputModeUIOnly UIInputMode;

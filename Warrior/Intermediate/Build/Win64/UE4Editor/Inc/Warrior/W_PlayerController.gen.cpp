@@ -19,6 +19,8 @@ void EmptyLinkFunctionForGeneratedCodeW_PlayerController() {}
 	UPackage* Z_Construct_UPackage__Script_Warrior();
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
 	WARRIOR_API UClass* Z_Construct_UClass_UW_HUDWidget_NoRegister();
+	WARRIOR_API UClass* Z_Construct_UClass_UW_GameplayWidget_NoRegister();
+	WARRIOR_API UClass* Z_Construct_UClass_UW_GameplayResultWidget_NoRegister();
 	WARRIOR_API UClass* Z_Construct_UClass_AW_PlayerState_NoRegister();
 // End Cross Module References
 	void AW_PlayerController::StaticRegisterNativesAW_PlayerController()
@@ -39,6 +41,14 @@ void EmptyLinkFunctionForGeneratedCodeW_PlayerController() {}
 #endif
 		static const UE4CodeGen_Private::FClassPropertyParams NewProp_HUDWidgetClass;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MenuWidgetClass_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_MenuWidgetClass;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ResultWidgetClass_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FClassPropertyParams NewProp_ResultWidgetClass;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_HUDWidget_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_HUDWidget;
@@ -46,6 +56,14 @@ void EmptyLinkFunctionForGeneratedCodeW_PlayerController() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_W_PlayerState_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_W_PlayerState;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MenuWidget_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_MenuWidget;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ResultWidget_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ResultWidget;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -70,6 +88,20 @@ void EmptyLinkFunctionForGeneratedCodeW_PlayerController() {}
 #endif
 	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AW_PlayerController_Statics::NewProp_HUDWidgetClass = { "HUDWidgetClass", nullptr, (EPropertyFlags)0x0024080000010005, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_PlayerController, HUDWidgetClass), Z_Construct_UClass_UW_HUDWidget_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_AW_PlayerController_Statics::NewProp_HUDWidgetClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_PlayerController_Statics::NewProp_HUDWidgetClass_MetaData)) };
 #if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_PlayerController_Statics::NewProp_MenuWidgetClass_MetaData[] = {
+		{ "Category", "UI" },
+		{ "ModuleRelativePath", "Public/W_PlayerController.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AW_PlayerController_Statics::NewProp_MenuWidgetClass = { "MenuWidgetClass", nullptr, (EPropertyFlags)0x0024080000010005, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_PlayerController, MenuWidgetClass), Z_Construct_UClass_UW_GameplayWidget_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_AW_PlayerController_Statics::NewProp_MenuWidgetClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_PlayerController_Statics::NewProp_MenuWidgetClass_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_PlayerController_Statics::NewProp_ResultWidgetClass_MetaData[] = {
+		{ "Category", "UI" },
+		{ "ModuleRelativePath", "Public/W_PlayerController.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FClassPropertyParams Z_Construct_UClass_AW_PlayerController_Statics::NewProp_ResultWidgetClass = { "ResultWidgetClass", nullptr, (EPropertyFlags)0x0024080000010005, UE4CodeGen_Private::EPropertyGenFlags::Class, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_PlayerController, ResultWidgetClass), Z_Construct_UClass_UW_GameplayResultWidget_NoRegister, Z_Construct_UClass_UClass, METADATA_PARAMS(Z_Construct_UClass_AW_PlayerController_Statics::NewProp_ResultWidgetClass_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_PlayerController_Statics::NewProp_ResultWidgetClass_MetaData)) };
+#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_PlayerController_Statics::NewProp_HUDWidget_MetaData[] = {
 		{ "EditInline", "true" },
 		{ "ModuleRelativePath", "Public/W_PlayerController.h" },
@@ -82,10 +114,28 @@ void EmptyLinkFunctionForGeneratedCodeW_PlayerController() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AW_PlayerController_Statics::NewProp_W_PlayerState = { "W_PlayerState", nullptr, (EPropertyFlags)0x0040000000000000, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_PlayerController, W_PlayerState), Z_Construct_UClass_AW_PlayerState_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AW_PlayerController_Statics::NewProp_W_PlayerState_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_PlayerController_Statics::NewProp_W_PlayerState_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_PlayerController_Statics::NewProp_MenuWidget_MetaData[] = {
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/W_PlayerController.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AW_PlayerController_Statics::NewProp_MenuWidget = { "MenuWidget", nullptr, (EPropertyFlags)0x0040000000080008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_PlayerController, MenuWidget), Z_Construct_UClass_UW_GameplayWidget_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AW_PlayerController_Statics::NewProp_MenuWidget_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_PlayerController_Statics::NewProp_MenuWidget_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_PlayerController_Statics::NewProp_ResultWidget_MetaData[] = {
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "Public/W_PlayerController.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AW_PlayerController_Statics::NewProp_ResultWidget = { "ResultWidget", nullptr, (EPropertyFlags)0x0040000000080008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_PlayerController, ResultWidget), Z_Construct_UClass_UW_GameplayResultWidget_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AW_PlayerController_Statics::NewProp_ResultWidget_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_PlayerController_Statics::NewProp_ResultWidget_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AW_PlayerController_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_PlayerController_Statics::NewProp_HUDWidgetClass,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_PlayerController_Statics::NewProp_MenuWidgetClass,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_PlayerController_Statics::NewProp_ResultWidgetClass,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_PlayerController_Statics::NewProp_HUDWidget,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_PlayerController_Statics::NewProp_W_PlayerState,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_PlayerController_Statics::NewProp_MenuWidget,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_PlayerController_Statics::NewProp_ResultWidget,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AW_PlayerController_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AW_PlayerController>::IsAbstract,
@@ -114,7 +164,7 @@ void EmptyLinkFunctionForGeneratedCodeW_PlayerController() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AW_PlayerController, 303633559);
+	IMPLEMENT_CLASS(AW_PlayerController, 3945316260);
 	template<> WARRIOR_API UClass* StaticClass<AW_PlayerController>()
 	{
 		return AW_PlayerController::StaticClass();

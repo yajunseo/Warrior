@@ -47,6 +47,11 @@ void EmptyLinkFunctionForGeneratedCodeW_PlayerState() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Exp_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FIntPropertyParams NewProp_Exp;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_bGameCleared_MetaData[];
+#endif
+		static void NewProp_bGameCleared_SetBit(void* Obj);
+		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_bGameCleared;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -88,11 +93,22 @@ void EmptyLinkFunctionForGeneratedCodeW_PlayerState() {}
 	};
 #endif
 	const UE4CodeGen_Private::FIntPropertyParams Z_Construct_UClass_AW_PlayerState_Statics::NewProp_Exp = { "Exp", nullptr, (EPropertyFlags)0x0020080000002000, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AW_PlayerState, Exp), METADATA_PARAMS(Z_Construct_UClass_AW_PlayerState_Statics::NewProp_Exp_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_PlayerState_Statics::NewProp_Exp_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AW_PlayerState_Statics::NewProp_bGameCleared_MetaData[] = {
+		{ "ModuleRelativePath", "Public/W_PlayerState.h" },
+	};
+#endif
+	void Z_Construct_UClass_AW_PlayerState_Statics::NewProp_bGameCleared_SetBit(void* Obj)
+	{
+		((AW_PlayerState*)Obj)->bGameCleared = 1;
+	}
+	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_AW_PlayerState_Statics::NewProp_bGameCleared = { "bGameCleared", nullptr, (EPropertyFlags)0x0020080000002000, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(AW_PlayerState), &Z_Construct_UClass_AW_PlayerState_Statics::NewProp_bGameCleared_SetBit, METADATA_PARAMS(Z_Construct_UClass_AW_PlayerState_Statics::NewProp_bGameCleared_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AW_PlayerState_Statics::NewProp_bGameCleared_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AW_PlayerState_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_PlayerState_Statics::NewProp_GameScore,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_PlayerState_Statics::NewProp_GameHighScore,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_PlayerState_Statics::NewProp_CharacterLevel,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_PlayerState_Statics::NewProp_Exp,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AW_PlayerState_Statics::NewProp_bGameCleared,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AW_PlayerState_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AW_PlayerState>::IsAbstract,
@@ -121,7 +137,7 @@ void EmptyLinkFunctionForGeneratedCodeW_PlayerState() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AW_PlayerState, 1833973412);
+	IMPLEMENT_CLASS(AW_PlayerState, 4061311345);
 	template<> WARRIOR_API UClass* StaticClass<AW_PlayerState>()
 	{
 		return AW_PlayerState::StaticClass();

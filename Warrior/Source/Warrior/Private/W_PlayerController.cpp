@@ -6,6 +6,8 @@
 #include "W_PlayerState.h"
 #include "W_Character.h"
 #include "W_GameState.h"
+#include "W_GameplayWidget.h"
+#include "W_GameplayResultWidget.h"
 
 AW_PlayerController::AW_PlayerController()
 {
@@ -15,17 +17,17 @@ AW_PlayerController::AW_PlayerController()
 		HUDWidgetClass = UI_HUD_C.Class;
 	}
 
-	/*static ConstructorHelpers::FClassFinder<UABGameplayWidget> UI_MENU_C(TEXT("/Game/Book/UI/UI_Menu.UI_Menu_C"));
+	static ConstructorHelpers::FClassFinder<UW_GameplayWidget> UI_MENU_C(TEXT("/Game/UI/UI_Menu.UI_Menu_C"));
 	if (UI_MENU_C.Succeeded())
 	{
 		MenuWidgetClass = UI_MENU_C.Class;
 	}
 
-	static ConstructorHelpers::FClassFinder<UABGameplayResultWidget> UI_RESULT_C(TEXT("/Game/Book/UI/UI_Result.UI_Result_C"));
+	static ConstructorHelpers::FClassFinder<UW_GameplayResultWidget> UI_RESULT_C(TEXT("/Game/UI/UI_Result.UI_Result_C"));
 	if (UI_RESULT_C.Succeeded())
 	{
 		ResultWidgetClass = UI_RESULT_C.Class;
-	}*/
+	}
 }
 
 void AW_PlayerController::PostInitializeComponents()
@@ -48,9 +50,9 @@ void AW_PlayerController::BeginPlay()
 	SetInputMode(InputMode);
 
 	HUDWidget = CreateWidget<UW_HUDWidget>(this, HUDWidgetClass);	
-	HUDWidget->AddToViewport();
+	HUDWidget->AddToViewport(1);
 
-	//ResultWidget = CreateWidget<UW_GameplayResultWidget>(this, ResultWidgetClass);
+	ResultWidget = CreateWidget<UW_GameplayResultWidget>(this, ResultWidgetClass);
 
 	W_PlayerState = Cast<AW_PlayerState>(PlayerState);
 	HUDWidget->BindPlayerState(W_PlayerState);
@@ -85,21 +87,28 @@ void AW_PlayerController::ChangeInputMode(bool bGameMode)
 		bShowMouseCursor = true;
 	}
 }
+
+void AW_PlayerController::SetupInputComponent()
+{
+	Super::SetupInputComponent();
+	InputComponent->BindAction(TEXT("GamePause"), EInputEvent::IE_Pressed, this, &AW_PlayerController::OnGamePause);
+}
+
 void AW_PlayerController::ShowResultUI()
 {
-	/*auto W_GameState = Cast<AW_GameState>(UGameplayStatics::GetGameState(this));
+	auto W_GameState = Cast<AW_GameState>(UGameplayStatics::GetGameState(this));
 	ResultWidget->BindGameState(W_GameState);
 
 	ResultWidget->AddToViewport();
-	ChangeInputMode(false);*/
+	ChangeInputMode(false);
 }
 
 void AW_PlayerController::OnGamePause()
 {
-	/*MenuWidget = CreateWidget<UABGameplayWidget>(this, MenuWidgetClass);
-	ABCHECK(nullptr != MenuWidget);
+	MenuWidget = CreateWidget<UW_GameplayWidget>(this, MenuWidgetClass);
+
 	MenuWidget->AddToViewport(3);
 
 	SetPause(true);
-	ChangeInputMode(false);*/
+	ChangeInputMode(false);
 }

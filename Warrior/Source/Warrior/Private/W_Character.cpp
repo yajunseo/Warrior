@@ -217,7 +217,7 @@ void AW_Character::SetCharacterState(ECharacterState NewState)
 			GetWorld()->GetTimerManager().SetTimer(DeadTimerHandle, FTimerDelegate::CreateLambda([this]() -> void {
 				if (bIsPlayer)
 				{
-					W_PlayerController->RestartLevel();
+					W_PlayerController->ShowResultUI();
 				}
 				else
 				{

@@ -29,6 +29,8 @@ public:
 
 	void InitPlayerData();
 	void SavePlayerData();
+	void SetGameCleared();
+	bool IsGameCleared() const;
 
 	FOnPlayerStateChangedDelegate OnPlayerStateChanged;
 
@@ -44,6 +46,9 @@ protected:
 
 	UPROPERTY(Transient)
 		int32 Exp;
+
+	UPROPERTY(Transient)
+		bool bGameCleared;
 
 private:
 	void SetCharacterLevel(int32 NewCharacterLevel);

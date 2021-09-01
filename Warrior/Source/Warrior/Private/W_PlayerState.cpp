@@ -54,9 +54,18 @@ void AW_PlayerState::SavePlayerData()
 	NewPlayerData->HighScore = GameHighScore;
 
 	UGameplayStatics::SaveGameToSlot(NewPlayerData, SaveSlotName, 0);
-
-
 }
+
+void AW_PlayerState::SetGameCleared()
+{
+	bGameCleared = true;
+}
+
+bool AW_PlayerState::IsGameCleared() const
+{
+	return bGameCleared;
+}
+
 
 float AW_PlayerState::GetExpRatio() const
 {

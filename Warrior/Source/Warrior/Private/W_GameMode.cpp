@@ -13,6 +13,7 @@ AW_GameMode::AW_GameMode()
 	PlayerControllerClass = AW_PlayerController::StaticClass();
 	PlayerStateClass = AW_PlayerState::StaticClass();
 	GameStateClass = AW_GameState::StaticClass();
+	ScoreToClear = 2;
 }
 
 void AW_GameMode::PostInitializeComponents()
@@ -29,38 +30,38 @@ void AW_GameMode::PostLogin(APlayerController* NewPlayer)
 	W_PlayerState->InitPlayerData();
 }
 
-void AW_GameMode::AddScore(AABPlayerController* ScoredPlayer)
+void AW_GameMode::AddScore(AW_PlayerController* ScoredPlayer)
 {
-	//for (FConstPlayerControllerIterator It = GetWorld()->GetPlayerControllerIterator(); It; ++It)
-	//{
-	//	const auto ABPlayerController = Cast<AW_PlayerController>(It->Get());
-	//	if ((nullptr != ABPlayerController) && (ScoredPlayer == ABPlayerController))
-	//	{
-	//		ABPlayerController->AddGameScore();
-	//		break;
-	//	}
-	//}
+	for (FConstPlayerControllerIterator It = GetWorld()->GetPlayerControllerIterator(); It; ++It)
+	{
+		const auto ABPlayerController = Cast<AW_PlayerController>(It->Get());
+		if ((nullptr != ABPlayerController) && (ScoredPlayer == ABPlayerController))
+		{
+			ABPlayerController->AddGameScore();
+			break;
+		}
+	}
 
-	//W_GameState->AddGameScore();
+	W_GameState->AddGameScore();
 
-	//if (GetScore() >= ScoreToClear)
-	//{
-	//	W_GameState->SetGameCleared();
+	if (GetScore() >= ScoreToClear)
+	{
+		W_GameState->SetGameCleared();
 
-	//	for (FConstPawnIterator It = GetWorld()->GetPawnIterator(); It; ++It)
-	//	{
-	//		(*It)->TurnOff();
-	//	}
+		for (FConstPawnIterator It = GetWorld()->GetPawnIterator(); It; ++It)
+		{
+			(*It)->TurnOff();
+		}
 
-	//	for (FConstPlayerControllerIterator It = GetWorld()->GetPlayerControllerIterator(); It; ++It)
-	//	{
-	//		const auto ABPlayerController = Cast<AW_PlayerController>(It->Get());
-	//		if (nullptr != ABPlayerController)
-	//		{
-	//			ABPlayerController->ShowResultUI();
-	//		}
-	//	}
-	//}
+		for (FConstPlayerControllerIterator It = GetWorld()->GetPlayerControllerIterator(); It; ++It)
+		{
+			const auto ABPlayerController = Cast<AW_PlayerController>(It->Get());
+			if (nullptr != ABPlayerController)
+			{
+				ABPlayerController->ShowResultUI();
+			}
+		}
+	}
 }
 
 int32 AW_GameMode::GetScore() const

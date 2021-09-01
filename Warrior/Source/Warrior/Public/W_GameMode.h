@@ -19,7 +19,7 @@ public:
 
 	virtual void PostInitializeComponents() override;
 	virtual void PostLogin(APlayerController* NewPlayer) override;
-	void AddScore(class AABPlayerController* ScoredPlayer);
+	void AddScore(class AW_PlayerController* ScoredPlayer);
 	int32 GetScore() const;
 
 private:
